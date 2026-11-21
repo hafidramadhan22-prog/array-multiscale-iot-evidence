@@ -10,21 +10,6 @@
     "sha256": "ac4218bed3de0524c8c10c45c832e8b5fbef2294773327104e0b8f0e1e02acec"
   },
   {
-    "path": "EVIDENCE/files/reports/ARRAY_MAJOR_REVISION_20261103/xai_faithfulness.csv",
-    "bytes": 348,
-    "sha256": "0dcc5566d0b32311a6f6ad8d72a7e34a09fe12892ce8d320ed9cb5e5d89eaece"
-  },
-  {
-    "path": "EVIDENCE/files/reports/ARRAY_MAJOR_REVISION_20261103/xai_sensitivity.csv",
-    "bytes": 226,
-    "sha256": "a1eed57eaaa766c12868c72a77211b48b0dcad11560c40f925617a2ad663f701"
-  },
-  {
-    "path": "EVIDENCE/files/reports/ARRAY_MAJOR_REVISION_20261103/xai_shares.csv",
-    "bytes": 3470,
-    "sha256": "6a2870da85c2eecfb2bb1a1b3b360127cd28ff805f057e6439e8632a11ebfc58"
-  },
-  {
     "path": "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/background_sensitivity.csv",
     "bytes": 22039,
     "sha256": "47b7917ea8e4f49ebcc6f20157f889b747b6268bd5e99a41b09c109c7b960b98"

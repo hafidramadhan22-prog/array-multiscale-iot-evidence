@@ -1,0 +1,2 @@
+method,top3_jaccard,normalized_l1,cosine
+weighted_voting,1.0,0.0280663251932128,0.9997019155086472

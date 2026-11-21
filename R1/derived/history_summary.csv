@@ -1,0 +1,3 @@
+history,method,n,macro_f1,ddos_f2,recall_Normal,support_Normal,recall_DDoS_TCP,support_DDoS_TCP,recall_Port_Scanning,support_Port_Scanning,recall_SQL_injection,support_SQL_injection,recall_Ransomware,support_Ransomware,balanced_accuracy,errors,errors_class_0,errors_class_1,errors_class_2,errors_class_3,errors_class_4
+exclusive,weighted_voting,52584,0.9376935651371078,1.0,0.9949585884047534,19439,1.0,8139,0.8373277039612567,8053,0.9964728776453418,8222,0.812850761653877,8731,0.9283219863330456,3071,98,0,1310,29,1634
+shared_density,weighted_voting,52584,0.9358036677641172,1.0,0.9949071454292916,19439,1.0,8139,0.8316155470011176,8053,0.9965945025541232,8222,0.8063222998511053,8731,0.9258878989671276,3174,99,0,1356,28,1691

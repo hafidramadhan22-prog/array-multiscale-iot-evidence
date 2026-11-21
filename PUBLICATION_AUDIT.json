@@ -1,8 +1,15 @@
 {
-  "source_archive_sha256": "67cf76a1a5dfdf72f35e486d0783087f9ce3533da49ebd4b3ce26cfa3619cb1c",
-  "files": 868,
-  "bytes": 108897887,
-  "credential_pattern_matches": [],
-  "excluded": "Raw PCAPs, packet arrays, full third-party datasets, serialized estimators, private correspondence and unrelated working history. Original local archive unchanged.",
-  "scope": "Saved-result audit, not full end-to-end raw-data reconstruction."
+  "date": "2026-11-22",
+  "scope": "Focused WV/GNB saved evidence with versioned historical index",
+  "source_previous_public_commit": "a061bcad7e2c7d29cd4029095a6038bc7cc969b0",
+  "credential_scan_matches": [],
+  "raw_PCOutputs": "No raw PCAPs or serialized models redistributed",
+  "corrections": [
+    "scikit-learn 1.7.2 matches recorded environment",
+    "archive index now identifies GNB 19-Nov archive, not VM branch",
+    "Windows long-path instructions",
+    "three-page supplement; all five tables unchanged"
+  ],
+  "new_training": 0,
+  "new_predictions": 0
 }

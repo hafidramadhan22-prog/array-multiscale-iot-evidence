@@ -1,37 +1,23 @@
 {
-  "status": "PASS_GNB_FOCUS_SAVED_RESULTS",
-  "current_S2_class_recall_values_verified": 45,
-  "displayed_comparator": "GNB default and G-selected",
-  "historical_evidence_preserved_and_checked": {
-    "status": "PASS_SELECTED_SAVED_RESULT_RECONSTRUCTION",
-    "prediction_vectors_recomputed": 70,
-    "ten_predictors_three_protocols": true,
-    "main_tables_checked": [
-      1,
-      3,
-      4,
-      5,
-      6
-    ],
-    "coverage_denominator": "all raw packets including warm-up",
-    "runtime_raw_counts": {
-      "feature_calls": 480,
-      "replays": 240,
-      "RSS_workers": 80
-    },
-    "runtime_gains": {
-      "combined_vs_native_full_percent": 60.5497700923184,
-      "encoding_vs_native_certified_percent": 37.396521882589894
-    },
-    "new_model_fits": 0,
-    "new_predictions": 0,
-    "model_deserializations": 0,
-    "row_id_storage": "GNB Unicode decimal IDs equal int64-run IDs after exact canonical decimal representation; order and labels unchanged",
-    "scope": "Selected saved-result reconstruction; not a new validation run, raw-PCAP extraction, full training reproduction or re-enumeration of every Shapley coalition.",
-    "historical_ten_predictor_summary_checked": true
+  "status": "PASS_FOCUSED_WV_GNB_SAVED_RESULTS",
+  "prediction_vectors_reconstructed": 21,
+  "class_recalls_verified": 45,
+  "main_tables_checked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "raw_measurements": {
+    "feature_calls": 480,
+    "replays": 240,
+    "RSS_workers": 80
   },
-  "new_training": 0,
+  "replay_reduction_percent": 60.5497700923184,
+  "new_fits": 0,
   "new_predictions": 0,
-  "model_deserialization": 0,
-  "scope": "Editorial reporting subset. Historical alternatives remain in the supplied archive; no independent classifier ranking is established."
+  "model_deserializations": 0,
+  "scope": "Current WV/GNB reporting subset. Versioned historical comparisons remain indexed; no universal classifier superiority or new independent test is claimed."
 }

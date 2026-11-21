@@ -1,0 +1,137 @@
+[
+  {
+    "paragraph": 3,
+    "before": "This supplementary material provides the evaluation protocols, class-specific predictive results, paired serving contrasts, explanation audits, and external diagnostic details supporting the main article. Extended observations, saved predictions, and verification materials are indexed in reproducibility artifacts R1–R4.",
+    "after": "This supplement supports main Tables 1–7 and RQ1–RQ3. The public R1–R4 evidence index links saved observations, source snapshots and verification scripts."
+  },
+  {
+    "paragraph": 5,
+    "before": "The canonical five-class Edge-IIoTset subset contains 65,855 observations. A seed-42 stratified 80:20 partition assigns 52,684 observations to development and 13,171 to a historical holdout. Within development, a 1 s boundary purge excludes 100 temporal decisions, leaving 52,584 eligible targets. The temporal protocol assigns these targets to A (model fitting), G (parameter and weight selection), C (expert ordering), and V (evaluation), as detailed in Table S1. Synthetic training observations are never included in the evaluation targets.",
+    "after": "The five-class subset contains 65,855 observations: 52,684 development and 13,171 historical holdout targets (seed-42 stratified 80:20 split). A 1 s temporal boundary purge excludes 100 development decisions. Table S1 defines the remaining 52,584 targets: A fits models, G selects parameters/weights, C orders experts and V evaluates predictions. Evaluation contains no synthetic rows."
+  },
+  {
+    "paragraph": 8,
+    "before": "Preprocessing is fitted on A only. Ten numerical and fifteen categorical packet attributes are combined with up to 60 temporal context statistics, giving 85 domain fields in the C60 reference representation and 112 columns after fitted encoding. The pipeline applies median imputation and one-hot encoding with unknown-category handling, and excludes raw destination ports and explicit port bands. Random undersampling followed by encoded-space SMOTE produces 30,060 training rows, of which 4,041 (13.443%) are synthetic; added examples are capped at 50% of each class’s pre-undersampling support.",
+    "after": "A-only preprocessing combines 10 numerical and 15 categorical packet fields with 60 context statistics (C60: 85 domain fields; 112 encoded columns), using median imputation and one-hot encoding with unknown-category handling. Raw destination ports and explicit bands are excluded. RUS followed by encoded-space SMOTE yields 30,060 training rows, including 4,041 synthetic rows (13.443%); additions are capped at 50% of each pre-RUS class support."
+  },
+  {
+    "paragraph": 9,
+    "before": "The five WV experts use the following settings: Decision Tree (depth 12), Random Forest (75 trees; depth 10), XGBoost (100 trees; depth 5), LightGBM (150 trees; depth 8), and Logistic Regression (C = 1; tolerance 10⁻⁶; 10,000 maximum iterations). Model fitting is repeated with seeds 42, 43, and 44 using the same temporal target roles. The retained historical holdout and development outcomes informed the earlier exploratory selection of WV; the subsequent execution analyses concern a specified reference function rather than a new independent classifier ranking.",
+    "after": "WV experts: DT depth 12; RF 75 trees/depth 10; XGBoost 100 trees/depth 5; LightGBM 150 trees/depth 8; LR C = 1, tolerance 10⁻⁶ and 10,000 iterations. Seeds 42–44 repeat fitting on fixed targets. Prior development/holdout observations influenced exploratory WV selection; these comparisons do not establish an independent classifier ranking."
+  },
+  {
+    "paragraph": 10,
+    "before": "Endpoint history is queried before the current packet is inserted, and each retained record contains eight 64-bit integers. A fixed allocation of 16,384 records occupies 1 MiB for the history array, excluding estimator and process memory. Nested 0.1, 1, and 10 s summaries are reconstructed from prior observations. C40 emits the 0.1/1 s features, whereas C60 additionally emits the 10 s features; O1 and O10 independently determine endpoint slot ordering. Consequently, C40/O10 uses 10 s information for ordering even though its 10 s statistics are not emitted as model inputs.",
+    "after": "Query-before-insertion history stores eight int64 values per record: 16,384 records occupy 1 MiB, excluding model/process memory. C40 emits 0.1/1 s features; C60 adds 10 s features. O1/O10 independently set endpoint ordering, so C40/O10 still uses 10 s ordering information."
+  },
+  {
+    "paragraph": 11,
+    "before": "The two-fold, exact-signature diagnostic is evaluated on the 52,584 eligible targets. Shared, density-matched, and packet-private history controls test sensitivity to the allocation of prior traffic; target signatures are disjoint, although history streams need not be. Capacity checks at 0.25, 1, and 4 MiB produce signature macro-F1 values between 97.2903% and 97.2973% for the reported configurations. At 1 MiB, the DDoS stream has 1,954,616 capacity evictions, so the retained history can be shorter than a nominal 10 s window under high traffic rates. Stage identifiers, original packet support, fitted configurations, and saved results are indexed in R1.",
+    "after": "Two signature folds cover 52,584 targets. Shared, density-matched and packet-private histories test traffic-context sensitivity; disjoint target signatures do not guarantee disjoint history streams. At 0.25/1/4 MiB, reported signature macro-F1 spans 97.2903–97.2973%. The 1 MiB DDoS stream has 1,954,616 evictions, shortening nominal 10 s histories. R1 supplies splits, configurations and predictions."
+  },
+  {
+    "paragraph": 13,
+    "before": "Table S2 complements the aggregate predictive comparison in main Table 3 by reporting recall for each evaluated class. Temporal values are three-fitting-seed means over the same 10,358 V targets, whereas packet-private and shared-signature results pool the two diagnostic folds over 52,584 targets. Gaussian Naive Bayes (GNB) is evaluated both with default variance smoothing (10⁻⁹) and with a separate smoothing parameter selected on G from 13 log-spaced candidates (91 fits across seven stages).",
+    "after": "Main Table 3 gives aggregate metrics; Table S2 gives recall. Temporal values average three fits on 10,358 fixed V targets; signature results pool two folds over 52,584 targets. GNB uses default smoothing 10⁻⁹ or G-selected smoothing from 13 log-spaced candidates (91 fits across seven stages)."
+  },
+  {
+    "paragraph": 16,
+    "before": "In the temporal protocol, tuning improves GNB Normal recall from 51.40% to 92.95%, although its class-specific changes are not uniformly positive. Under the packet-private and shared-signature conditions, both displayed GNB variants have zero DDoS recall; their aggregate scores are reported in main Table 3. These descriptive comparisons specify the behavior of GNB under the stated protocols and do not establish WV as the strongest classifier among all historical alternatives. Broader comparator outcomes, including higher-scoring alternatives and fitted smoothing settings, are indexed in R1.",
+    "after": "GNB tuning raises temporal Normal recall from 51.40% to 92.95%; other class changes are mixed. Both GNB variants have zero DDoS recall under private/shared-signature conditions. R1 retains fitted settings and higher-scoring historical alternatives; these descriptive results do not establish WV superiority."
+  },
+  {
+    "paragraph": 18,
+    "before": "The serving study compares native and compact implementation paths for the same fitted WV predictor. Each retained session uses 30 randomized paired replays of 15,665 packets with 160 annotated decisions; Session B (17 November 2026) and Session A (3 November 2026) are analyzed separately. The compact certified path shares fitted sparse encoding across experts and terminates label-only evaluation only after the remaining-weight certificate in main Eq. (2) passes. Complete-probability requests always evaluate every expert in canonical order.",
+    "after": "Each session uses 30 randomized paired replays of 15,665 packets/160 decisions. Session B (17 November) and Session A (3 November 2026) remain separate. Compact WV shares fitted encoding; label-only stopping requires main Eq. (2). Complete probabilities evaluate all experts in canonical order."
+  },
+  {
+    "paragraph": 21,
+    "before": "Each saving is the native replay time minus compact certified replay time, and each percentage reduction uses the corresponding native reference mean. Uncertainty intervals use 10,000 paired bootstrap resamples. Values retained for paired contrasts can differ by 0.0001 s from subtracting display-rounded mean times in main Table 4. The Session B (17 November 2026) crossed design yields an encoding-by-stopping interaction of 0.6025 s (95% interval [0.5347, 0.6733] s), showing that the component effects are not additive. An earlier five-pair archive contains one slower compact repetition with no established cause in the retained telemetry.",
+    "after": "Saving = native minus compact certified time; percentage reduction uses the corresponding native mean. CIs use 10,000 paired bootstrap resamples; rounding can cause 0.0001 s differences from main Table 4. Session B interaction is 0.6025 s (95% CI [0.5347, 0.6733]), so encoding/stopping gains are not additive. An earlier five-pair archive contains one slower compact repeat without an established cause."
+  },
+  {
+    "paragraph": 22,
+    "before": "The eight-policy serving session indexed in R2 also includes the single-model controls. Feature latency is measured from 30 calls following five warm-up calls; incremental peak resident memory is sampled at 2 ms intervals in five fresh processes after model loading. These delta-RSS measurements characterize the specified workloads and are distinct from the fixed 1 MiB history-array capacity. Optimized single-model paths are faster on prepared batches, whereas the WV result concerns acceleration of the unchanged five-expert mixture.",
+    "after": "R2 includes 480 feature calls, 240 replays and 80 RSS records across eight policies. Feature tests use 30 calls after five warm-ups; RSS is sampled every 2 ms in five fresh post-load processes per workload/policy. Incremental RSS differs from the 1 MiB history bound. Single-model controls remain faster on prepared batches."
+  },
+  {
+    "paragraph": 23,
+    "before": "The preservation check covers 52,684 development inputs, separately from the 52,584 temporal targets eligible after boundary purge. For the fixed reference fit, native and compact encoding, sparse structure, expert posteriors, and class decisions agree, with full-posterior differences no greater than 10⁻¹². Certified stopping requires nonnegative weights, the strict remaining-weight margin, numerical guards, and full-sum fallback for unresolved rows. GV is outside this contract. R2 retains the posterior checks and request-level benchmarks.",
+    "after": "Preservation covers 52,684 development inputs, distinct from 52,584 purged temporal targets: labels agree, with complete-posterior differences within 10⁻¹². The certificate requires nonnegative weights, a strict remaining-weight margin, numerical guards and full-sum fallback. GV is outside this contract. R2 retains encoding/posterior checks."
+  },
+  {
+    "paragraph": 25,
+    "before": "RQ3 separates implementation consistency from sensitivity to background donors and from intervention-based faithfulness. The archived seven-group native-versus-compact test evaluates 300 finite donor games (38,400 coalition values and 1,228,800 donor hybrids). For these tested games, the two full-probability implementations return identical observed coalition outputs and Shapley attributions, with additivity and weighted-linearity checks satisfied. This implementation check is distinct from the nine-group background and intervention analyses.",
+    "after": "Seven-group implementation checks cover 300 finite games, 38,400 coalition values and 1,228,800 donor hybrids: observed native/compact coalition outputs and Shapley arrays agree, with additivity/weighted-linearity checks. This does not certify the distinct nine-group game."
+  },
+  {
+    "paragraph": 26,
+    "before": "For the nine-group game, six packet-protocol families and three 20-feature history windows define 512 coalitions per target. The experiment evaluates 100 V targets (20 per class), with rankings derived using A32 background donors and deletion/insertion interventions evaluated against a disjoint B32 background. Table S4 combines the supporting implementation, stability, and faithfulness observations; main Table 5 gives the aggregate deletion and insertion area measures.",
+    "after": "The nine-group audit uses six protocol families plus three 20-feature history windows (512 coalitions), with 100 V targets (20/class). A32 donors define rankings; disjoint B32 donors define deletion/insertion interventions. Table S4 supplements main Table 5; R3 retains arrays, donor IDs, curves and rankings."
+  },
+  {
+    "paragraph": 29,
+    "before": "Attribution concentration provides additional context for the nine-group results: the 10 s, 1 s, and 0.1 s history groups account for 84.49%, 8.86%, and 5.21% of mean absolute attribution share, respectively, with 1.44% distributed across the six protocol families (main Figure 4). The top-three group membership remains unchanged between the two donor backgrounds, but one target changes the internal top-three order and lower-ranked groups show variation. The seven-group Jaccard value is obtained from a different grouping and therefore represents a different cooperative game.",
+    "after": "History attribution shares for 10/1/0.1 s are 84.49/8.86/5.21%; protocol groups total 1.44% (main Figure 4). Top-three membership is unchanged across donors, but one target swaps internal order and lower ranks vary. Seven-group Jaccard describes a different game."
+  },
+  {
+    "paragraph": 30,
+    "before": "The positive deletion/insertion gains compare the designated ranking with an exact random-order expectation under B32 replacement; they measure agreement with the reference predictor’s probability behavior, not causal effects or correctness of ground-truth attack labels. The three erroneous predictions are reported separately to avoid treating them as a representative error subgroup.",
+    "after": "Gains compare designated rankings with exact random-order expectations under B32 replacement. They measure reference-posterior faithfulness, not causality or attack-label correctness. Only three errors support the error-conditioned subgroup."
+  },
+  {
+    "paragraph": 32,
+    "before": "The guarded-voting (GV) diagnostic is evaluated separately from the WV execution-preservation contract. Main Table 6 reports the local benign false-alarm cohorts, and main Table 7 reports aggregated frozen external outcomes. Table S5 retains these external cohort definitions and adds file-level Normal false-positive rates underlying main Figure 5, making visible the heterogeneity that is averaged in the aggregate results.",
+    "after": "GV is separate from WV preservation. Main Table 6 reports local benign cohorts; main Table 7 gives frozen external aggregates. Table S5 adds Normal file-level counts underlying main Figure 5. Aggregate and constituent rows must not be summed together."
+  },
+  {
+    "paragraph": 35,
+    "before": "The four per-file percentages reproduce the one-decimal values in main Figure 5. False-positive counts follow from the stated 1,000 Normal targets per file. Asterisks indicate uniquely flow-mapped TON_IoT targets. Aggregate rows must not be summed again with their constituent per-file rows.",
+    "after": "Each Normal file contributes 1,000 targets. Counts reproduce Figure 5 percentages; * indicates uniquely flow-mapped TON targets."
+  },
+  {
+    "paragraph": 36,
+    "before": "CICIoT2023 contributes five capture-scenario files, with two Normal files and one each assigned to SQL, Scan, and SYN; each file contributes 1,000 selected targets. Scenario agreement is not equivalent to packet-level verification of every malicious action. TON_IoT contributes two previously evaluated files, each sampled with 1,000 Normal and 1,000 Ransomware targets after warm-up and unique bidirectional-flow mapping. Its labels and coverage differ from the CIC capture-scenario assignments, so the two sources are not pooled as a common five-class test.",
+    "after": "CIC contributes five files (two Normal; one SQL, Scan and SYN), with 1,000 targets/file and scenario labels rather than verified packet-level malicious actions. Each previously evaluated TON file contributes 1,000 Normal and 1,000 Ransomware targets after warm-up/unique flow mapping. Different label semantics prevent pooling these as one five-class test."
+  },
+  {
+    "paragraph": 37,
+    "before": "For TON_IoT file 1, 172,410 Normal and 52,671 Ransomware packets have unique in-scope flow matches among 357,819 raw packets. File 2 contains 78,945 Normal and 47,940 Ransomware matches among 1,905,124 raw packets. All-packet in-scope mapping coverage is 62.9036% and 6.6602%, respectively, with 4,256 and 475 warm-up packets included in the raw denominators. The balanced 1,000-per-class-per-file evaluation is a sampling protocol, not an estimate of real-world class prevalence or proof of independent acquisition sessions.",
+    "after": "TON file 1 has 172,410 Normal/52,671 Ransomware matches among 357,819 raw packets; file 2 has 78,945/47,940 among 1,905,124. Coverage is 62.9036/6.6602%, using all packets including 4,256/475 warm-up packets. Balanced sampling does not estimate prevalence or establish independent acquisition sessions."
+  },
+  {
+    "paragraph": 38,
+    "before": "The local WV diagnostic yields 324 false alarms among 760 matched benign targets before flag-format alignment and 321 after alignment. Of the latter, 257 have no TCP payload. Additional syntax, character 2–5-gram TF-IDF, and combined payload refits produce 310, 312, and 331 false alarms, respectively. The payload illustration compares MQTT Normal packets with HTTP SQL packets and does not constitute a matched benign/malicious HTTP experiment.",
+    "after": "Initial WV false alarms are 324/760 before flag alignment and 321/760 after it; 257 aligned errors have no TCP payload. Syntax, character 2–5-gram TF-IDF and combined refits yield 310/312/331 alarms. MQTT Normal versus HTTP SQL examples are not a matched HTTP experiment."
+  },
+  {
+    "paragraph": 39,
+    "before": "GV is specified after inspection of the initial benign cohort, blocks 1–2, and seven attack-containing cohorts, then frozen before block 3. In that block, WV raises 396 false alarms among 697 matched benign targets versus one for GV; treating three unmatched candidates as alarms yields a conservative 4/700 coverage bound. These targets come from source families encountered previously. In reused V observations, two Scan-to-Normal WV errors become Scan-to-Ransomware errors under GV. For CIC Scan and SYN scenarios, the numbers assigned Normal rise from 465 to 555 and from 2 to 12, respectively. R4 indexes the saved prediction changes, unmatched identifiers, and external target mappings.",
+    "after": "GV uses the initial cohort, blocks 1–2 and seven attack cohorts, then freezes before block 3: WV/GV alarms are 396/697 versus 1/697. Counting three unmatched candidates as alarms gives 4/700. Sources were previously encountered. Reused V changes two Scan-to-Normal errors into Scan-to-Ransomware; CIC Scan/SYN predictions assigned Normal rise 465→555 and 2→12. R4 retains changes, unmatched IDs and mappings."
+  },
+  {
+    "paragraph": 41,
+    "before": "R1 — Predictive evidence. Frozen split and target identifiers, model settings, class-specific saved predictions, and historical classifier comparisons document the matched representation and comparator experiments. Temporal seeds are fitting repetitions on fixed target roles; signature-fold predictions are pooled once.",
+    "after": "R1: Split/target IDs, settings, training plans and saved WV/GNB predictions. A versioned index links earlier comparative studies. Temporal seeds repeat fits; signature folds pool once."
+  },
+  {
+    "paragraph": 42,
+    "before": "R2 — Serving evidence. Retained encoding and posterior checks, 480 feature calls, 240 replays, and 80 fresh-process RSS records document the eight-policy serving design and separate historical replay sessions. The saved-results verification path does not require model refitting or estimator deserialization.",
+    "after": "R2: Encoding/posterior checks, 480 feature calls, 240 replays and 80 RSS records; earlier sessions remain separate."
+  },
+  {
+    "paragraph": 43,
+    "before": "R3 — Explanation evidence. Coalition values, background-donor identifiers, group definitions, Shapley arrays, intervention curves, and rank summaries distinguish the seven-group and nine-group estimands.",
+    "after": "R3: Coalition values, donor IDs, group definitions, Shapley arrays, interventions and rankings for distinct seven/nine-group games."
+  },
+  {
+    "paragraph": 44,
+    "before": "R4 — Diagnostic evidence. Packet-to-flow mappings, coverage exclusions, ground-truth label scopes, saved WV/GV predictions, and per-file confusion counts support the benign and external diagnostic analyses.",
+    "after": "R4: Selected packet–flow mappings, exclusions, label scope, WV/GV predictions and per-file confusion counts."
+  },
+  {
+    "paragraph": 45,
+    "before": "The R1–R4 archive is organized as a separate supporting-data package for upload with the manuscript through the journal submission system. Its index records relative file paths, SHA256 checksums, and the retained software environment. The saved-results entry point verifies selected observations without refitting estimators or deserializing trained models; it does not replace raw-PCAP reconstruction or a fresh independent evaluation. Raw Edge-IIoTset, CICIoT2023, and TON_IoT data remain subject to their providers’ access terms, as cited in the main article.",
+    "after": "Repository: https://github.com/hafidramadhan22-prog/array-multiscale-iot-evidence (release final-checked-20261122). Relative paths, SHA256 checksums and environments accompany saved-result verifiers that require no training or estimator deserialization. Provider datasets remain subject to access terms. These checks do not replace raw-PCAP reconstruction or independent evaluation."
+  }
+]

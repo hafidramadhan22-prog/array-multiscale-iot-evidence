@@ -1,0 +1,323 @@
+[
+  [
+    [
+      "Context / Order",
+      "Temporal F1 (%)",
+      "Temporal BA (%)",
+      "Mean Errors",
+      "Signature F1 (%)",
+      "Signature Errors"
+    ],
+    [
+      "C40 / O1",
+      "96.7363",
+      "96.9240",
+      "283.00",
+      "71.8438",
+      "9,746"
+    ],
+    [
+      "C40 / O10",
+      "96.7479",
+      "96.9398",
+      "282.00",
+      "71.8424",
+      "9,745"
+    ],
+    [
+      "C60 / O1",
+      "97.8787",
+      "97.9820",
+      "187.00",
+      "97.4512",
+      "1,100"
+    ],
+    [
+      "C60 / O10",
+      "97.8954",
+      "98.0030",
+      "184.67",
+      "97.2955",
+      "1,167"
+    ]
+  ],
+  [
+    [
+      "History Regime",
+      "Macro-F1 (%)",
+      "Balanced Acc. (%)",
+      "Scan Recall (%)",
+      "Ransomware Recall (%)",
+      "Total Errors"
+    ],
+    [
+      "Full shared",
+      "97.2955",
+      "97.3609",
+      "94.8342",
+      "92.7042",
+      "1,167"
+    ],
+    [
+      "Shared-density",
+      "93.5804",
+      "92.5888",
+      "83.1616",
+      "80.6322",
+      "3,174"
+    ],
+    [
+      "Packet-private",
+      "93.7694",
+      "92.8322",
+      "83.7328",
+      "81.2851",
+      "3,071"
+    ]
+  ],
+  [
+    [
+      "Evaluation",
+      "Predictor",
+      "F1 (%)",
+      "BA (%)",
+      "Normal FPR (%)",
+      "DDoS F2 (%)",
+      "Errors"
+    ],
+    [
+      "Temporal",
+      "WV (reference)",
+      "97.90",
+      "98.00",
+      "0.92",
+      "100.00",
+      "184.67"
+    ],
+    [
+      "Temporal",
+      "GNB (default)",
+      "82.61",
+      "86.25",
+      "48.60",
+      "99.95",
+      "2,207.00"
+    ],
+    [
+      "Temporal",
+      "GNB (G-selected)",
+      "95.05",
+      "95.88",
+      "7.05",
+      "99.95",
+      "506.00"
+    ],
+    [
+      "Private history",
+      "WV (reference)",
+      "93.77",
+      "92.83",
+      "0.50",
+      "100.00",
+      "3,071"
+    ],
+    [
+      "Private history",
+      "GNB (default)",
+      "43.88",
+      "46.53",
+      "19.16",
+      "0.00",
+      "24,113"
+    ],
+    [
+      "Private history",
+      "GNB (G-selected)",
+      "43.92",
+      "46.74",
+      "17.69",
+      "0.00",
+      "23,864"
+    ],
+    [
+      "Shared signature",
+      "WV (reference)",
+      "97.30",
+      "97.36",
+      "0.48",
+      "99.98",
+      "1,167"
+    ],
+    [
+      "Shared signature",
+      "GNB (default)",
+      "39.83",
+      "41.15",
+      "19.94",
+      "0.00",
+      "26,546"
+    ],
+    [
+      "Shared signature",
+      "GNB (G-selected)",
+      "49.53",
+      "51.13",
+      "22.40",
+      "0.00",
+      "22,653"
+    ]
+  ],
+  [
+    [
+      "WV Serving Policy",
+      "1-Row (ms)",
+      "1,000-Row (ms)",
+      "Feature Delta (MiB)",
+      "Replay (s)",
+      "Replay Delta (MiB)"
+    ],
+    [
+      "WV native / full",
+      "17.480",
+      "61.089",
+      "2.147",
+      "2.8265",
+      "4.748"
+    ],
+    [
+      "WV native / certified",
+      "8.738",
+      "56.615",
+      "2.758",
+      "1.7811",
+      "4.171"
+    ],
+    [
+      "WV compact / full",
+      "7.946",
+      "48.669",
+      "2.362",
+      "1.5578",
+      "4.338"
+    ],
+    [
+      "WV compact / certified",
+      "5.219",
+      "43.515",
+      "2.520",
+      "1.1150",
+      "3.909"
+    ]
+  ],
+  [
+    [
+      "Predictor",
+      "Deletion AUC",
+      "Insertion AUC",
+      "Deletion Gain (ΔD)",
+      "Insertion Gain (ΔI)"
+    ],
+    [
+      "Weighted voting (WV)",
+      "0.2600",
+      "0.9073",
+      "0.3203",
+      "0.3270"
+    ]
+  ],
+  [
+    [
+      "Cohort",
+      "n",
+      "WV: FP (FPR)",
+      "GV: FP (FPR)",
+      "Evaluation Role"
+    ],
+    [
+      "Initial benign",
+      "760",
+      "321 (42.2368%)",
+      "0 (0.0000%)",
+      "Observed before rule"
+    ],
+    [
+      "Later block 1",
+      "769",
+      "401 (52.1456%)",
+      "0 (0.0000%)",
+      "Observed before rule"
+    ],
+    [
+      "Later block 2",
+      "699",
+      "407 (58.2260%)",
+      "0 (0.0000%)",
+      "Observed before rule"
+    ],
+    [
+      "Later block 3",
+      "697",
+      "396 (56.8149%)",
+      "1 (0.1435%)",
+      "Frozen before scoring"
+    ],
+    [
+      "V Normal",
+      "3,860",
+      "36 (0.9326%)",
+      "39 (1.0104%)",
+      "Reused validation"
+    ]
+  ],
+  [
+    [
+      "External Target Cohort",
+      "n",
+      "Metric",
+      "WV (%)",
+      "GV (%)"
+    ],
+    [
+      "CICIoT2023 Normal",
+      "2,000",
+      "Normal FPR",
+      "30.15",
+      "31.90"
+    ],
+    [
+      "TON_IoT Normal (flow-mapped)",
+      "2,000",
+      "Normal FPR",
+      "24.35",
+      "18.85"
+    ],
+    [
+      "CICIoT2023 SQL",
+      "1,000",
+      "Scenario match",
+      "29.80",
+      "32.10"
+    ],
+    [
+      "CICIoT2023 Scan",
+      "1,000",
+      "Scenario match",
+      "3.80",
+      "4.00"
+    ],
+    [
+      "CICIoT2023 SYN",
+      "1,000",
+      "Scenario match",
+      "62.10",
+      "62.10"
+    ],
+    [
+      "TON_IoT Ransomware (flow-mapped)",
+      "2,000",
+      "Correct-type recall",
+      "1.35",
+      "1.55"
+    ]
+  ]
+]

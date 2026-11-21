@@ -643,5 +643,15 @@
     "path": "EVIDENCE/files/src/sql_guard_rf_rescue_20261109.py",
     "bytes": 1358,
     "sha256": "766fe15ca9d1a5aeb3f67a79945ec12bef063fdfd70b3b62afe93525e2fc6321"
+  },
+  {
+    "path": "R4/external_confusion_recomputed.json",
+    "bytes": 8097,
+    "sha256": "54504c2d9915b8f41ccdb5cdd1c788b14449182f357ea713a39d0bf675e1f411"
+  },
+  {
+    "path": "R4/README.md",
+    "bytes": 253,
+    "sha256": "c8f00d73cbda9faf9a31b8b7d0c304df8cf7db6bb45783b22b988cf1658f0d15"
   }
 ]

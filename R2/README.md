@@ -1,3 +1,5 @@
 # Serving evidence
 
-`index.json` lists relative repository paths and SHA256 checksums. Historical paths are preserved under EVIDENCE/files so the saved-results verifier can resolve them. These are archived experiments, not newly run validations.
+Unfiltered eight-policy benchmark logs retain all 480/240/80 records. RF and LR benchmark-control records are needed to reconstruct the reported session; RF remains an expert of WV.
+
+See index.json for relative paths and checksums. These are archived observations, not new validation.

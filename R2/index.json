@@ -1140,11 +1140,6 @@
     "sha256": "09ba67b16a9d9598597c2361d2becef29e3ef050203c2c8c2c316550e65f93c7"
   },
   {
-    "path": "EVIDENCE/files/scripts/replay_array_svm_20261118.py",
-    "bytes": 2969,
-    "sha256": "e5fad3892e63df825cdb686bb4abd407a342673ca30af8e8f32bc643c2757361"
-  },
-  {
     "path": "EVIDENCE/files/scripts/replay_multiscale_repair.py",
     "bytes": 7569,
     "sha256": "99e690f228b8ed053099eb5821731d7a0eb9e32de0ad016afd35e69fdcd426b6"

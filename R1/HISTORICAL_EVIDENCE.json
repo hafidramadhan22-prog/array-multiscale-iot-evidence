@@ -1,0 +1,166 @@
+{
+  "current_scope": "WV/GNB predictive evidence, a reporting subset rather than a comprehensive classifier ranking.",
+  "earlier_comparative_evidence": "https://github.com/hafidramadhan22-prog/array-multiscale-iot-evidence/releases/tag/qc-20261121",
+  "historical_commit": "a061bcad7e2c7d29cd4029095a6038bc7cc969b0",
+  "reason": "Current package focuses on the displayed WV/GNB comparison; stronger earlier alternatives remain publicly traceable. Omitting files from this release does not erase prior experiments.",
+  "local_source_archive": {
+    "name": "ARRAY_HAFID_REPRODUCIBILITY_GNB_REVISION_20261119.zip",
+    "sha256": "67cf76a1a5dfdf72f35e486d0783087f9ce3533da49ebd4b3ce26cfa3619cb1c"
+  },
+  "exact_subset_transformations": [
+    {
+      "source": "EVIDENCE/files/runs/ARRAY_GNB_FULL_20261119_01/private_fold1/evaluation.npz",
+      "source_sha256": "967f85f8a396bcab5240217a006f77440c558ae474c7ac6dc744c25425e1af59",
+      "derived": "R1/predictions/private_fold1/evaluation.npz",
+      "retained_keys": [
+        "y",
+        "row_ids",
+        "WV",
+        "GNB_default",
+        "GNB_G_selected",
+        "CM_WV",
+        "CM_GNB_default",
+        "CM_GNB_G_selected"
+      ],
+      "rule": "Exact array copies; omitted standalone comparator arrays are retained in the preceding public release."
+    },
+    {
+      "source": "EVIDENCE/files/runs/ARRAY_GNB_FULL_20261119_01/private_fold2/evaluation.npz",
+      "source_sha256": "8d67adde8323b4635b993c7d6e11f1b681d9facc2efd1db3cfb3df8b38524dab",
+      "derived": "R1/predictions/private_fold2/evaluation.npz",
+      "retained_keys": [
+        "y",
+        "row_ids",
+        "WV",
+        "GNB_default",
+        "GNB_G_selected",
+        "CM_WV",
+        "CM_GNB_default",
+        "CM_GNB_G_selected"
+      ],
+      "rule": "Exact array copies; omitted standalone comparator arrays are retained in the preceding public release."
+    },
+    {
+      "source": "EVIDENCE/files/runs/ARRAY_GNB_FULL_20261119_01/signature_fold1/evaluation.npz",
+      "source_sha256": "677817b98d3e945987069a01f68bc5b1a33db759e8e3a5945257b0b077ac5013",
+      "derived": "R1/predictions/signature_fold1/evaluation.npz",
+      "retained_keys": [
+        "y",
+        "row_ids",
+        "WV",
+        "GNB_default",
+        "GNB_G_selected",
+        "CM_WV",
+        "CM_GNB_default",
+        "CM_GNB_G_selected"
+      ],
+      "rule": "Exact array copies; omitted standalone comparator arrays are retained in the preceding public release."
+    },
+    {
+      "source": "EVIDENCE/files/runs/ARRAY_GNB_FULL_20261119_01/signature_fold2/evaluation.npz",
+      "source_sha256": "af00925de12d10dac3113344be941f82c55ecd8fb87db7bebabde26320682dfc",
+      "derived": "R1/predictions/signature_fold2/evaluation.npz",
+      "retained_keys": [
+        "y",
+        "row_ids",
+        "WV",
+        "GNB_default",
+        "GNB_G_selected",
+        "CM_WV",
+        "CM_GNB_default",
+        "CM_GNB_G_selected"
+      ],
+      "rule": "Exact array copies; omitted standalone comparator arrays are retained in the preceding public release."
+    },
+    {
+      "source": "EVIDENCE/files/runs/ARRAY_GNB_FULL_20261119_01/temporal_seed42/evaluation.npz",
+      "source_sha256": "9446464709c44da05d977a45066e681bc9f7c2d2a3de66252cb841bcfb4ac934",
+      "derived": "R1/predictions/temporal_seed42/evaluation.npz",
+      "retained_keys": [
+        "y",
+        "row_ids",
+        "WV",
+        "GNB_default",
+        "GNB_G_selected",
+        "CM_WV",
+        "CM_GNB_default",
+        "CM_GNB_G_selected"
+      ],
+      "rule": "Exact array copies; omitted standalone comparator arrays are retained in the preceding public release."
+    },
+    {
+      "source": "EVIDENCE/files/runs/ARRAY_GNB_FULL_20261119_01/temporal_seed43/evaluation.npz",
+      "source_sha256": "09b4d87487ed4e72640a228cbd8dd9d283f1784d62d82610957d65b1cd890189",
+      "derived": "R1/predictions/temporal_seed43/evaluation.npz",
+      "retained_keys": [
+        "y",
+        "row_ids",
+        "WV",
+        "GNB_default",
+        "GNB_G_selected",
+        "CM_WV",
+        "CM_GNB_default",
+        "CM_GNB_G_selected"
+      ],
+      "rule": "Exact array copies; omitted standalone comparator arrays are retained in the preceding public release."
+    },
+    {
+      "source": "EVIDENCE/files/runs/ARRAY_GNB_FULL_20261119_01/temporal_seed44/evaluation.npz",
+      "source_sha256": "8de3e23ddf24d9c51ac081481fe3766befab44832746dd3f285f092181bae8a7",
+      "derived": "R1/predictions/temporal_seed44/evaluation.npz",
+      "retained_keys": [
+        "y",
+        "row_ids",
+        "WV",
+        "GNB_default",
+        "GNB_G_selected",
+        "CM_WV",
+        "CM_GNB_default",
+        "CM_GNB_G_selected"
+      ],
+      "rule": "Exact array copies; omitted standalone comparator arrays are retained in the preceding public release."
+    },
+    {
+      "source": "EVIDENCE/files/reports/ARRAY_MAJOR_REVISION_20261103/buffer_summary.csv",
+      "source_sha256": "4980c825b35005e27ccdf77963174bbeb77ac82a6a83b8476592a1f2b329f0cd",
+      "derived": "R1/derived/buffer_summary.csv",
+      "rule": "WV rows only when method column exists; all underlying original rows remain in preceding public release."
+    },
+    {
+      "source": "EVIDENCE/files/reports/ARRAY_MAJOR_REVISION_20261103/factorial_summary.csv",
+      "source_sha256": "b327d4853e8ec4267a054cff6850d8895847719c6c76a409ce43ebcc448c23e6",
+      "derived": "R1/derived/factorial_summary.csv",
+      "rule": "WV rows only when method column exists; all underlying original rows remain in preceding public release."
+    },
+    {
+      "source": "EVIDENCE/files/reports/ARRAY_MAJOR_REVISION_20261103/history_summary.csv",
+      "source_sha256": "55aafe86717e1c7e9979b71aa0ebbd4b745dcceaba5c804b0af58e74184c222b",
+      "derived": "R1/derived/history_summary.csv",
+      "rule": "WV rows only when method column exists; all underlying original rows remain in preceding public release."
+    },
+    {
+      "source": "EVIDENCE/files/reports/ARRAY_MAJOR_REVISION_20261103/reference_audit.csv",
+      "source_sha256": "68a97ea1bc06f3711788367d03736d266abe4923422d67678c58442ff6bc4323",
+      "derived": "R1/derived/reference_audit.csv",
+      "rule": "WV rows only when method column exists; all underlying original rows remain in preceding public release."
+    },
+    {
+      "source": "EVIDENCE/files/reports/ARRAY_MAJOR_REVISION_20261103/xai_faithfulness.csv",
+      "source_sha256": "0dcc5566d0b32311a6f6ad8d72a7e34a09fe12892ce8d320ed9cb5e5d89eaece",
+      "derived": "R1/derived/xai_faithfulness.csv",
+      "rule": "WV rows only when method column exists; all underlying original rows remain in preceding public release."
+    },
+    {
+      "source": "EVIDENCE/files/reports/ARRAY_MAJOR_REVISION_20261103/xai_sensitivity.csv",
+      "source_sha256": "a1eed57eaaa766c12868c72a77211b48b0dcad11560c40f925617a2ad663f701",
+      "derived": "R1/derived/xai_sensitivity.csv",
+      "rule": "WV rows only when method column exists; all underlying original rows remain in preceding public release."
+    },
+    {
+      "source": "EVIDENCE/files/reports/ARRAY_MAJOR_REVISION_20261103/xai_shares.csv",
+      "source_sha256": "6a2870da85c2eecfb2bb1a1b3b360127cd28ff805f057e6439e8632a11ebfc58",
+      "derived": "R1/derived/xai_shares.csv",
+      "rule": "WV rows only when method column exists; all underlying original rows remain in preceding public release."
+    }
+  ]
+}
