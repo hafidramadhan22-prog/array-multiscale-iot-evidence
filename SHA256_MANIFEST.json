@@ -1,5 +1,10 @@
 [
   {
+    "path": ".gitattributes",
+    "bytes": 81,
+    "sha256": "ac793cd88f49e71febefd32a67b627543c0d1ec778c76ac7bc36cf6e5e9760a6"
+  },
+  {
     "path": "EVIDENCE/current_s2_recall.csv",
     "bytes": 1008,
     "sha256": "79d1c9f7ee235da3f4ef4bbfac12d1bc9ae088091acce354963a9d6268764f4d"
@@ -3851,13 +3856,13 @@
   },
   {
     "path": "manuscript/main.pdf",
-    "bytes": 211012,
-    "sha256": "d225a3c6431b1b912edbef040ff4691a4c7e2009022661a84eeaaface9627042"
+    "bytes": 211015,
+    "sha256": "e992c2256a07ca9d218700eda4ac514a6d77bdc9eb9d9066d1e9f7a201b3e277"
   },
   {
     "path": "manuscript/main.tex",
-    "bytes": 65277,
-    "sha256": "2f25d05a10a3ebfa21e842a39a347a80022c72ac4e4151a5b9d5967071f50d3f"
+    "bytes": 65280,
+    "sha256": "125bb4b775b8a1de02d1700f9487b03044002fca62af14b874c3eb77808b8bb7"
   },
   {
     "path": "manuscript/README.md",
@@ -3881,8 +3886,8 @@
   },
   {
     "path": "manuscript/REVISION_LOG/supplement_condensation.json",
-    "bytes": 22770,
-    "sha256": "b2e9ff9a055f0553ca0250eb712bbceee624340494003d901ce25f00d2d5591b"
+    "bytes": 22773,
+    "sha256": "b9b3688ee9c1b151dfa65ed654e2c8a502b4189c7d71575fae191cb438624b2e"
   },
   {
     "path": "manuscript/REVISION_LOG/VERIFICATION_RESULTS.json",
@@ -3891,13 +3896,13 @@
   },
   {
     "path": "manuscript/SUPPLEMENTARY/supplement.pdf",
-    "bytes": 47442,
-    "sha256": "645a5be58ce8ab5cf19754d5263c70113b0e3a4d78a5861f3daa07d19d5aa559"
+    "bytes": 47446,
+    "sha256": "d16701ebf58de7f8e87a66d6ac0f9831b2d884a0a92e49feb53f785ec84ff854"
   },
   {
     "path": "manuscript/SUPPLEMENTARY/supplement.tex",
-    "bytes": 14670,
-    "sha256": "4ea1db003825340f1a615be53783e451d2b294277e0a53de50cdf9828e1c15d7"
+    "bytes": 14673,
+    "sha256": "bac9385fde4491df1dd8f70598a930f8735788334787bd3328ad2b3b4d50928b"
   },
   {
     "path": "PUBLICATION_AUDIT.json",
@@ -3946,8 +3951,8 @@
   },
   {
     "path": "R1/index.json",
-    "bytes": 70326,
-    "sha256": "50b90eda68ccc8ad959d41cbdd0c490538ef38ac2f9dbd9d175b650338dd02ce"
+    "bytes": 70619,
+    "sha256": "dc4fd4d63bb24a4beda5aebc8f62b1c0b0c947f71497ecc8ae34d8439b4ff931"
   },
   {
     "path": "R1/predictions/private_fold1/evaluation.npz",
@@ -4026,8 +4031,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 4508,
-    "sha256": "4e255af9b5a00516bc1708bfd9dc3c3dcd8e9bf80aa0827f849d94e88aaa7ce7"
+    "bytes": 4671,
+    "sha256": "409cbe0bb79e7074bb3d1cd41d3e83c553cbf241b2e8e02027e09a7b18acd8f7"
   },
   {
     "path": "requirements-verification.txt",

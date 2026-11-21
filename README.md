@@ -14,7 +14,7 @@ The current main predictive comparison is WV/GNB. R1 contains split/target IDs, 
 Use Python 3.11 and a short local directory. On Windows, clone with Git long-path support enabled for this operation:
 
 ```sh
-git -c core.longpaths=true clone https://github.com/hafidramadhan22-prog/array-multiscale-iot-evidence.git
+git -c core.longpaths=true -c core.autocrlf=false clone https://github.com/hafidramadhan22-prog/array-multiscale-iot-evidence.git
 cd array-multiscale-iot-evidence
 python -m venv .venv
 # Activate the environment using the command appropriate for your shell.
@@ -23,7 +23,7 @@ python verify_saved_results.py --output local_verification.json
 python verify_extended.py
 ```
 
-The saved-results environment uses numpy 2.2.6, pandas 2.2.3 and scikit-learn 1.7.2. Run-specific environment records remain under EVIDENCE/files/runs. Verification reconstructs 21 WV/GNB prediction vectors, 45 per-class recalls, selected main tables, 480/240/80 measurement counts and finite-game Shapley arrays. It does not train, deserialize estimators, obtain fresh classifier predictions or repeat raw-PCAP extraction.
+The repository .gitattributes preserves original file bytes across checkout, so SHA256 checks are unaffected by Windows newline conversion. The saved-results environment uses numpy 2.2.6, pandas 2.2.3 and scikit-learn 1.7.2. Run-specific environment records remain under EVIDENCE/files/runs. Verification reconstructs 21 WV/GNB prediction vectors, 45 per-class recalls, selected main tables, 480/240/80 measurement counts and finite-game Shapley arrays. It does not train, deserialize estimators, obtain fresh classifier predictions or repeat raw-PCAP extraction.
 
 From `EVIDENCE/files/runs/ARRAY_SERVING_ABLATION_20261117_01/replay_raw.csv`, `100*(1-mean(WV_compact_certified)/mean(WV_native_full))` is 60.5497700923%, reported as 60.55%. Native-certified comparison is 37.3965218826%. The earlier 3 November 41.75% session remains separate.
 

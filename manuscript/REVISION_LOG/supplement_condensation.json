@@ -132,6 +132,6 @@
   {
     "paragraph": 45,
     "before": "The R1–R4 archive is organized as a separate supporting-data package for upload with the manuscript through the journal submission system. Its index records relative file paths, SHA256 checksums, and the retained software environment. The saved-results entry point verifies selected observations without refitting estimators or deserializing trained models; it does not replace raw-PCAP reconstruction or a fresh independent evaluation. Raw Edge-IIoTset, CICIoT2023, and TON_IoT data remain subject to their providers’ access terms, as cited in the main article.",
-    "after": "Repository: https://github.com/hafidramadhan22-prog/array-multiscale-iot-evidence (release final-checked-20261122). Relative paths, SHA256 checksums and environments accompany saved-result verifiers that require no training or estimator deserialization. Provider datasets remain subject to access terms. These checks do not replace raw-PCAP reconstruction or independent evaluation."
+    "after": "Repository: https://github.com/hafidramadhan22-prog/array-multiscale-iot-evidence (release final-checked-20261122-v2). Relative paths, SHA256 checksums and environments accompany saved-result verifiers that require no training or estimator deserialization. Provider datasets remain subject to access terms. These checks do not replace raw-PCAP reconstruction or independent evaluation."
   }
 ]

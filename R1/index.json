@@ -1,5 +1,10 @@
 [
   {
+    "path": ".gitattributes",
+    "bytes": 81,
+    "sha256": "ac793cd88f49e71febefd32a67b627543c0d1ec778c76ac7bc36cf6e5e9760a6"
+  },
+  {
     "path": "EVIDENCE/current_s2_recall.csv",
     "bytes": 1008,
     "sha256": "79d1c9f7ee235da3f4ef4bbfac12d1bc9ae088091acce354963a9d6268764f4d"
@@ -1675,6 +1680,11 @@
     "sha256": "6febe5a7670d83e5c2d4e3928037802a4ccd4161727e5f69c0e058a0b4993668"
   },
   {
+    "path": "PUBLICATION_AUDIT.json",
+    "bytes": 585,
+    "sha256": "8cb4e61e6b513a9bdd908f79cd0faebaca170f1b2f813d72c7616403718098fa"
+  },
+  {
     "path": "R1/derived/buffer_summary.csv",
     "bytes": 5051,
     "sha256": "0df18b77a156c71e9a19c63ea377791f1c108aa312723936bfef766a31a9d318"
@@ -1766,8 +1776,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 4508,
-    "sha256": "4e255af9b5a00516bc1708bfd9dc3c3dcd8e9bf80aa0827f849d94e88aaa7ce7"
+    "bytes": 4671,
+    "sha256": "409cbe0bb79e7074bb3d1cd41d3e83c553cbf241b2e8e02027e09a7b18acd8f7"
   },
   {
     "path": "requirements-verification.txt",
