@@ -1,0 +1,3 @@
+row_id,true_class,weighted_prediction,RF_prediction,candidate_prediction
+73079,Port_Scanning,Normal,Ransomware,Ransomware
+73085,Port_Scanning,Normal,Ransomware,Ransomware

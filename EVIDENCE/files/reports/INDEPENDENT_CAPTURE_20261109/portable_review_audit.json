@@ -1,0 +1,61 @@
+{
+  "status": "PASS_PORTABLE_EVIDENCE_LABELS_REPLAY_AND_NOTEBOOK",
+  "extraction_directory": "C:\\Users\\PREDAT~1\\AppData\\Local\\Temp\\hafid_independent_20261109_8hvpt1bl",
+  "tested_archive_sha256": "e555eb57df68430017686443b876f66c756265813a1e1c250fad187b06aa4e5c",
+  "fresh_extraction": true,
+  "new_fits": 0,
+  "replay_inputs": 9000,
+  "replay_predictions": 27000,
+  "saved_labels_identical": true,
+  "max_probability_difference": 0.0,
+  "notebook_byte_identical": true,
+  "notebook_execution": {
+    "status": "PASS_ALL_CELLS_EXECUTED",
+    "notebook": "C:\\Users\\PREDATOR NEO 16\\AppData\\Local\\Temp\\hafid_independent_20261109_8hvpt1bl\\notebooks\\independent_20261109\\UJI_INDEPENDEN_HASIL_DAN_PREDIKSI_20261109.ipynb",
+    "sha256": "a224e01317f219a7baa1dcece0a24797f909876a1326cf8c771060c9ba7ccc87",
+    "code_cells": 18,
+    "images": 16,
+    "paper_tables": 0,
+    "paper_figures": 0,
+    "errors": 0,
+    "guarded_model_loading": true,
+    "guarded_fitting": true,
+    "new_training": 0,
+    "new_inference": 0,
+    "frozen_catalogs_unchanged": true,
+    "execution_cwd": "C:\\Users\\PREDATOR NEO 16\\AppData\\Local\\Temp\\hafid_independent_20261109_8hvpt1bl\\notebooks\\independent_20261109"
+  },
+  "original_run_catalog_unchanged": true,
+  "events": [
+    {
+      "step": "package_hashes",
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS_ALL_PACKAGE_FILES\",\n  \"files\": 256,\n  \"total_bytes\": 709286588\n}\n",
+      "stderr": ""
+    },
+    {
+      "step": "saved_results_and_4000_TON_labels",
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS_SAVED_RESULTS_AND_LABEL_MAPPING\",\n  \"unique_targets\": 9000,\n  \"primary_policy_predictions\": 27000,\n  \"sources\": [\n    {\n      \"source\": \"CIC_Normal0\",\n      \"n\": 1000,\n      \"feature_sha256\": \"0bb2dc43836c697914f425eab11c6839a85dea9a928c6b17898f3c5773964be9\",\n      \"posterior_sha256\": \"c746e1bd677cd8e907f868352afbdc30cbfbb9b8249faf11bacb8f9d74237864\",\n      \"label_scope\": \"known_benign_capture\"\n    },\n    {\n      \"source\": \"CIC_Normal3\",\n      \"n\": 1000,\n      \"feature_sha256\": \"11374008b937630c02eb9abd876bbdfe4f2eb35478958f6eb54236a60c5dd31e\",\n      \"posterior_sha256\": \"07ee69687f12cd95427b3d661ecce7eabd44f88700fe1e02f27c4c9d323ebfe3\",\n      \"label_scope\": \"known_benign_capture\"\n    },\n    {\n      \"source\": \"CIC_SQL\",\n      \"n\": 1000,\n      \"feature_sha256\": \"0ed0b672235f49b6b14a9abd98dd6e91a56f32768c50b6d734dd3ab114e985c3\",\n      \"posterior_sha256\": \"ad48ff75c6d84a0c5c958f5b32d0124e0679e329810f075f7658e38f27e31da0\",\n      \"label_scope\": \"capture_scenario_not_verified_packet_attack\"\n    },\n    {\n      \"source\": \"CIC_PortScan\",\n      \"n\": 1000,\n      \"feature_sha256\": \"26b35bb48bb05964874f5f1bf855106543474d5aacf3e192fee793f72299d9e0\",\n      \"posterior_sha256\": \"545f8de5b5e6431bab507772cb539e54d921dc7bb9e463314b71c5d09e27006d\",\n      \"label_scope\": \"capture_scenario_not_verified_packet_attack\"\n    },\n    {\n      \"source\": \"CIC_DDoS_SYN\",\n      \"n\": 1000,\n      \"feature_sha256\": \"fc8d185a815eb40625d4170f6ccf777b3eb7ed1983b54f5c6b8e5d42cf3cb57d\",\n      \"posterior_sha256\": \"8c0b03b0dc243e9960ac079395f7255a69abd4f7460e367624e11c38a474ef43\",\n      \"label_scope\": \"capture_scenario_not_verified_packet_attack\"\n    },\n    {\n      \"source\": \"TON_Ransom1\",\n      \"n\": 2000,\n      \"feature_sha256\": \"aa1943a0b2086776a71dfd9f962324070f0bc9694cca8026b9099ecf268b811c\",\n      \"posterior_sha256\": \"6be39e1a79c19cc56aab1f5301d6930fae65e67ba60c6846cb6578d41f6cbe72\",\n      \"label_scope\": \"author_flow_derived\"\n    },\n    {\n      \"source\": \"TON_Ransom2\",\n      \"n\": 2000,\n      \"feature_sha256\": \"1efe9875d97da834fb5e346d108d35b3d4554a68a2bce34106c83d2202766719\",\n      \"posterior_sha256\": \"e0c49881255e9147bc2430cfac2dbd4de94eabad7ac449926bcbca0485af306b\",\n      \"label_scope\": \"author_flow_derived\"\n    }\n  ],\n  \"all_five_category_names_covered_across_different_datasets\": true,\n  \"single_independent_five_class_testbed\": false,\n  \"independent_FPR_target8_met\": false,\n  \"CIC_candidate_FPR_percent\": 31.9,\n  \"TON_labels\": \"derived author flow labels with quantized time; unmapped excluded\",\n  \"model_sha256\": \"77aa1beb6980f4eb9db9838af6505949899c5aa574f3be49d55adfdc1efcf31d\",\n  \"new_fits\": 0,\n  \"all_primary_metrics_independently_recomputed\": true,\n  \"all_4000_TON_labels_checked_against_all_matching_author_flows\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "step": "frozen_model_replay",
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS_FROZEN_MODEL_REPLAY\",\n  \"inputs\": 9000,\n  \"predictions\": 27000,\n  \"no_fit\": true,\n  \"model_sha256\": \"77aa1beb6980f4eb9db9838af6505949899c5aa574f3be49d55adfdc1efcf31d\",\n  \"frozen_catalog_sha256\": \"9b25f63c75777d7c1aad4d04c75405832062d994c2410985e58fc53f6513d537\",\n  \"features_sha256\": \"e8aea301472ea6114ee3728c792ad0288bf516d59f38b9fefa7c30257781e87c\",\n  \"prediction_sha256\": \"44e67026ec0df4fd669cb40126ebcea558234e53854d9f23c477d64401f315be\",\n  \"saved_labels_identical\": true,\n  \"max_probability_difference\": 0.0\n}\n",
+      "stderr": "C:\\Users\\PREDATOR NEO 16\\Downloads\\TA_HAFID_PAKET_CODEX_20261010\\TA_HAFID_CODEX_HANDOFF\\.venv\\Lib\\site-packages\\sklearn\\utils\\validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names\n  warnings.warn(\n"
+    },
+    {
+      "step": "notebook_run_all",
+      "returncode": 0,
+      "stdout": "Executing 1 cell 1\nExecuting 2 cell 3\nExecuting 3 cell 5\nExecuting 10 cell 19\n{\n  \"status\": \"PASS_ALL_CELLS_EXECUTED\",\n  \"notebook\": \"C:\\\\Users\\\\PREDATOR NEO 16\\\\AppData\\\\Local\\\\Temp\\\\hafid_independent_20261109_8hvpt1bl\\\\notebooks\\\\independent_20261109\\\\UJI_INDEPENDEN_HASIL_DAN_PREDIKSI_20261109.ipynb\",\n  \"sha256\": \"a224e01317f219a7baa1dcece0a24797f909876a1326cf8c771060c9ba7ccc87\",\n  \"code_cells\": 18,\n  \"images\": 16,\n  \"paper_tables\": 0,\n  \"paper_figures\": 0,\n  \"errors\": 0,\n  \"guarded_model_loading\": true,\n  \"guarded_fitting\": true,\n  \"new_training\": 0,\n  \"new_inference\": 0,\n  \"frozen_catalogs_unchanged\": true,\n  \"execution_cwd\": \"C:\\\\Users\\\\PREDATOR NEO 16\\\\AppData\\\\Local\\\\Temp\\\\hafid_independent_20261109_8hvpt1bl\\\\notebooks\\\\independent_20261109\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "step": "scientific_and_replay_gate_tests",
+      "returncode": 0,
+      "stdout": "..............                                                           [100%]\n- generated xml file: C:\\Users\\PREDATOR NEO 16\\Downloads\\TA_HAFID_PAKET_CODEX_20261010\\TA_HAFID_CODEX_HANDOFF\\reports\\INDEPENDENT_CAPTURE_20261109\\portable_test_results.xml -\n14 passed in 2.21s\n",
+      "stderr": ""
+    }
+  ]
+}

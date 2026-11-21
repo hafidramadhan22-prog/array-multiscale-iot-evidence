@@ -1,0 +1,21 @@
+{
+  "experiment": "WB_RESEARCH_20261019",
+  "views": ["legacy29", "legacy29_destination", "legacy29_symmetric", "legacy25", "legacy25_symmetric"],
+  "cases": ["original", "balanced"],
+  "seeds": [42, 43, 44],
+  "signature_seed": 42,
+  "runtime_workers": 3,
+  "weight_alphas": [0.5, 0.6, 0.7],
+  "lr_max_iter": 10000,
+  "lr_tol": 0.000001,
+  "port_bijection_offset": 32768,
+  "profile_repeats": 15,
+  "profile_blocks": 3,
+  "memory_runs": 3,
+  "memory_interval_seconds": 0.002,
+  "historical_holdout_used": false,
+  "data_folder": "runs/WB_BEHAVIOR_DATA_20261019_01",
+  "hyperparameters": "Frozen FULL balanced parameters applied identically to both treatments; inherited exploratory choices, not an independent validation claim",
+  "roles": "Temporal A fit, G learn weights, C choose exact execution order, V evaluate. Signature diagnostic retains SBFE role partitions.",
+  "novelty_status_before_execution": "Unestablished; representation and exact scheduling are research hypotheses/adaptations, not claimed first inventions."
+}

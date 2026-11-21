@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "pages": 6,
+  "all_pages_rendered": true,
+  "visual_inspection_all_pages": true,
+  "changed_pages_rechecked": [
+    "page_05.png",
+    "page_06.png"
+  ],
+  "sha256": "47fa691c319f827639ff6af95bc0cb981fa7faf6368e6d0879ea271aec85a414"
+}

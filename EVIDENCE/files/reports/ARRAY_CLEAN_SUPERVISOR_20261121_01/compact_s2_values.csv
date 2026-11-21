@@ -1,0 +1,11 @@
+method,Temporal,Packet-private,Shared-signature
+WV,97.9,93.77,97.3
+RF,97.86,97.0,97.2
+LR,97.84,92.07,97.06
+Uniform,97.9,93.76,97.3
+SVM_default,97.88,94.88,68.46
+SVM_G_selected,97.92,65.75,68.46
+KNN_default,97.25,93.01,75.35
+KNN_G_selected,97.31,91.56,75.82
+GNB_default,82.61,43.88,39.83
+GNB_G_selected,95.05,43.92,49.53

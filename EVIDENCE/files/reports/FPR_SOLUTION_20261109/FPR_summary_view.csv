@@ -1,0 +1,13 @@
+cohort,policy,n,FP,FPR_percent
+Lama 760,weighted_reference,760,321,42.23684210526316
+Blok 1,weighted_reference,769,401,52.145643693107935
+Blok 2,weighted_reference,699,407,58.22603719599428
+Blok 3,weighted_reference,697,396,56.81492109038737
+Lama 760,random_forest,760,0,0.0
+Blok 1,random_forest,769,0,0.0
+Blok 2,random_forest,699,0,0.0
+Blok 3,random_forest,697,1,0.1434720229555236
+Lama 760,sql_guard_rf_rescue,760,0,0.0
+Blok 1,sql_guard_rf_rescue,769,0,0.0
+Blok 2,sql_guard_rf_rescue,699,0,0.0
+Blok 3,sql_guard_rf_rescue,697,1,0.1434720229555236

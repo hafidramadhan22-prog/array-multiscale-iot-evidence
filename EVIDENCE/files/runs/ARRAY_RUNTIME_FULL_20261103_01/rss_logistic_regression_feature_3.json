@@ -1,0 +1,9 @@
+{
+  "policy": "logistic_regression",
+  "workload": "feature",
+  "repeat": 3,
+  "baseline_mib": 186.84375,
+  "peak_mib": 188.13671875,
+  "delta_mib": 1.29296875,
+  "samples": 4
+}

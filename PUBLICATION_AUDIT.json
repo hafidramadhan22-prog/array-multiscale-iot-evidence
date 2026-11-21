@@ -1,0 +1,8 @@
+{
+  "source_archive_sha256": "67cf76a1a5dfdf72f35e486d0783087f9ce3533da49ebd4b3ce26cfa3619cb1c",
+  "files": 868,
+  "bytes": 108897887,
+  "credential_pattern_matches": [],
+  "excluded": "Raw PCAPs, packet arrays, full third-party datasets, serialized estimators, private correspondence and unrelated working history. Original local archive unchanged.",
+  "scope": "Saved-result audit, not full end-to-end raw-data reconstruction."
+}

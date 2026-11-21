@@ -1,0 +1,9 @@
+{
+  "policy": "compact_certified",
+  "workload": "feature",
+  "repeat": 4,
+  "baseline_mib": 292.4765625,
+  "peak_mib": 295.11328125,
+  "delta_mib": 2.63671875,
+  "samples": 6
+}

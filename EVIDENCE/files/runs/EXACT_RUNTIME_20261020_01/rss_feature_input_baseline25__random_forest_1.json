@@ -1,0 +1,13 @@
+{
+  "policy": "baseline25__random_forest",
+  "workload": "feature_input",
+  "run": 1,
+  "baseline_rss_mib": 187.59375,
+  "peak_rss_mib": 187.828125,
+  "delta_peak_inference_mib": 0.234375,
+  "samples": 5,
+  "interval_seconds": 0.002,
+  "labels_match": true,
+  "cold_first_prediction": true,
+  "ring_included": false
+}

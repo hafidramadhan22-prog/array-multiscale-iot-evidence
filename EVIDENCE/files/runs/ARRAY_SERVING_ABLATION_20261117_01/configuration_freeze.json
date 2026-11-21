@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-17",
+  "seed": 20261117,
+  "smoke": false,
+  "repeats": 30,
+  "warmups": 5,
+  "cold_rss_repeats": 5,
+  "interval_seconds": 0.002,
+  "bootstrap": 10000,
+  "policies": [
+    "WV_native_full",
+    "WV_native_certified",
+    "WV_compact_full",
+    "WV_compact_certified",
+    "RF_native",
+    "RF_compact",
+    "LR_native",
+    "LR_compact"
+  ],
+  "batches": [
+    1,
+    1000
+  ],
+  "source_manifest_sha256": "b935207d33fb17b3fb74dbb977683f9c1e3444997c07b7fea955ff8aa7ce03f2",
+  "source_sha256": "5ca2b8de2ca8f449d6bc0e2a929e8e32c3597c272440a2d6bb4938bfac3842fe",
+  "source_files": [
+    {
+      "path": "scripts/profile_array_serving_20261117.py",
+      "sha256": "5ca2b8de2ca8f449d6bc0e2a929e8e32c3597c272440a2d6bb4938bfac3842fe"
+    },
+    {
+      "path": "src/exact_runtime.py",
+      "sha256": "90c665d28953dd158759720a9d965e0fddb6a5d13dd3312e35b439a3b18005c8"
+    },
+    {
+      "path": "src/wb_scheduler.py",
+      "sha256": "0f40ec59638b92465283a0401acaba571bab79aebe572c6ebc878b9d6a7b4209"
+    },
+    {
+      "path": "src/wb_research.py",
+      "sha256": "3c0575f1afba9cefcaf57becfcaa7ac0cc3972b1f28bb1549fa656f6663deb7c"
+    },
+    {
+      "path": "scripts/profile_exact_runtime.py",
+      "sha256": "85501d588fb04116a3bf4b9a6d0b00482b328771147b3a5e0c4ef690986d824f"
+    },
+    {
+      "path": "src/multiscale_context.py",
+      "sha256": "5259bc739c52472d83151b2232ef9cb9cbb1e1fe307bf025ef3c35e78a48ac83"
+    },
+    {
+      "path": "scripts/replay_multiscale_repair.py",
+      "sha256": "99e690f228b8ed053099eb5821731d7a0eb9e32de0ad016afd35e69fdcd426b6"
+    },
+    {
+      "path": "docs/ARRAY_SERVING_ENHANCEMENT_PROTOCOL_20261117.md",
+      "sha256": "43a450b9d8f7443ac948e7f9b904f6fcd1cbdb69b4f0b27c3562e21095fa9199"
+    }
+  ],
+  "threads": 1,
+  "new_classifier_fits": 0,
+  "new_data": false,
+  "stage": "post-observation serving comparison; not independent predictive validation"
+}

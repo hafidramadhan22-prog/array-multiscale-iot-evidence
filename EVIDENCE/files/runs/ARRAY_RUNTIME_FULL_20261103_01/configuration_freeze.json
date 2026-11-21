@@ -1,0 +1,10 @@
+{
+  "seed": 20261103,
+  "repeats": 30,
+  "warmups": 5,
+  "bootstrap": 10000,
+  "cold_rss_repeats": 5,
+  "interval_seconds": 0.002,
+  "source_manifest_sha256": "b935207d33fb17b3fb74dbb977683f9c1e3444997c07b7fea955ff8aa7ce03f2",
+  "same_machine_only": true
+}

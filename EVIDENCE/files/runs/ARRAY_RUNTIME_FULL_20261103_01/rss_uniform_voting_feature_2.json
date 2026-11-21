@@ -1,0 +1,9 @@
+{
+  "policy": "uniform_voting",
+  "workload": "feature",
+  "repeat": 2,
+  "baseline_mib": 294.36328125,
+  "peak_mib": 296.359375,
+  "delta_mib": 1.99609375,
+  "samples": 8
+}

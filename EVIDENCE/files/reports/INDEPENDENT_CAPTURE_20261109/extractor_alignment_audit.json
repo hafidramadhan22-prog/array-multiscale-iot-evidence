@@ -1,0 +1,770 @@
+{
+  "status": "PASS",
+  "source": "Flame_Sensor",
+  "source_sha256": "57bf51ae5cd8848c688affee6b71f4b10a6bae4fa297aa18e57cf3ba85cdc2db",
+  "targets": 94,
+  "numeric_features": 70,
+  "categorical_features": 15,
+  "differences": [],
+  "external_model_scoring_performed": false,
+  "metadata": {
+    "command": [
+      "C:\\Program Files\\Wireshark\\tshark.exe",
+      "-n",
+      "-r",
+      "C:\\TA HAFID\\Edge-IIoTset dataset\\Normal traffic\\Flame_Sensor\\Flame_Sensor.pcap",
+      "-c",
+      "100000",
+      "-Y",
+      "frame.number in {7000,8000,9000,10000,11000,12000,13000,14000,15000,16000,17000,18000,19000,20000,21000,22000,23000,24000,25000,26000,27000,28000,29000,30000,31000,32000,33000,34000,35000,36000,37000,38000,39000,40000,41000,42000,43000,44000,45000,46000,47000,48000,49000,50000,51000,52000,53000,54000,55000,56000,57000,58000,59000,60000,61000,62000,63000,64000,65000,66000,67000,68000,69000,70000,71000,72000,73000,74000,75000,76000,77000,78000,79000,80000,81000,82000,83000,84000,85000,86000,87000,88000,89000,90000,91000,92000,93000,94000,95000,96000,97000,98000,99000,100000}",
+      "-T",
+      "fields",
+      "-E",
+      "header=y",
+      "-E",
+      "separator=,",
+      "-E",
+      "quote=d",
+      "-E",
+      "occurrence=f",
+      "-e",
+      "http.response",
+      "-e",
+      "tcp.connection.fin",
+      "-e",
+      "tcp.connection.rst",
+      "-e",
+      "tcp.connection.syn",
+      "-e",
+      "tcp.connection.synack",
+      "-e",
+      "tcp.flags.ack",
+      "-e",
+      "tcp.len",
+      "-e",
+      "udp.time_delta",
+      "-e",
+      "mqtt.len",
+      "-e",
+      "arp.opcode",
+      "-e",
+      "arp.hw.size",
+      "-e",
+      "http.request.method",
+      "-e",
+      "http.request.version",
+      "-e",
+      "tcp.flags",
+      "-e",
+      "dns.qry.qu",
+      "-e",
+      "dns.retransmission",
+      "-e",
+      "mqtt.conflag.cleansess",
+      "-e",
+      "mqtt.conflags",
+      "-e",
+      "mqtt.hdrflags",
+      "-e",
+      "mqtt.msgtype",
+      "-e",
+      "mqtt.proto_len",
+      "-e",
+      "mqtt.protoname",
+      "-e",
+      "mqtt.topic_len",
+      "-e",
+      "mqtt.ver",
+      "-e",
+      "dns.qry.name.len",
+      "-e",
+      "frame.number",
+      "-e",
+      "frame.time_epoch",
+      "-e",
+      "ip.src",
+      "-e",
+      "ip.dst",
+      "-e",
+      "tcp.checksum",
+      "-e",
+      "tcp.srcport",
+      "-e",
+      "tcp.dstport",
+      "-e",
+      "udp.port",
+      "-e",
+      "http.request.uri",
+      "-e",
+      "eth.src",
+      "-e",
+      "eth.dst"
+    ],
+    "stderr": "tshark: Can't open your preferences file \"C:\\Users\\PREDATOR NEO 16\\AppData\\Roaming\\Wireshark\\preferences\": Permission denied.\n"
+  },
+  "history": {
+    "capacity_evictions": 0,
+    "backward_steps": 0,
+    "targets": [
+      {
+        "packet_index": 6999,
+        "epoch_ns": 1641357735523827000,
+        "logical_elapsed_seconds": 10.797571,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 7999,
+        "epoch_ns": 1641357737307199000,
+        "logical_elapsed_seconds": 12.580943,
+        "wire_bytes": 79,
+        "protocol": 6
+      },
+      {
+        "packet_index": 8999,
+        "epoch_ns": 1641357738484914000,
+        "logical_elapsed_seconds": 13.758658,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 9999,
+        "epoch_ns": 1641357739748596000,
+        "logical_elapsed_seconds": 15.02234,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 10999,
+        "epoch_ns": 1641357741014685000,
+        "logical_elapsed_seconds": 16.288429,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 11999,
+        "epoch_ns": 1641357742235588000,
+        "logical_elapsed_seconds": 17.509332,
+        "wire_bytes": 66,
+        "protocol": 6
+      },
+      {
+        "packet_index": 12999,
+        "epoch_ns": 1641357743508647000,
+        "logical_elapsed_seconds": 18.782391,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 13999,
+        "epoch_ns": 1641357744463923000,
+        "logical_elapsed_seconds": 19.737667,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 14999,
+        "epoch_ns": 1641357745503957000,
+        "logical_elapsed_seconds": 20.777701,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 15999,
+        "epoch_ns": 1641357746634027000,
+        "logical_elapsed_seconds": 21.907771,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 16999,
+        "epoch_ns": 1641357748426473000,
+        "logical_elapsed_seconds": 23.700217,
+        "wire_bytes": 66,
+        "protocol": 6
+      },
+      {
+        "packet_index": 17999,
+        "epoch_ns": 1641357749735479000,
+        "logical_elapsed_seconds": 25.009223,
+        "wire_bytes": 79,
+        "protocol": 6
+      },
+      {
+        "packet_index": 18999,
+        "epoch_ns": 1641357751019440000,
+        "logical_elapsed_seconds": 26.293184,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 19999,
+        "epoch_ns": 1641357752299702000,
+        "logical_elapsed_seconds": 27.573446,
+        "wire_bytes": 58,
+        "protocol": 6
+      },
+      {
+        "packet_index": 20999,
+        "epoch_ns": 1641357753648013000,
+        "logical_elapsed_seconds": 28.921757,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 21999,
+        "epoch_ns": 1641357754751368000,
+        "logical_elapsed_seconds": 30.025112,
+        "wire_bytes": 79,
+        "protocol": 6
+      },
+      {
+        "packet_index": 22999,
+        "epoch_ns": 1641357756077713000,
+        "logical_elapsed_seconds": 31.351457,
+        "wire_bytes": 66,
+        "protocol": 6
+      },
+      {
+        "packet_index": 23999,
+        "epoch_ns": 1641357757383691000,
+        "logical_elapsed_seconds": 32.657435,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 24999,
+        "epoch_ns": 1641357758618634000,
+        "logical_elapsed_seconds": 33.892378,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 25999,
+        "epoch_ns": 1641357759856250000,
+        "logical_elapsed_seconds": 35.129994,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 26999,
+        "epoch_ns": 1641357761078596000,
+        "logical_elapsed_seconds": 36.35234,
+        "wire_bytes": 66,
+        "protocol": 6
+      },
+      {
+        "packet_index": 27999,
+        "epoch_ns": 1641357762329404000,
+        "logical_elapsed_seconds": 37.603148,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 28999,
+        "epoch_ns": 1641357763588208000,
+        "logical_elapsed_seconds": 38.861952,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 29999,
+        "epoch_ns": 1641357764594270000,
+        "logical_elapsed_seconds": 39.868014,
+        "wire_bytes": 68,
+        "protocol": 6
+      },
+      {
+        "packet_index": 30999,
+        "epoch_ns": 1641357765983507000,
+        "logical_elapsed_seconds": 41.257251,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 31999,
+        "epoch_ns": 1641357767236170000,
+        "logical_elapsed_seconds": 42.509914,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 32999,
+        "epoch_ns": 1641357768513420000,
+        "logical_elapsed_seconds": 43.787164,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 33999,
+        "epoch_ns": 1641357769802699000,
+        "logical_elapsed_seconds": 45.076443,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 34999,
+        "epoch_ns": 1641357771073212000,
+        "logical_elapsed_seconds": 46.346956,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 35999,
+        "epoch_ns": 1641357772312795000,
+        "logical_elapsed_seconds": 47.586539,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 36999,
+        "epoch_ns": 1641357773557665000,
+        "logical_elapsed_seconds": 48.831409,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 37999,
+        "epoch_ns": 1641357774708058000,
+        "logical_elapsed_seconds": 49.981802,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 38999,
+        "epoch_ns": 1641357775964216000,
+        "logical_elapsed_seconds": 51.23796,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 39999,
+        "epoch_ns": 1641357777307618000,
+        "logical_elapsed_seconds": 52.581362,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 40999,
+        "epoch_ns": 1641357778506184000,
+        "logical_elapsed_seconds": 53.779928,
+        "wire_bytes": 66,
+        "protocol": 6
+      },
+      {
+        "packet_index": 41999,
+        "epoch_ns": 1641357779827485000,
+        "logical_elapsed_seconds": 55.101229,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 42999,
+        "epoch_ns": 1641357781183145000,
+        "logical_elapsed_seconds": 56.456889,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 43999,
+        "epoch_ns": 1641357782373438000,
+        "logical_elapsed_seconds": 57.647182,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 44999,
+        "epoch_ns": 1641357783725213000,
+        "logical_elapsed_seconds": 58.998957,
+        "wire_bytes": 88,
+        "protocol": 6
+      },
+      {
+        "packet_index": 45999,
+        "epoch_ns": 1641357784922947000,
+        "logical_elapsed_seconds": 60.196691,
+        "wire_bytes": 58,
+        "protocol": 6
+      },
+      {
+        "packet_index": 46999,
+        "epoch_ns": 1641357786143808000,
+        "logical_elapsed_seconds": 61.417552,
+        "wire_bytes": 68,
+        "protocol": 6
+      },
+      {
+        "packet_index": 47999,
+        "epoch_ns": 1641357787342246000,
+        "logical_elapsed_seconds": 62.61599,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 48999,
+        "epoch_ns": 1641357788637736000,
+        "logical_elapsed_seconds": 63.91148,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 49999,
+        "epoch_ns": 1641357789961956000,
+        "logical_elapsed_seconds": 65.2357,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 50999,
+        "epoch_ns": 1641357791251916000,
+        "logical_elapsed_seconds": 66.52566,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 51999,
+        "epoch_ns": 1641357792559128000,
+        "logical_elapsed_seconds": 67.832872,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 52999,
+        "epoch_ns": 1641357796469129000,
+        "logical_elapsed_seconds": 71.742873,
+        "wire_bytes": 68,
+        "protocol": 6
+      },
+      {
+        "packet_index": 53999,
+        "epoch_ns": 1641357797887180000,
+        "logical_elapsed_seconds": 73.160924,
+        "wire_bytes": 88,
+        "protocol": 6
+      },
+      {
+        "packet_index": 54999,
+        "epoch_ns": 1641357799171535000,
+        "logical_elapsed_seconds": 74.445279,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 55999,
+        "epoch_ns": 1641357800434106000,
+        "logical_elapsed_seconds": 75.70785,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 56999,
+        "epoch_ns": 1641357801741874000,
+        "logical_elapsed_seconds": 77.015618,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 57999,
+        "epoch_ns": 1641357802996878000,
+        "logical_elapsed_seconds": 78.270622,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 58999,
+        "epoch_ns": 1641357804068037000,
+        "logical_elapsed_seconds": 79.341781,
+        "wire_bytes": 66,
+        "protocol": 6
+      },
+      {
+        "packet_index": 59999,
+        "epoch_ns": 1641357804892532000,
+        "logical_elapsed_seconds": 80.166276,
+        "wire_bytes": 88,
+        "protocol": 6
+      },
+      {
+        "packet_index": 60999,
+        "epoch_ns": 1641357806080055000,
+        "logical_elapsed_seconds": 81.353799,
+        "wire_bytes": 88,
+        "protocol": 6
+      },
+      {
+        "packet_index": 61999,
+        "epoch_ns": 1641357807401454000,
+        "logical_elapsed_seconds": 82.675198,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 62999,
+        "epoch_ns": 1641357808596362000,
+        "logical_elapsed_seconds": 83.870106,
+        "wire_bytes": 88,
+        "protocol": 6
+      },
+      {
+        "packet_index": 63999,
+        "epoch_ns": 1641357809941825000,
+        "logical_elapsed_seconds": 85.215569,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 64999,
+        "epoch_ns": 1641357811276405000,
+        "logical_elapsed_seconds": 86.550149,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 65999,
+        "epoch_ns": 1641357813596643000,
+        "logical_elapsed_seconds": 88.870387,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 66999,
+        "epoch_ns": 1641357816582207000,
+        "logical_elapsed_seconds": 91.855951,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 67999,
+        "epoch_ns": 1641357817933378000,
+        "logical_elapsed_seconds": 93.207122,
+        "wire_bytes": 68,
+        "protocol": 6
+      },
+      {
+        "packet_index": 68999,
+        "epoch_ns": 1641357819436617000,
+        "logical_elapsed_seconds": 94.710361,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 69999,
+        "epoch_ns": 1641357821126341000,
+        "logical_elapsed_seconds": 96.400085,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 70999,
+        "epoch_ns": 1641357822467332000,
+        "logical_elapsed_seconds": 97.741076,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 71999,
+        "epoch_ns": 1641357823821268000,
+        "logical_elapsed_seconds": 99.095012,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 72999,
+        "epoch_ns": 1641357824964748000,
+        "logical_elapsed_seconds": 100.238492,
+        "wire_bytes": 68,
+        "protocol": 6
+      },
+      {
+        "packet_index": 73999,
+        "epoch_ns": 1641357826176692000,
+        "logical_elapsed_seconds": 101.450436,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 74999,
+        "epoch_ns": 1641357827428660000,
+        "logical_elapsed_seconds": 102.702404,
+        "wire_bytes": 56,
+        "protocol": 6
+      },
+      {
+        "packet_index": 75999,
+        "epoch_ns": 1641357828765999000,
+        "logical_elapsed_seconds": 104.039743,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 76999,
+        "epoch_ns": 1641357830076326000,
+        "logical_elapsed_seconds": 105.35007,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 77999,
+        "epoch_ns": 1641357831395658000,
+        "logical_elapsed_seconds": 106.669402,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 78999,
+        "epoch_ns": 1641357832730883000,
+        "logical_elapsed_seconds": 108.004627,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 79999,
+        "epoch_ns": 1641357834008046000,
+        "logical_elapsed_seconds": 109.28179,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 80999,
+        "epoch_ns": 1641357835182615000,
+        "logical_elapsed_seconds": 110.456359,
+        "wire_bytes": 56,
+        "protocol": 6
+      },
+      {
+        "packet_index": 81999,
+        "epoch_ns": 1641357836484415000,
+        "logical_elapsed_seconds": 111.758159,
+        "wire_bytes": 68,
+        "protocol": 6
+      },
+      {
+        "packet_index": 82999,
+        "epoch_ns": 1641357837716283000,
+        "logical_elapsed_seconds": 112.990027,
+        "wire_bytes": 88,
+        "protocol": 6
+      },
+      {
+        "packet_index": 83999,
+        "epoch_ns": 1641357839044079000,
+        "logical_elapsed_seconds": 114.317823,
+        "wire_bytes": 56,
+        "protocol": 6
+      },
+      {
+        "packet_index": 84999,
+        "epoch_ns": 1641357840365312000,
+        "logical_elapsed_seconds": 115.639056,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 85999,
+        "epoch_ns": 1641357841626535000,
+        "logical_elapsed_seconds": 116.900279,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 86999,
+        "epoch_ns": 1641357842935573000,
+        "logical_elapsed_seconds": 118.209317,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 87999,
+        "epoch_ns": 1641357844163213000,
+        "logical_elapsed_seconds": 119.436957,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 88999,
+        "epoch_ns": 1641357845350654000,
+        "logical_elapsed_seconds": 120.624398,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 89999,
+        "epoch_ns": 1641357846542579000,
+        "logical_elapsed_seconds": 121.816323,
+        "wire_bytes": 66,
+        "protocol": 6
+      },
+      {
+        "packet_index": 90999,
+        "epoch_ns": 1641357847805382000,
+        "logical_elapsed_seconds": 123.079126,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 91999,
+        "epoch_ns": 1641357849160064000,
+        "logical_elapsed_seconds": 124.433808,
+        "wire_bytes": 56,
+        "protocol": 6
+      },
+      {
+        "packet_index": 92999,
+        "epoch_ns": 1641357850464935000,
+        "logical_elapsed_seconds": 125.738679,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 93999,
+        "epoch_ns": 1641357851749887000,
+        "logical_elapsed_seconds": 127.023631,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 94999,
+        "epoch_ns": 1641357853839880000,
+        "logical_elapsed_seconds": 129.113624,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 95999,
+        "epoch_ns": 1641357857055302000,
+        "logical_elapsed_seconds": 132.329046,
+        "wire_bytes": 79,
+        "protocol": 6
+      },
+      {
+        "packet_index": 96999,
+        "epoch_ns": 1641357858364606000,
+        "logical_elapsed_seconds": 133.63835,
+        "wire_bytes": 54,
+        "protocol": 6
+      },
+      {
+        "packet_index": 97999,
+        "epoch_ns": 1641357859628481000,
+        "logical_elapsed_seconds": 134.902225,
+        "wire_bytes": 58,
+        "protocol": 6
+      },
+      {
+        "packet_index": 98999,
+        "epoch_ns": 1641357860890284000,
+        "logical_elapsed_seconds": 136.164028,
+        "wire_bytes": 66,
+        "protocol": 6
+      },
+      {
+        "packet_index": 99999,
+        "epoch_ns": 1641357862154637000,
+        "logical_elapsed_seconds": 137.428381,
+        "wire_bytes": 54,
+        "protocol": 6
+      }
+    ],
+    "query_before_push": true
+  }
+}

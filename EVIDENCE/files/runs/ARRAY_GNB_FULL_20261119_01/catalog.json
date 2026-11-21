@@ -1,0 +1,312 @@
+[
+  {
+    "path": "array_gnb_20261119.py",
+    "sha256": "5cc847e50a8907be63409b2659f7417e8bf6261097df478841adfc9b5f7f32e9",
+    "bytes": 179
+  },
+  {
+    "path": "ARRAY_GNB_PROTOCOL_20261119.md",
+    "sha256": "08872041c5fa035f58fc8080bc2fe6cf272609812c95d0d063f98f7eef4b3f35",
+    "bytes": 1689
+  },
+  {
+    "path": "configuration_freeze.json",
+    "sha256": "24b6fdf9ac404be6754a618aa00ecdae18c0f021dc3eb5b6d3cbfc44ead77c35",
+    "bytes": 321
+  },
+  {
+    "path": "private_fold1/evaluation.npz",
+    "sha256": "967f85f8a396bcab5240217a006f77440c558ae474c7ac6dc744c25425e1af59",
+    "bytes": 100649
+  },
+  {
+    "path": "private_fold1/G_candidates.csv",
+    "sha256": "d208d4ade8ffd8136c05411367d44cafe559cbd413a5278356e769c500f71a6b",
+    "bytes": 4409
+  },
+  {
+    "path": "private_fold1/G_predictions.npz",
+    "sha256": "7c950a5ff5aa4b2618ff3336451b6ddf8c4cc28390ca58c46948e41eea13d35f",
+    "bytes": 23695
+  },
+  {
+    "path": "private_fold1/GNB_default.joblib",
+    "sha256": "923eb414acc014afa348ef41ba0c5cced2ebeac0d59747e161c925a5707fcc9c",
+    "bytes": 10937
+  },
+  {
+    "path": "private_fold1/GNB_G_selected.joblib",
+    "sha256": "923eb414acc014afa348ef41ba0c5cced2ebeac0d59747e161c925a5707fcc9c",
+    "bytes": 10937
+  },
+  {
+    "path": "private_fold1/selection_before_V.json",
+    "sha256": "5c9d03b6916ca2d8776245f843b3ad803b790da1e4d1bba07939456050f36a20",
+    "bytes": 99
+  },
+  {
+    "path": "private_fold1/split.npz",
+    "sha256": "feb4c68cb256e1773589bc27408f05672f75adde2b8e8823108c43fb09801ce2",
+    "bytes": 214785
+  },
+  {
+    "path": "private_fold1/training_plan.json",
+    "sha256": "84a87081a14745f38ef0ae61fbcf9478b13b4e8f6a83dcf2eda4a8efc8210831",
+    "bytes": 757128
+  },
+  {
+    "path": "private_fold2/evaluation.npz",
+    "sha256": "8d67adde8323b4635b993c7d6e11f1b681d9facc2efd1db3cfb3df8b38524dab",
+    "bytes": 107973
+  },
+  {
+    "path": "private_fold2/G_candidates.csv",
+    "sha256": "b785b94bf87c6dfb37ae06bb297aa1e1cfd422e87fcd46905d8b34850a1b4668",
+    "bytes": 4533
+  },
+  {
+    "path": "private_fold2/G_predictions.npz",
+    "sha256": "13d0da562c4727e02aed7d8bee58ad06366b6bc641bdb61c5918c4abea925c34",
+    "bytes": 25045
+  },
+  {
+    "path": "private_fold2/GNB_default.joblib",
+    "sha256": "8f46d932651df1daa7c218df7464411725e31cd24be1908048e3796e2348df46",
+    "bytes": 10727
+  },
+  {
+    "path": "private_fold2/GNB_G_selected.joblib",
+    "sha256": "43d7697628165a32a49e65d271338e6bbb6c3e5ff6ed3434be7a9ba088fc9780",
+    "bytes": 10727
+  },
+  {
+    "path": "private_fold2/selection_before_V.json",
+    "sha256": "12c319a17bdd485b42c847e68748ad0c9a67dd03c01dea44433f7350fae18d44",
+    "bytes": 99
+  },
+  {
+    "path": "private_fold2/split.npz",
+    "sha256": "ad2448ac20bb651d46031e0cd3172c0e1edd0efdc704db7405d682e47248bb3a",
+    "bytes": 214508
+  },
+  {
+    "path": "private_fold2/training_plan.json",
+    "sha256": "1e70e134e1aeb2f06d1b1bbf227c61e812f6de7499243b3a562d0ba5b9cc5be3",
+    "bytes": 757130
+  },
+  {
+    "path": "run_array_gnb_20261119.py",
+    "sha256": "d29c7aaee73b866943d7118841d8ff3ae13229417b54d97837334d447d9e087c",
+    "bytes": 5255
+  },
+  {
+    "path": "signature_fold1/evaluation.npz",
+    "sha256": "677817b98d3e945987069a01f68bc5b1a33db759e8e3a5945257b0b077ac5013",
+    "bytes": 93060
+  },
+  {
+    "path": "signature_fold1/G_candidates.csv",
+    "sha256": "39baec71626748676f2b472ad7c09ecd5e0a38ee96545dc9b8e8a621223d5d2c",
+    "bytes": 4383
+  },
+  {
+    "path": "signature_fold1/G_predictions.npz",
+    "sha256": "f74037a17ac1af8905a495c068cbdd8d78349c98d7dab0230e2a540990e9200c",
+    "bytes": 21823
+  },
+  {
+    "path": "signature_fold1/GNB_default.joblib",
+    "sha256": "f61809a6704d71dc178374d8b15561a17e134e4bc7f6a3b2e5c054c27daf605a",
+    "bytes": 11080
+  },
+  {
+    "path": "signature_fold1/GNB_G_selected.joblib",
+    "sha256": "3b3ef4f944fe9e67bab653f43dfb1511ae4ca1246fddfe5f1559a3d7aaac7c7c",
+    "bytes": 11053
+  },
+  {
+    "path": "signature_fold1/selection_before_V.json",
+    "sha256": "3cb8e1f44ecc24c2ca8aed7486f95bce9b91b773594bee43d8be00156991fa90",
+    "bytes": 98
+  },
+  {
+    "path": "signature_fold1/split.npz",
+    "sha256": "feb4c68cb256e1773589bc27408f05672f75adde2b8e8823108c43fb09801ce2",
+    "bytes": 214785
+  },
+  {
+    "path": "signature_fold1/training_plan.json",
+    "sha256": "84a87081a14745f38ef0ae61fbcf9478b13b4e8f6a83dcf2eda4a8efc8210831",
+    "bytes": 757128
+  },
+  {
+    "path": "signature_fold2/evaluation.npz",
+    "sha256": "af00925de12d10dac3113344be941f82c55ecd8fb87db7bebabde26320682dfc",
+    "bytes": 106334
+  },
+  {
+    "path": "signature_fold2/G_candidates.csv",
+    "sha256": "abfeb65b7e10dad9d8eb6cc035f0e82517f438ba63abd53661948a9ae076b2e0",
+    "bytes": 4026
+  },
+  {
+    "path": "signature_fold2/G_predictions.npz",
+    "sha256": "15eddbc1dab38ddf5742390d986adb190ca9c4bca44ed8cce8023ebcd0128059",
+    "bytes": 18498
+  },
+  {
+    "path": "signature_fold2/GNB_default.joblib",
+    "sha256": "b9d7298c27d721a12e1093425f48fe2bdc80946f5c2e612717d5c259eb6b0854",
+    "bytes": 10722
+  },
+  {
+    "path": "signature_fold2/GNB_G_selected.joblib",
+    "sha256": "249425638d11fb112ae0035ab725f95d58782432f2ed50f5fb4ac37f9cdccded",
+    "bytes": 10720
+  },
+  {
+    "path": "signature_fold2/selection_before_V.json",
+    "sha256": "de0cfddf1ee832c7443373ea9223058c9f0fb4be9492fd1b2a49c5bbb0695e21",
+    "bytes": 97
+  },
+  {
+    "path": "signature_fold2/split.npz",
+    "sha256": "ad2448ac20bb651d46031e0cd3172c0e1edd0efdc704db7405d682e47248bb3a",
+    "bytes": 214508
+  },
+  {
+    "path": "signature_fold2/training_plan.json",
+    "sha256": "1e70e134e1aeb2f06d1b1bbf227c61e812f6de7499243b3a562d0ba5b9cc5be3",
+    "bytes": 757130
+  },
+  {
+    "path": "stage_metrics.csv",
+    "sha256": "ea26fda60c064d889b7a2d560b975953f82a0fae00909ec79d011b16775f5388",
+    "bytes": 12767
+  },
+  {
+    "path": "summary.csv",
+    "sha256": "6c153ffc55e2cc46e9718324965197052b7bb2c95087d2167dc2842749e6e439",
+    "bytes": 5332
+  },
+  {
+    "path": "temporal_seed42/evaluation.npz",
+    "sha256": "9446464709c44da05d977a45066e681bc9f7c2d2a3de66252cb841bcfb4ac934",
+    "bytes": 38793
+  },
+  {
+    "path": "temporal_seed42/G_candidates.csv",
+    "sha256": "2904e54fc9d32c31a38d08f47ebcc31212542b7b3feed7a5741a0f5fd0bcad75",
+    "bytes": 4304
+  },
+  {
+    "path": "temporal_seed42/G_predictions.npz",
+    "sha256": "cb05fbc750689f34c150cbe75a83e479480525c0a4202f39ec912879ce1dd8f3",
+    "bytes": 30057
+  },
+  {
+    "path": "temporal_seed42/GNB_default.joblib",
+    "sha256": "53678e6f9395d8be1508aeabd774397402f8a25a3a0e9abd714577ce09f2bca5",
+    "bytes": 11454
+  },
+  {
+    "path": "temporal_seed42/GNB_G_selected.joblib",
+    "sha256": "2d34ce78400f24caae66eaf93f9038f560432a50496031995a0093b73e2a0cc3",
+    "bytes": 11457
+  },
+  {
+    "path": "temporal_seed42/selection_before_V.json",
+    "sha256": "e8958db28a3b01a8c1435845a6232a83555c78faa13b9c3b38368365de39e092",
+    "bytes": 99
+  },
+  {
+    "path": "temporal_seed42/split.npz",
+    "sha256": "17b3e9210e183fd5cfa31e71204d2a9a2616ae3f2616018d412176c3d18edd33",
+    "bytes": 198875
+  },
+  {
+    "path": "temporal_seed42/training_plan.json",
+    "sha256": "cb0b5a489cd73efe64d9c549484dd29ba72e98fc6e07a30000b4c22ca2bc3dbe",
+    "bytes": 757133
+  },
+  {
+    "path": "temporal_seed43/evaluation.npz",
+    "sha256": "09b4d87487ed4e72640a228cbd8dd9d283f1784d62d82610957d65b1cd890189",
+    "bytes": 38727
+  },
+  {
+    "path": "temporal_seed43/G_candidates.csv",
+    "sha256": "223a519362a00d17adff89351a29b9af467c052c457f6289454142db5007d8e4",
+    "bytes": 4302
+  },
+  {
+    "path": "temporal_seed43/G_predictions.npz",
+    "sha256": "3f69e5ce985d40fa5782bcbcaabed4746d19eb88872cbccdc9e2a3d7af8aabe3",
+    "bytes": 30031
+  },
+  {
+    "path": "temporal_seed43/GNB_default.joblib",
+    "sha256": "e85910118081b9f53589b2c8b199acf54cbbcccd0eec01a005a5b40800a12144",
+    "bytes": 11471
+  },
+  {
+    "path": "temporal_seed43/GNB_G_selected.joblib",
+    "sha256": "157c6e192a116db55e24eb7801322153927058aa642f2e994e1ccfb21e9d40e8",
+    "bytes": 11468
+  },
+  {
+    "path": "temporal_seed43/selection_before_V.json",
+    "sha256": "50eb4875bb7303031fb69d903c8058de8a4fb34ac9c1da907119abe25998dbd0",
+    "bytes": 99
+  },
+  {
+    "path": "temporal_seed43/split.npz",
+    "sha256": "17b3e9210e183fd5cfa31e71204d2a9a2616ae3f2616018d412176c3d18edd33",
+    "bytes": 198875
+  },
+  {
+    "path": "temporal_seed43/training_plan.json",
+    "sha256": "cb0b5a489cd73efe64d9c549484dd29ba72e98fc6e07a30000b4c22ca2bc3dbe",
+    "bytes": 757133
+  },
+  {
+    "path": "temporal_seed44/evaluation.npz",
+    "sha256": "8de3e23ddf24d9c51ac081481fe3766befab44832746dd3f285f092181bae8a7",
+    "bytes": 38789
+  },
+  {
+    "path": "temporal_seed44/G_candidates.csv",
+    "sha256": "ed486e9d855e1cc09ae7bc27e6c09f76fa89a6bbe9ff95ca6ec62a5d3d8ffcf6",
+    "bytes": 4301
+  },
+  {
+    "path": "temporal_seed44/G_predictions.npz",
+    "sha256": "bd184a4f7408249641dca6d396b14321027408b6d258eb49111a3b52cad91009",
+    "bytes": 30104
+  },
+  {
+    "path": "temporal_seed44/GNB_default.joblib",
+    "sha256": "8cffd2e017c57a3873db0051a524210552ee872524557369805a46198d1ccc77",
+    "bytes": 11490
+  },
+  {
+    "path": "temporal_seed44/GNB_G_selected.joblib",
+    "sha256": "601f4374f228cb12d543e8afc2f71e4d0762fa1f4cb0b1369d9037c992e1c2d7",
+    "bytes": 11489
+  },
+  {
+    "path": "temporal_seed44/selection_before_V.json",
+    "sha256": "3445c156876cbb7f87f1c4c8713e85192d96927efce547f1756a458458d342e0",
+    "bytes": 99
+  },
+  {
+    "path": "temporal_seed44/split.npz",
+    "sha256": "17b3e9210e183fd5cfa31e71204d2a9a2616ae3f2616018d412176c3d18edd33",
+    "bytes": 198875
+  },
+  {
+    "path": "temporal_seed44/training_plan.json",
+    "sha256": "cb0b5a489cd73efe64d9c549484dd29ba72e98fc6e07a30000b4c22ca2bc3dbe",
+    "bytes": 757133
+  }
+]

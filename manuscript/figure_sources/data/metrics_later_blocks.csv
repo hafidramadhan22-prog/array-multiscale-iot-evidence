@@ -1,0 +1,10 @@
+block,policy,planned,scored,coverage_percent,FPR_worst_case_percent,selection_scope,n,normal_support,attack_support,false_alarms,attack_to_Normal,errors,FPR_percent,attack_recall_percent,macro_F1_percent,balanced_accuracy_percent,DDoS_F2_percent,support_Normal,recall_Normal,support_DDoS_TCP,recall_DDoS_TCP,support_Port_Scanning,recall_Port_Scanning,support_SQL_injection,recall_SQL_injection,support_Ransomware,recall_Ransomware
+1,weighted_reference,770,769,99.87012987012987,52.20779220779221,retrospective for targeted rule,769,769,0,401,0,401,52.145643693107935,,,,,769,47.854356306892065,0,,0,,0,,0,
+1,random_forest,770,769,99.87012987012987,0.12987012987012986,retrospective for targeted rule,769,769,0,0,0,0,0.0,,,,,769,100.0,0,,0,,0,,0,
+1,sql_guard_rf_rescue,770,769,99.87012987012987,0.12987012987012986,retrospective for targeted rule,769,769,0,0,0,0,0.0,,,,,769,100.0,0,,0,,0,,0,
+2,weighted_reference,700,699,99.85714285714286,58.285714285714285,retrospective for targeted rule,699,699,0,407,0,407,58.22603719599428,,,,,699,41.77396280400572,0,,0,,0,,0,
+2,random_forest,700,699,99.85714285714286,0.14285714285714285,retrospective for targeted rule,699,699,0,0,0,0,0.0,,,,,699,100.0,0,,0,,0,,0,
+2,sql_guard_rf_rescue,700,699,99.85714285714286,0.14285714285714285,retrospective for targeted rule,699,699,0,0,0,0,0.0,,,,,699,100.0,0,,0,,0,,0,
+3,weighted_reference,700,697,99.57142857142857,57.0,before this block,697,697,0,396,0,396,56.81492109038737,,,,,697,43.18507890961262,0,,0,,0,,0,
+3,random_forest,700,697,99.57142857142857,0.5714285714285714,before this block,697,697,0,1,0,1,0.14347202295552366,,,,,697,99.85652797704448,0,,0,,0,,0,
+3,sql_guard_rf_rescue,700,697,99.57142857142857,0.5714285714285714,before this block,697,697,0,1,0,1,0.14347202295552366,,,,,697,99.85652797704448,0,,0,,0,,0,

@@ -1,0 +1,7 @@
+cohort,policy,RSS_delta_mean_MiB,RSS_delta_SD_MiB
+V1000,random_forest,1.921875,0.8021520279701114
+V1000,sql_guard_rf_rescue,1.71484375,0.3724891527887926
+V1000,weighted_reference,2.0625,0.8726163822585142
+later,random_forest,1.60546875,0.2436949056325347
+later,sql_guard_rf_rescue,1.72265625,0.2230670552385817
+later,weighted_reference,1.6692708333333333,0.71775505751694

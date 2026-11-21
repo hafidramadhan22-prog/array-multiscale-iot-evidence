@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-18",
+  "training": "runs/ARRAY_SVM_FULL_20261118_01",
+  "training_catalog_sha256": "dc7ed471d458d2e6324ea982e344d4414cfa8a1891df6cd37551f1ea5c2ace74",
+  "new_SVC_fits": 0,
+  "selected_candidates_unchanged": true,
+  "repair_only": "Legacy cache weights read from recorded selection file",
+  "frozen_unix": 1795013245.1307385
+}

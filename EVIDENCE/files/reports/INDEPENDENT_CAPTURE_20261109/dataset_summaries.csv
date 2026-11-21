@@ -1,0 +1,7 @@
+dataset,policy,Normal_n,Normal_FP,FPR_percent,attack_or_scenario_n,attack_or_scenario_to_Normal,pooled_descriptive_not_IID
+CIC,weighted_reference,2000,603,30.15,3000,728,True
+CIC,random_forest,2000,612,30.6,3000,811,True
+CIC,sql_guard_rf_rescue,2000,638,31.9,3000,778,True
+TON,weighted_reference,2000,487,24.35,2000,1630,True
+TON,random_forest,2000,369,18.45,2000,1658,True
+TON,sql_guard_rf_rescue,2000,377,18.85,2000,1657,True

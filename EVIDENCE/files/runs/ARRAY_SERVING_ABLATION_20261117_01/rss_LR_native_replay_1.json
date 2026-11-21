@@ -1,0 +1,11 @@
+{
+  "policy": "LR_native",
+  "workload": "replay",
+  "repeat": 1,
+  "baseline_mib": 294.69140625,
+  "peak_mib": 297.625,
+  "delta_mib": 2.93359375,
+  "samples": 47,
+  "interval_seconds": 0.002,
+  "labels_match": true
+}

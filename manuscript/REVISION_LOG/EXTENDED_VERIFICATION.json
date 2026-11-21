@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "shapley_reconstructions": [
+    {
+      "path": "EVIDENCE\\files\\runs\\ARRAY_XAI_FULL_20261103_01\\groups\\A32\\coalitions.npz",
+      "targets": 100,
+      "groups": 9,
+      "donors": 32,
+      "max_shapley_reconstruction_error": 2.4424906541753444e-15,
+      "max_additivity_error": 7.771561172376096e-16
+    },
+    {
+      "path": "EVIDENCE\\files\\runs\\ARRAY_XAI_FULL_20261103_01\\groups\\B32\\coalitions.npz",
+      "targets": 100,
+      "groups": 9,
+      "donors": 32,
+      "max_shapley_reconstruction_error": 2.9976021664879227e-15,
+      "max_additivity_error": 1.1102230246251565e-15
+    },
+    {
+      "path": "EVIDENCE\\files\\runs\\XAI_MULTISCALE_FULL_20261020_01\\groups\\A32\\coalitions.npz",
+      "targets": 100,
+      "groups": 7,
+      "donors": 32,
+      "max_shapley_reconstruction_error": 7.771561172376096e-16,
+      "max_additivity_error": 4.440892098500626e-16
+    },
+    {
+      "path": "EVIDENCE\\files\\runs\\XAI_MULTISCALE_FULL_20261020_01\\groups\\B32\\coalitions.npz",
+      "targets": 100,
+      "groups": 7,
+      "donors": 32,
+      "max_shapley_reconstruction_error": 6.661338147750939e-16,
+      "max_additivity_error": 4.440892098500626e-16
+    },
+    {
+      "path": "EVIDENCE\\files\\runs\\XAI_MULTISCALE_FULL_20261020_01\\groups\\query_delay_5ms\\coalitions.npz",
+      "targets": 100,
+      "groups": 7,
+      "donors": 32,
+      "max_shapley_reconstruction_error": 7.771561172376096e-16,
+      "max_additivity_error": 3.3306690738754696e-16
+    }
+  ],
+  "external_prediction_records": 27000,
+  "external_source_policy_groups": 21,
+  "scope": "Reconstructs stored finite games and counts; does not execute classifiers or claim independent validation."
+}

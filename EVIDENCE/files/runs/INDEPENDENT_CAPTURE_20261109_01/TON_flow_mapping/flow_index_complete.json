@@ -1,0 +1,263 @@
+{
+  "status": "AUTHOR_FLOW_INDEX_READY",
+  "records": 234860,
+  "files": 23,
+  "audit": [
+    {
+      "file": "Network_dataset_1.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_2.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_3.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_4.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_5.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_6.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_7.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_8.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_9.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_10.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_11.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_12.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_13.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_14.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_15.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_16.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_17.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_18.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_19.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_20.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_21.csv",
+      "rows": 1000000,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_22.csv",
+      "rows": 1000000,
+      "time_overlaps": 269210,
+      "matched_capture_flow_keys": 234860,
+      "invalid_selected_keys": 0
+    },
+    {
+      "file": "Network_dataset_23.csv",
+      "rows": 339021,
+      "time_overlaps": 0,
+      "matched_capture_flow_keys": 0,
+      "invalid_selected_keys": 0
+    }
+  ],
+  "source_hashes": [
+    {
+      "path": "Network_dataset_1.csv",
+      "sha256": "37ea5238fcd2a7a18574b8e37e0427086c6c34d03a22f690256fc925946c0448"
+    },
+    {
+      "path": "Network_dataset_2.csv",
+      "sha256": "63b70bb96a95499b477b890674b74cc207ccb638b68ea4cc3a3dea9a448772c1"
+    },
+    {
+      "path": "Network_dataset_3.csv",
+      "sha256": "7c8710722f26679c5d795b60019975945a81730934c768083261e66e3b1ee366"
+    },
+    {
+      "path": "Network_dataset_4.csv",
+      "sha256": "a20b2aed18fa474681f3614d35d4a23554272d6424cf6148596015440fb84a91"
+    },
+    {
+      "path": "Network_dataset_5.csv",
+      "sha256": "2cfccfbc2816418b49ab8bf26bcd45f0a4796f634512f7e5dff9def7b601778e"
+    },
+    {
+      "path": "Network_dataset_6.csv",
+      "sha256": "e8aa726d8551ffe59ea816bb1199455c0ebd53f44993a8bbec67ef0843bab229"
+    },
+    {
+      "path": "Network_dataset_7.csv",
+      "sha256": "e5d3303520909b2e90e57199aa2159f8b2bef287b56502f453df2a6407ca39ab"
+    },
+    {
+      "path": "Network_dataset_8.csv",
+      "sha256": "485c53e676016c730018ec51ef885efa584546f6930035c75876b5ba520814be"
+    },
+    {
+      "path": "Network_dataset_9.csv",
+      "sha256": "ed86e18cd03c6b9e1963964e400a04c4b7684356f2ca7d3acca172c942c4dfba"
+    },
+    {
+      "path": "Network_dataset_10.csv",
+      "sha256": "c33290654db525d0f926d4bc010d27f82c615e1ba87cff0c9e87b1cff673d2ad"
+    },
+    {
+      "path": "Network_dataset_11.csv",
+      "sha256": "ffd77ddb051852facd348ec189cf1204a01c0cc840da312c1a440fd0d8c287cf"
+    },
+    {
+      "path": "Network_dataset_12.csv",
+      "sha256": "80fd7d6782d4acdd9c528085d38823e1036b530c551d3b646bc7d0eeb5298512"
+    },
+    {
+      "path": "Network_dataset_13.csv",
+      "sha256": "fc295ee26ebee93e3ab0b0e61ae7ab567fb86c1b67cbcd1d8025944c9e5ad24c"
+    },
+    {
+      "path": "Network_dataset_14.csv",
+      "sha256": "8eb759212e6b36c29478b5e45102814438b48e7929477a5bb8e734390cdc3ab0"
+    },
+    {
+      "path": "Network_dataset_15.csv",
+      "sha256": "f7dded78b7670900cfa9c56e4b3df1c6c6f8ec3d82262c1b184af7f9d87e9f43"
+    },
+    {
+      "path": "Network_dataset_16.csv",
+      "sha256": "415376cfbd6a4592b717b5e756ca5c1548d4491121e01fb0bab79555d8665cae"
+    },
+    {
+      "path": "Network_dataset_17.csv",
+      "sha256": "d933a39088804258386441d83e4dec29ad14b97378b2a216f9919b0f5180143a"
+    },
+    {
+      "path": "Network_dataset_18.csv",
+      "sha256": "32d04d9cfefee40774e979c600ec322e2da6518bb6d8974999075007794c3934"
+    },
+    {
+      "path": "Network_dataset_19.csv",
+      "sha256": "162203394dc41b3020bdc70b99e213f620fd66bacd333dbdf1cd5279adbd5f5d"
+    },
+    {
+      "path": "Network_dataset_20.csv",
+      "sha256": "ca793a8ff6860c2a8b8e8b4bc72271bbbfc011b0b6c523765658949e1513fd0f"
+    },
+    {
+      "path": "Network_dataset_21.csv",
+      "sha256": "63fe9f2c91c48c0f30721eda03864675e1d87103a36cd61c19a3ac68d8ac077b"
+    },
+    {
+      "path": "Network_dataset_22.csv",
+      "sha256": "a1f6009f2be53bc1fba90f044d07ff5a9c5cfe4912b56690d8f02fb75aa335c0"
+    },
+    {
+      "path": "Network_dataset_23.csv",
+      "sha256": "e89c54673961c2b260265cdd3f6c50355369f8a80e63c31999df04b0a757f213"
+    }
+  ],
+  "new_model_scoring": false
+}

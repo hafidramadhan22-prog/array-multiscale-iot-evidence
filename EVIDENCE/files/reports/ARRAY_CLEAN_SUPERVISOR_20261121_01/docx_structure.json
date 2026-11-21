@@ -1,0 +1,1216 @@
+[
+  {
+    "index": 0,
+    "kind": "paragraph",
+    "text": "Multiscale endpoint context and prediction-preserving execution for explainable IoT intrusion detection"
+  },
+  {
+    "index": 1,
+    "kind": "paragraph",
+    "text": "M Hafid Ramadhan, Satria Mandala*"
+  },
+  {
+    "index": 2,
+    "kind": "paragraph",
+    "text": "Humic Engineering (Humic Eng), School of Computing, Telkom University, Jl. Telekomunikasi no. 1, Bandung, 40257, West Java, Indonesia"
+  },
+  {
+    "index": 3,
+    "kind": "paragraph",
+    "text": "*Corresponding author. E-mail addresses: hafid1050677@gmail.com (M Hafid Ramadhan), satriamandala@telkomuniversity.ac.id (Satria Mandala)"
+  },
+  {
+    "index": 4,
+    "kind": "paragraph",
+    "text": "Abstract"
+  },
+  {
+    "index": 5,
+    "kind": "paragraph",
+    "text": "Reliable packet-level intrusion detection at IoT gateways requires informative traffic context, efficient inference, and explanations that remain consistent with the deployed prediction function. We investigate these requirements through an integrated representation, serving, and explanation-auditing framework built around a fixed five-expert weighted-voting (WV) predictor on Edge-IIoTset. A prior-only 1 MiB endpoint buffer and matched 2×2 ablation show that explicitly adding 10 s history features improves within-trace temporal macro-F1 by approximately 1.14–1.15 percentage points, reaching 97.8954%. For execution, shared fitted preprocessing and a sufficient remaining-weight stopping certificate preserve all predicted labels on 52,684 tested development inputs; requested full posteriors agree within 10⁻¹². In a 30-repeat serving benchmark, compact certified execution reduces mean replay time by 60.55% relative to native full execution (2.8265 versus 1.1150 s) and by 37.40% relative to native certified execution. A seven-group finite-game Shapley audit confirms native–compact consistency on tested coalitions, while a separate nine-group audit measures donor-background stability (top-three Jaccard 1.0000) and intervention faithfulness (deletion/insertion gains 0.3203/0.3270). Diagnostic guarded voting reduces post-freeze benign alarms from 396/697 to 1/697 within previously observed sources, but external Normal false-positive rates remain 31.90% on CICIoT2023 and 18.85% on flow-mapped TON_IoT, with only 1.55% correct-type TON_IoT Ransomware recall. Thus, the framework verifies bounded within-trace representation gains and function-preserving execution without claiming cross-dataset deployment readiness."
+  },
+  {
+    "index": 6,
+    "kind": "paragraph",
+    "text": "Keywords: IoT intrusion detection; multiscale endpoint context; weighted voting; prediction-preserving early exit; SHAP auditing; reproducibility"
+  },
+  {
+    "index": 7,
+    "kind": "paragraph",
+    "text": "1. Introduction"
+  },
+  {
+    "index": 8,
+    "kind": "paragraph",
+    "text": "Packet-level intrusion detection at an IoT gateway must infer malicious behavior from observations that contain only part of a network exchange. A packet header provides immediate protocol information but does not necessarily describe an endpoint's recent communication pattern. Windowed summaries can supply this missing context, although maintaining packet histories imposes storage, retrieval, and preprocessing costs. An operationally useful representation must therefore improve detection without requiring an unbounded traffic buffer. Ferrag et al. [1] provide packet and tabular Edge-IIoTset records for studying this trade-off, while D'hooge et al. [2] demonstrate why the choice of network metadata can materially influence IDS evaluation."
+  },
+  {
+    "index": 9,
+    "kind": "paragraph",
+    "text": "A second challenge arises when a trained IDS is optimized for inference. An ensemble serving system may reuse preprocessing or terminate expert evaluation early to reduce latency, but these changes are meaningful only if their effects on the prediction function are explicit. In particular, preserving the predicted class does not automatically imply that the complete class-probability vector is available after early termination. This distinction matters for probability-based evaluation and for post-hoc explanations that depend on model outputs. Consequently, serving efficiency and explanation fidelity should be assessed against the same formally defined reference predictor."
+  },
+  {
+    "index": 10,
+    "kind": "paragraph",
+    "text": "These engineering concerns must also be separated from claims about predictive generalization. Within-trace performance may reflect recurrent packet signatures, shared traffic histories, and adaptive choices made during model development. A faster or more explainable implementation cannot correct a reference classifier that responds poorly to traffic from a different capture environment. The relevant scientific question is therefore not whether one ensemble attains the largest benchmark score, but whether representation, execution, and explanation properties can be isolated, verified, and interpreted within their evidential limits. This distinction motivates the study design developed below."
+  },
+  {
+    "index": 11,
+    "kind": "paragraph",
+    "text": "We study these properties using a frozen five-expert weighted-voting (WV) predictor. Keeping the reference function unchanged allows a direct comparison between native and compact execution rather than introducing the additional uncertainty of retraining or surrogate approximation. The representation experiments examine whether explicit long-window statistics improve detection; the serving experiments test whether the same predictions can be produced with less computation; and the explanation experiments audit output-dependent attributions. We formulate these linked but distinct objectives as three research questions:"
+  },
+  {
+    "index": 12,
+    "kind": "paragraph",
+    "text": "RQ1 — Bounded multiscale representation: Under each fixed endpoint-ordering policy, does adding explicitly emitted 10 s endpoint statistics improve within-trace detection when target splits and modeling budgets are unchanged?"
+  },
+  {
+    "index": 13,
+    "kind": "paragraph",
+    "text": "RQ2 — Prediction-preserving execution: Can shared fitted preprocessing and a sufficient early-exit certificate reduce label-only inference cost while preserving the WV reference decisions and retaining a numerically equivalent full-posterior path?"
+  },
+  {
+    "index": 14,
+    "kind": "paragraph",
+    "text": "RQ3 — Auditable explanation consistency: Within explicitly defined finite donor games, do native and compact WV executions yield consistent explanations, and what do donor-background sensitivity and intervention tests reveal about their interpretation?"
+  },
+  {
+    "index": 15,
+    "kind": "paragraph",
+    "text": "The contribution is a controlled integration of established methods rather than the invention of endpoint statistics, weighted voting, early exit, or SHAP in isolation. Each research question has a corresponding evaluation contract, so that a result from one component is not treated as evidence for another. The three contributions are as follows:"
+  },
+  {
+    "index": 16,
+    "kind": "paragraph",
+    "text": "1. Bounded context isolation. We implement a 1 MiB query-before-insertion endpoint history and a matched C40/C60 × O1/O10 factorial design. History-ownership and shared-density diagnostics further distinguish gains from emitted time scales from performance dependent on the surrounding packet stream."
+  },
+  {
+    "index": 17,
+    "kind": "paragraph",
+    "text": "2. Function-preserving serving. We combine reuse of fitted sparse preprocessing with a sufficient remaining-weight termination condition, explicit numerical safeguards, and canonical full evaluation when probabilities are needed. A crossed serving ablation measures the separate and joint contributions of preprocessing reuse and certified early stopping."
+  },
+  {
+    "index": 18,
+    "kind": "paragraph",
+    "text": "3. Disentangled explanation auditing. We test native–compact consistency in an archived seven-group finite donor game and independently examine background sensitivity and intervention faithfulness in a nine-group game. Reporting these as different estimands prevents implementation agreement from being mistaken for universal explanation stability."
+  },
+  {
+    "index": 19,
+    "kind": "paragraph",
+    "text": "The fixed WV predictor serves as an auditable engineering target rather than a claim of classifier superiority. Its selection was influenced by an earlier exploratory program, whose adaptive history is disclosed in Section 3.2 and discussed against the concerns identified by Cawley and Talbot [3] and Kapoor and Narayanan [4]. The present paper therefore compares WV with GNB in its main baseline table and reports stronger RF, LR, SVM, and KNN controls through the cited supplementary results, without implying that WV dominates every comparator. Beyond RQ1–RQ3, we use false-alarm analyses, a modified guarded-voting (GV) predictor, and frozen external scoring to identify the boundary between verified implementation properties and unresolved cross-dataset robustness. GV changes the function and does not inherit the serving or explanation guarantees established for WV."
+  },
+  {
+    "index": 20,
+    "kind": "paragraph",
+    "text": "2. Related Work"
+  },
+  {
+    "index": 21,
+    "kind": "paragraph",
+    "text": "2.1. Traffic representation and evaluation rigor"
+  },
+  {
+    "index": 22,
+    "kind": "paragraph",
+    "text": "Temporal traffic aggregation is well established in intrusion detection, but its evaluation depends on how traffic histories are constructed. Mirsky et al. [5] developed damped incremental statistics for the Kitsune detector, while Habibi Lashkari et al. [6] used time-based traffic features to characterize network behavior. Ferrag et al. [1] subsequently provided the packet captures and associated observations used here. These studies motivate endpoint context; they do not, by themselves, determine whether the gain from adding a 10 s feature window can be isolated from changes in endpoint ordering. Our matched factorial addresses that narrower contrast by fixing the targets, estimator budget, and ordering policy within each feature-scale comparison."
+  },
+  {
+    "index": 23,
+    "kind": "paragraph",
+    "text": "The interpretation of this contrast also depends on evaluation independence. D'hooge et al. [2] identify metadata-induced contamination risks, whereas Cawley and Talbot [3] and Kapoor and Narayanan [4] explain how repeated selection and leakage can distort performance estimates. In our design, exact packet signatures define a diagnostic group split, and additional history-allocation controls examine the influence of shared traffic context. These controls cannot establish complete domain independence, particularly because a C40/O10 representation still uses 10 s information for ordering. We therefore report within-trace representation results separately from external stress tests based on CICIoT2023 and TON_IoT [7–9]."
+  },
+  {
+    "index": 24,
+    "kind": "paragraph",
+    "text": "2.2. Ensemble serving cost and function preservation"
+  },
+  {
+    "index": 25,
+    "kind": "paragraph",
+    "text": "Reducing the cost of ensemble inference is a known systems problem, but efficient serving can alter the prediction function if approximation is not controlled. Wang et al. [10] studied expert ordering and early termination in QWYC. Our objective differs from optimizing a new operating point on an accuracy–latency curve: we retain the fitted WV mixture and derive a sufficient condition under which the winning class cannot change. This certificate applies to label-only responses, whereas requests for probabilities must evaluate the complete reference mixture. The explicit separation of these two paths is central to the serving contract evaluated in RQ2."
+  },
+  {
+    "index": 26,
+    "kind": "paragraph",
+    "text": "Preprocessing reuse offers a complementary route to reducing runtime. Nakandala et al. [11] demonstrate the relevance of compiled ML serving through Hummingbird, and Wan et al. [12] examine end-to-end optimization of traffic-analysis pipelines in CATO. Guided by this systems perspective, we reuse fitted imputation and sparse one-hot CSR encoding across experts while retaining the LR-specific scaled view. This change avoids repeated feature transformation without refitting or approximating the component estimators. The native/compact × full/certified comparison and optimized RF/LR controls then distinguish encoding savings from early-termination savings within the measured software and hardware configuration."
+  },
+  {
+    "index": 27,
+    "kind": "paragraph",
+    "text": "2.3. Explanation consistency, sensitivity, and faithfulness"
+  },
+  {
+    "index": 28,
+    "kind": "paragraph",
+    "text": "The fidelity of a post-hoc explanation depends on both the model output being explained and the intervention game used to define attribution. Lundberg and Lee [13] provide the Shapley-based foundation for SHAP, while Arreche et al. [14], Hendro et al. [15], Kalakoti et al. [16], and related Array studies [17–20] show the growing interest in evaluating IDS explanations beyond a single importance ranking. Tulla et al. [21] specifically report that model compression can produce attribution-fidelity failures, motivating a direct comparison of coalition outputs across serving implementations. At the same time, intervention studies such as Petsiuk et al. [22] and feature-dependence analyses by Aas et al. [23] and Covert et al. [24] caution that an explanation is conditional on how missing groups are replaced. We accordingly distinguish implementation consistency, donor-background sensitivity, and intervention faithfulness rather than reducing all three properties to a single SHAP stability score (Supplementary Tables S96 and S114)."
+  },
+  {
+    "index": 29,
+    "kind": "paragraph",
+    "text": "3. Study Design"
+  },
+  {
+    "index": 30,
+    "kind": "paragraph",
+    "text": "3.1. Data and evaluation roles"
+  },
+  {
+    "index": 31,
+    "kind": "paragraph",
+    "text": "The study uses a canonical five-class subset of Edge-IIoTset comprising 65,855 observations from Normal Temperature/Humidity traffic, DDoS TCP SYN flood, Port Scanning, SQL injection, and Ransomware. The associated raw material spans five PCAP sources containing 3,735,488 packets. A seed-42 stratified 80:20 split assigns 52,684 targets to development and 13,171 targets to a historical holdout. File hashes, split manifests, and derived-artifact identifiers are documented in Supplementary Tables S1–S2. Because earlier research had already inspected historical holdout outcomes, that partition is not presented as a new independent test in this study."
+  },
+  {
+    "index": 32,
+    "kind": "paragraph",
+    "text": "All new fitting, selection, predictive analyses, and runtime measurements use development target IDs only. Within each source, a temporal protocol allocates packets approximately 60:10:10:20 to A for fitting preprocessors and experts, G for selecting hyperparameters and ensemble weights, C for selecting expert order, and V for evaluation. Buffer states are reset at each stage boundary, and a 1 s purge removes 100 boundary decisions. The remaining target counts are A = 31,676, G = 5,360, C = 5,190, and V = 10,358, totaling 52,584 eligible decisions. Seeds 42, 43, and 44 repeat estimator fitting on these fixed targets to quantify fitting variation without changing the evaluation roles."
+  },
+  {
+    "index": 33,
+    "kind": "paragraph",
+    "text": "The temporal split evaluates prediction within the recorded source streams; it does not establish independence from repeated packet patterns. To test sensitivity to such patterns, a separate two-fold, unshuffled StratifiedGroupKFold diagnostic groups observations by exact equality of 25 packet fields. This protocol retains 52,584 eligible targets and checks signature equality directly, although only two distinct DDoS signatures are present. Moreover, unlabeled history packets may be shared across groups even when evaluated target signatures are disjoint. We consequently add shared-density and packet-private history conditions to probe this dependence rather than treating the group split as proof that all sources of contextual leakage have been excluded."
+  },
+  {
+    "index": 34,
+    "kind": "paragraph",
+    "text": "3.2. Selection provenance and evaluation flow"
+  },
+  {
+    "index": 35,
+    "kind": "paragraph",
+    "text": "The reference predictor has an adaptive selection history that constrains interpretation of its predictive scores. In an earlier exploration, 28/29-field representations and six Original/Balanced ensemble variants were compared, and Balanced WV ranked first under a composite preference criterion. That criterion was revised after historical holdout results had been observed, as recorded in Supplementary Tables S12, S16, S22–S24, and S40. The present study therefore freezes Balanced WV as the mathematical function to be optimized and audited, rather than presenting its selection as independently confirmed classifier superiority. This distinction separates the provenance of the predictor from the subsequent controlled tests of its execution."
+  },
+  {
+    "index": 36,
+    "kind": "paragraph",
+    "text": "Figure 1 translates this separation into an evaluation flow. RQ1 compares matched representations using development roles, RQ2 tests alternative serving paths for the same WV function, and RQ3 examines full-posterior explanations under specified donor games. A parallel diagnostic branch identifies benign false alarms, evaluates the function-changing GV rule, and performs external scoring without further fitting. Thus, any gain associated with GV or the external cohorts is not pooled with the formal preservation claims for WV. The recorded selection and freeze points are indexed in Supplementary Tables S34, S64, S93, and S114."
+  },
+  {
+    "index": 37,
+    "kind": "paragraph",
+    "text": ""
+  },
+  {
+    "index": 38,
+    "kind": "paragraph",
+    "text": "Figure 1. Evaluation flow separating representation (RQ1), execution (RQ2), and explanation (RQ3) from benign false-alarm diagnostics and frozen external scoring. Predictive controls reuse the development targets; function preservation is evaluated separately. Only complete WV probabilities are used for explanation analysis."
+  },
+  {
+    "index": 39,
+    "kind": "paragraph",
+    "text": "4. Methods"
+  },
+  {
+    "index": 40,
+    "kind": "paragraph",
+    "text": "4.1. Bounded multiscale endpoint context"
+  },
+  {
+    "index": 41,
+    "kind": "paragraph",
+    "text": "Endpoint context is constructed from a bounded, prior-only packet history. The state consists of a fixed array of 16,384 records, each containing eight int64 fields, for a 1 MiB record capacity. The logical clock is updated monotonically as max(t_curr, t_prev), and every target queries the existing buffer before its own record is inserted. This query-before-insertion rule excludes the target packet from its own history summary. The bound concerns the record array rather than the memory needed for model parameters, temporary features, or process execution."
+  },
+  {
+    "index": 42,
+    "kind": "paragraph",
+    "text": "Each retained history is summarized independently for the two endpoints over nested 0.1, 1, and 10 s windows. Within each window, ten statistics describe packet count, total bytes, distinct peers, local and peer TCP-port cardinality (each with log1p transformation), mean and population standard deviation of wire length, and fractions of SYN, ACK, and RST flags. Empty windows or unavailable endpoints produce zero vectors; missing endpoints are not combined into a synthetic host. This yields 30 history statistics per endpoint when all three windows are emitted. Because the summaries use cardinalities rather than raw endpoint identifiers, their interpretation remains focused on recent communication structure."
+  },
+  {
+    "index": 43,
+    "kind": "paragraph",
+    "text": "The representation experiment distinguishes the number of emitted history features from the rule used to assign endpoint slots. With both endpoints and all three windows, C60 emits 60 history fields, which combine with 25 packet fields to form 85 domain fields; C40 emits 40 history fields from 0.1 and 1 s, resulting in 65 domain fields. Two endpoint slots are sorted lexicographically using either the 1 s (O1) or 10 s (O10) window, with a deterministic full-vector rule for ties. The matched 2×2 design crosses C40/C60 with O1/O10 and holds targets, model budgets, seeds, resampling, and stage weights fixed within each contrast. As a result, C40/O10 still draws on 10 s history for ordering, although it does not expose the 10 s statistics as explicit prediction fields. The C40-to-C60 comparison therefore estimates the added value of emitted 10 s features conditional on the selected ordering policy; endpoint-swap and consistent valid-port-relabelling invariance claims for C60 hold only with fixed retained buffer membership."
+  },
+  {
+    "index": 44,
+    "kind": "paragraph",
+    "text": "4.2. Training, reference predictor, and comparative baselines"
+  },
+  {
+    "index": 45,
+    "kind": "paragraph",
+    "text": "Expert training starts from 25 packet attributes, comprising ten numeric and fifteen categorical fields without raw destination ports or explicit port bands. Preprocessing is fitted on A only and uses median imputation, missing-token handling, one-hot encoding with unknown-category tolerance, and a non-centered scaled view for Logistic Regression (LR). In the C60 setting, the 85 domain fields expand to 112 encoded columns. Training then applies random undersampling followed by encoded-space SMOTE [28], with synthetic additions capped at 50% of each pre-RUS class count. The resulting training material contains 30,060 rows, including 4,041 synthetic rows (13.443%), while G, C, and V remain untouched (Supplementary Tables S3–S4)."
+  },
+  {
+    "index": 46,
+    "kind": "paragraph",
+    "text": "The fixed ensemble combines five heterogeneous predictors: Decision Tree (DT; maximum depth 12), Random Forest (RF; 75 trees, depth 10) [25], XGBoost (100 trees, depth 5) [26], LightGBM (150 trees, depth 8) [27], and LR (C = 1, tolerance 10⁻⁶, maximum 10,000 iterations). These experts share aligned class labels but retain their fitted parameters and model-specific preprocessing semantics. Their diversity makes WV a useful target for evaluating duplicated encoding, partial expert execution, and complete-probability explanations. This choice does not imply that all five experts are needed for the best predictive score on every cohort."
+  },
+  {
+    "index": 47,
+    "kind": "paragraph",
+    "text": "For class c and target x, the reference WV probability is f_c(x) = Σⱼ wⱼ pⱼc(x), and the predicted label is the canonical argmax of f_c(x) (Eq. 1). Weights are constrained to be nonnegative and normalized, ensuring that each component contributes a bounded probability vector. On G, weights are chosen using a heuristic combining macro-F1, a latency/serialized-size proxy, shrinkage toward uniform weights, and a 0.05 minimum weight; a quality coefficient is selected from {0.5, 0.6, 0.7} using the mean of macro-F1 and DDoS F2. For seed 42, the reported rounded DT, RF, XGBoost, LightGBM, and LR weights are 0.223950, 0.186478, 0.184082, 0.183980, and 0.221511. Once selected for a stage, these weights define the fixed function used by the serving and explanation experiments."
+  },
+  {
+    "index": 48,
+    "kind": "paragraph",
+    "text": "Comparator experiments characterize the frozen WV predictor without assuming its superiority over individual models. Table 3 reports Gaussian Naive Bayes (GNB) [29] with default variance smoothing of 10⁻⁹ and smoothing selected on G from 13 log-spaced candidates (91 fits across seven stages), followed by evaluation on V. Retained RF, LR, SVM, and KNN controls are reported in Supplementary Tables S115–S128. Because GNB was introduced after earlier comparator outcomes had been observed, these comparisons are interpreted descriptively rather than as an independent classifier ranking."
+  },
+  {
+    "index": 49,
+    "kind": "paragraph",
+    "text": "4.3. Prediction-preserving execution contract"
+  },
+  {
+    "index": 50,
+    "kind": "paragraph",
+    "text": "The serving contract exploits a bound on the contribution of experts that have not yet been evaluated. Let E denote the evaluated experts, s_c their accumulated weighted probability for class c, a the currently leading class, and R the sum of all remaining weights. Every unevaluated component posterior is between zero and one, and every mixture weight is nonnegative. Under these assumptions, the following strict inequality is sufficient to certify that no remaining expert can change the leading class:"
+  },
+  {
+    "index": 51,
+    "kind": "paragraph",
+    "text": "min(sₐ − sᵦ for all b ≠ a) > R + τ + η,        R = Σ of unevaluated wⱼ        (Eq. 2)"
+  },
+  {
+    "index": 52,
+    "kind": "paragraph",
+    "text": "For any competing class b, the contribution of unevaluated experts can reduce the partial margin s_a − s_b by no more than R. Therefore, if the smallest partial margin exceeds R, every possible completion of the remaining probability vectors preserves a as the winner. The implemented condition adds τ = 10⁻¹² and η = 64ε₆₄ max(1, M) max(1, Σⱼ wⱼ) ≈ 7.11 × 10⁻¹⁴, with M = 5 and ε₆₄ = 2⁻⁵², as numerical safeguards rather than confidence thresholds. Candidate expert orders comprise all 120 permutations and are evaluated on C using retained probabilities and measured costs. The selected order, DT → XGBoost → LightGBM → LR → RF, is then frozen for subsequent serving measurements."
+  },
+  {
+    "index": 53,
+    "kind": "paragraph",
+    "text": "The compact path also removes duplicated feature transformation without modifying any expert. Fitted imputation and sparse CSR one-hot encoding are shared across the five models, while LR receives a derived scaled view with preserved missing-entry and explicit-zero semantics. This optimization is distinct from certified stopping: it accelerates both full-probability and label-only requests, whereas stopping applies only when the caller needs a class decision. The following four operational rules define the contract."
+  },
+  {
+    "index": 54,
+    "kind": "paragraph",
+    "text": "1. Contract validation. Before serving, verify the frozen feature schema, class alignment, nonnegative normalized weights, and sparse/missing-category interpretation."
+  },
+  {
+    "index": 55,
+    "kind": "paragraph",
+    "text": "2. Complete-probability evaluation. When the caller requests probabilities, including for scoring or SHAP coalition values, encode once, evaluate all five experts, and accumulate outputs in canonical order."
+  },
+  {
+    "index": 56,
+    "kind": "paragraph",
+    "text": "3. Selective label evaluation. For label-only requests, traverse experts in the frozen order, update partial class scores and R, and process only rows that remain unresolved."
+  },
+  {
+    "index": 57,
+    "kind": "paragraph",
+    "text": "4. Certified stopping and fallback. Stop a row only after the strict condition in Eq. 2 passes; otherwise evaluate the remaining experts and use the canonical full-sum tie rule. Never expose a certified partial mixture as a complete posterior."
+  },
+  {
+    "index": 58,
+    "kind": "paragraph",
+    "text": "Preservation is checked at both the decision and probability levels because the paths serve different uses. Across 52,684 examined development inputs, compact certified execution produces the same class labels as native WV. When complete probabilities are requested, native and compact outputs differ by no more than the reported numerical tolerance of 10⁻¹². This observation verifies behavior on the tested inputs while the stopping bound supplies the mathematical reason why a certified label cannot be overtaken under the stated assumptions. Neither result should be interpreted as a claim of bitwise-identical posteriors for every conceivable unseen input."
+  },
+  {
+    "index": 59,
+    "kind": "paragraph",
+    "text": "4.4. Finite-game explanation audits and runtime protocol"
+  },
+  {
+    "index": 60,
+    "kind": "paragraph",
+    "text": "Explanation analysis uses the complete WV posterior rather than the partial scores from certified label-only inference. The main audit selects 100 V targets, balanced at 20 per class, and draws two disjoint sets of 32 background donors from A (A32 and B32). Its nine groups consist of six packet-protocol families (HTTP, TCP, UDP, MQTT, DNS, and ARP) and three history windows, each containing 20 fields. For target x, original predicted class c, donor set B, and coalition S, the game value is v_{x,c}^B(S) = |B|⁻¹ Σ_{b∈B} f_c(x_S, b_{¬S}) (Eq. 3), with omitted groups replaced jointly from one donor. Exhaustively enumerating the 2⁹ = 512 coalitions produces exact Shapley values for the specified finite donor game, checked against additivity, weighted linearity, and SHAP ExactExplainer outputs."
+  },
+  {
+    "index": 61,
+    "kind": "paragraph",
+    "text": "Implementation agreement and explanation robustness are evaluated with different tests. The archived native-versus-compact execution check uses a seven-group, 300-game donor design containing 38,400 coalition values and 1,228,800 donor hybrids. That audit isolates whether two implementations of the same predictor produce the same observed coalition outputs and Shapley values. The principal nine-group A32/B32 study instead examines sensitivity to donor choice through top-three absolute-attribution Jaccard, normalized L1 distance, ordered ranks, and Kendall τ_b. Changing the grouping changes the underlying cooperative game, so seven-group agreement does not certify every nine-group hybrid."
+  },
+  {
+    "index": 62,
+    "kind": "paragraph",
+    "text": "Intervention faithfulness is measured independently of implementation equality. Rankings computed with A32 define the order in which semantic groups are removed or inserted, whereas the disjoint B32 background supplies the intervention replacements. Deletion gain is Δ_D = A_D^random − A_D^rank, and insertion gain is Δ_I = A_I^rank − A_I^random (Eq. 4), with random-order expectations computed exactly for the specified procedure. Positive gains therefore indicate that the ranking changes the model probability in the intended direction relative to random ordering. They do not establish causal feature effects or determine whether the original predicted label was correct."
+  },
+  {
+    "index": 63,
+    "kind": "paragraph",
+    "text": "Runtime comparisons use a single Windows laptop (Intel64 Family 6 Model 183, 32 logical CPUs, 16,103.9 MiB RAM) running Python 3.11.15, scikit-learn 1.7.2, XGBoost 3.0.5, LightGBM 4.6.0, and SHAP 0.48.0. Numerical libraries operate in single-threaded mode, and feature timings follow five warm-up calls. Two sessions are retained separately: a 3 November randomized 30-pair replay comparison of native and compact certified WV, and a pre-specified 17 November eight-policy comparison of native/compact encoding with full/certified WV and optimized RF/LR controls. Each replay uses 15,665 packets and 160 decisions, and the latter session includes 30 repetitions per workload. Five cold processes contribute post-load delta peak RSS readings sampled every 2 ms, while paired uncertainty intervals use 10,000 bootstrap resamples (Supplementary Tables S105–S109). These workstation measurements characterize the implemented software pipeline rather than embedded-device throughput."
+  },
+  {
+    "index": 64,
+    "kind": "paragraph",
+    "text": "A separate timing-perturbation audit advances query time by 5 ms while retaining the available packet history and excluding future arrivals. The audit assesses the effect of this perturbation on feature construction, model predictions, and attribution stability rather than changing the source traffic (Supplementary Tables S35–S36)."
+  },
+  {
+    "index": 65,
+    "kind": "paragraph",
+    "text": "4.5. False-alarm and external transfer diagnostics"
+  },
+  {
+    "index": 66,
+    "kind": "paragraph",
+    "text": "The diagnostic branch first tests whether the reference WV function raises false alarms on benign traffic beyond its main development roles. Nine existing Edge-IIoTset Normal sources contribute samples from the first 100,000 packets at indices 999, 1999, ..., 99999. After warm-up, 867 candidate targets remain; 760 are matched and scorable across eight sources, whereas 107 unmatched targets, including the Modbus candidates, are left unlabelled. We then evaluate decimal alignment of three hexadecimal flag fields and three payload representations: 12 syntax indicators, character 2–5-gram TF-IDF, and their combination within a 4,096-byte limit. These tests diagnose feature-format and payload-information explanations for the observed SQL false alarms."
+  },
+  {
+    "index": 67,
+    "kind": "paragraph",
+    "text": "A function-changing guarded-voting rule is investigated separately after those diagnostics. The GV predictor g substitutes the existing RF posterior when WV predicts SQL and RF predicts Normal, or when WV predicts Normal and RF predicts an attack; otherwise it returns the reference WV posterior f. Rule construction uses the initial benign cohort, later blocks 1–2, and seven already observed attack cohorts (Supplementary Tables S74–S85). The rule is frozen before scoring later block 3, which contains 697 matched targets from source families encountered previously. Thus, block 3 tests a post-freeze rule on distinct target IDs, not independent source-level transportability."
+  },
+  {
+    "index": 68,
+    "kind": "paragraph",
+    "text": "External evaluation then applies the frozen WV, RF, and GV functions without fitting new parameters or tuning thresholds. Seven previously unseen PCAP files comprise five CICIoT2023 scenarios with 1,000 targets each and two TON_IoT files contributing 1,000 flow-mapped Normal and 1,000 flow-mapped Ransomware targets each, for 9,000 unique rows and 27,000 function-level decisions. Features are reconstructed from raw PCAPs with TShark 4.4.9 using the 85-field scheme and resetting context at each file boundary. CICIoT2023 labels refer to assigned capture scenarios, whereas TON_IoT labels are uniquely associated with author-labelled bidirectional flows within [t_s, t_s + d + 1 s). Consequently, results retain the semantics and coverage of their source dataset and are not combined into an undifferentiated five-class score (Supplementary Tables S86–S95)."
+  },
+  {
+    "index": 69,
+    "kind": "paragraph",
+    "text": "5. Results"
+  },
+  {
+    "index": 70,
+    "kind": "paragraph",
+    "text": "5.1. Context scale gains and history dependence (RQ1)"
+  },
+  {
+    "index": 71,
+    "kind": "paragraph",
+    "text": "The matched factorial in Table 1 and Figure 2 shows that explicitly emitting 10 s history statistics improves within-trace temporal macro-F1 under either endpoint-ordering policy. Under O1, the three-seed mean rises from 96.7363% with C40 to 97.8787% with C60; under O10, it rises from 96.7479% to 97.8954%. These paired contrasts correspond to approximately 1.14–1.15 percentage points, whereas switching O1 to O10 at a fixed feature scale changes macro-F1 by less than 0.02 points. Under O1, the mean number of Port Scanning errors declines from 83 to 61 and Ransomware errors from 147 to 82. The comparison isolates emitted 10 s features conditional on ordering, because C40/O10 itself still uses a 10 s slot-ordering key."
+  },
+  {
+    "index": 72,
+    "kind": "paragraph",
+    "text": "The signature-disjoint diagnostic shows a larger difference between emitted time scales but requires a narrower interpretation. C40 achieves about 71.84% pooled macro-F1, whereas the two C60 configurations exceed 97.29%. Within C60, O1 gives 97.4512%, slightly above the O10 value of 97.2955%, so the longer ordering key is not uniformly better. Since exact target signatures are separated but the preceding unlabeled stream may remain shared, these figures measure robustness to a constrained signature split rather than independent capture environments. The C60/O10 configuration is carried forward as the frozen RQ2–RQ3 reference; it is not reselected on this diagnostic."
+  },
+  {
+    "index": 73,
+    "kind": "paragraph",
+    "text": "Table 1: Matched 2×2 context/ordering ablation with fixed per-stage reference weights."
+  },
+  {
+    "index": 74,
+    "kind": "table",
+    "rows": [
+      [
+        "Context / Order",
+        "Temporal F1 (%)",
+        "Temporal BA (%)",
+        "Mean Errors",
+        "Signature F1 (%)",
+        "Signature Errors"
+      ],
+      [
+        "C40 / O1",
+        "96.7363",
+        "96.9240",
+        "283.00",
+        "71.8438",
+        "9,746"
+      ],
+      [
+        "C40 / O10",
+        "96.7479",
+        "96.9398",
+        "282.00",
+        "71.8424",
+        "9,745"
+      ],
+      [
+        "C60 / O1",
+        "97.8787",
+        "97.9820",
+        "187.00",
+        "97.4512",
+        "1,100"
+      ],
+      [
+        "C60 / O10",
+        "97.8954",
+        "98.0030",
+        "184.67",
+        "97.2955",
+        "1,167"
+      ]
+    ]
+  },
+  {
+    "index": 75,
+    "kind": "paragraph",
+    "text": "Temporal: three-seed means on the same 10,358 V targets (macro-F1 SDs: 0.0342, 0.0378, 0.0077, 0.0145 percentage points). Signature: pooled two-fold diagnostic on 52,584 targets. C40 emits 0.1/1 s history statistics; C60 additionally emits 10 s statistics. O1/O10 select 1/10 s endpoint slot-ordering keys, respectively. C40/O10 is not independent of 10 s information because ordering uses the 10 s key. Per-seed recalls: Supplementary Tables S25–S26, S38, and S113."
+  },
+  {
+    "index": 76,
+    "kind": "paragraph",
+    "text": ""
+  },
+  {
+    "index": 77,
+    "kind": "paragraph",
+    "text": "Figure 2. Matched C40/C60 × O1/O10 ablation showing (a) temporal macro-F1 across three fitting seeds, with sample-SD error bars, and (b) pooled two-fold signature-disjoint results. C40/O10 uses 10 s history for slot ordering, but does not emit 10 s context features."
+  },
+  {
+    "index": 78,
+    "kind": "paragraph",
+    "text": "The ownership experiments in Table 2 test whether the signature result depends on the traffic available to history construction. Replacing full shared history with packet-private history reduces macro-F1 from 97.2955% to 93.7694% and lowers Scanning and Ransomware recall to 83.7328% and 81.2851%, respectively. Matched shared-density history yields an even lower macro-F1 of 93.5804%, showing that density reduction and warm-up behavior affect the result in addition to which packets share context. The comparison therefore establishes context-allocation sensitivity but does not quantify label leakage as a single identified mechanism."
+  },
+  {
+    "index": 79,
+    "kind": "paragraph",
+    "text": "Ring capacity provides a separate check on the bounded-memory design. Over 0.25, 1, and 4 MiB settings, temporal WV predictions remain identical and signature macro-F1 ranges only from 97.2903% to 97.2973%. The 1 MiB DDoS buffer nevertheless records 1,954,616 capacity evictions, indicating that a nominal 10 s window may contain less than ten seconds of high-rate history. The result supports robustness of these measured outcomes to the tested capacities, not an unconditional guarantee that all ten-second histories are complete (Supplementary Tables S28–S32 and S98)."
+  },
+  {
+    "index": 80,
+    "kind": "paragraph",
+    "text": "Table 2: Signature-split history-ownership controls under unchanged modeling budget and reference weights."
+  },
+  {
+    "index": 81,
+    "kind": "table",
+    "rows": [
+      [
+        "History Regime",
+        "Macro-F1 (%)",
+        "Balanced Acc. (%)",
+        "Scan Recall (%)",
+        "Ransomware Recall (%)",
+        "Total Errors"
+      ],
+      [
+        "Full shared",
+        "97.2955",
+        "97.3609",
+        "94.8342",
+        "92.7042",
+        "1,167"
+      ],
+      [
+        "Shared-density",
+        "93.5804",
+        "92.5888",
+        "83.1616",
+        "80.6322",
+        "3,174"
+      ],
+      [
+        "Packet-private",
+        "93.7694",
+        "92.8322",
+        "83.7328",
+        "81.2851",
+        "3,071"
+      ]
+    ]
+  },
+  {
+    "index": 82,
+    "kind": "paragraph",
+    "text": "Evaluated on the same 52,584 signature-diagnostic targets; experts are refitted without retuning. Shared-density and packet-private controls match marginal allocation probabilities (Supplementary Figure S7)."
+  },
+  {
+    "index": 83,
+    "kind": "paragraph",
+    "text": "5.2. Predictive comparators and function-preserving serving (RQ2)"
+  },
+  {
+    "index": 84,
+    "kind": "paragraph",
+    "text": "The baseline results in Table 3 put the frozen WV reference in context without treating it as universally optimal. On the temporal evaluation, default GNB reaches 82.61% macro-F1 and G-selected GNB reaches 95.05%, compared with 97.90% for WV. GNB smoothing also reduces its Normal false-positive rate from 48.60% to 7.05%, although WV remains at 0.92% on the reported comparison. Under private-history and shared-signature diagnostics, selected GNB falls to 43.92% and 49.53% macro-F1 with zero DDoS recall. These results indicate strong sensitivity of the GNB comparator to correlated context and encoded inputs, rather than establishing an inherent advantage of ensembles."
+  },
+  {
+    "index": 85,
+    "kind": "paragraph",
+    "text": "The stronger retained controls further qualify the predictive ranking. Supplementary Table S116 reports that RF outperforms WV under private-history evaluation and that tuned SVM slightly exceeds WV in the temporal setting. These comparisons establish the context in which the fixed WV predictor was selected. RQ2 consequently evaluates preservation and execution cost for that reference function, rather than claiming that WV consistently outperforms simpler alternatives."
+  },
+  {
+    "index": 86,
+    "kind": "paragraph",
+    "text": "Table 3: Reference WV and GNB comparators across temporal and signature-based evaluation regimes."
+  },
+  {
+    "index": 87,
+    "kind": "table",
+    "rows": [
+      [
+        "Evaluation",
+        "Predictor",
+        "F1 (%)",
+        "BA (%)",
+        "Normal FPR (%)",
+        "DDoS F2 (%)",
+        "Errors"
+      ],
+      [
+        "Temporal",
+        "WV (reference)",
+        "97.90",
+        "98.00",
+        "0.92",
+        "100.00",
+        "184.67"
+      ],
+      [
+        "Temporal",
+        "GNB (default)",
+        "82.61",
+        "86.25",
+        "48.60",
+        "99.95",
+        "2,207.00"
+      ],
+      [
+        "Temporal",
+        "GNB (G-selected)",
+        "95.05",
+        "95.88",
+        "7.05",
+        "99.95",
+        "506.00"
+      ],
+      [
+        "Private history",
+        "WV (reference)",
+        "93.77",
+        "92.83",
+        "0.50",
+        "100.00",
+        "3,071"
+      ],
+      [
+        "Private history",
+        "GNB (default)",
+        "43.88",
+        "46.53",
+        "19.16",
+        "0.00",
+        "24,113"
+      ],
+      [
+        "Private history",
+        "GNB (G-selected)",
+        "43.92",
+        "46.74",
+        "17.69",
+        "0.00",
+        "23,864"
+      ],
+      [
+        "Shared signature",
+        "WV (reference)",
+        "97.30",
+        "97.36",
+        "0.48",
+        "99.98",
+        "1,167"
+      ],
+      [
+        "Shared signature",
+        "GNB (default)",
+        "39.83",
+        "41.15",
+        "19.94",
+        "0.00",
+        "26,546"
+      ],
+      [
+        "Shared signature",
+        "GNB (G-selected)",
+        "49.53",
+        "51.13",
+        "22.40",
+        "0.00",
+        "22,653"
+      ]
+    ]
+  },
+  {
+    "index": 88,
+    "kind": "paragraph",
+    "text": "Temporal results are three-seed means on 10,358 V targets (macro-F1 SDs for WV, default GNB, and selected GNB: 0.0145, 0.0043, and 0.0485 percentage points). Signature results pool two folds on 52,584 targets. Retained RF, LR, SVM, and KNN comparator results appear in Supplementary Table S116."
+  },
+  {
+    "index": 89,
+    "kind": "paragraph",
+    "text": "Across the 52,684 examined development inputs, compact certified WV reproduces every native class decision while evaluating a mean of 3.0715 of five experts per label-only decision. When a complete probability vector is requested, native and compact paths agree within 10⁻¹² on the measured inputs. These results align with the formal stopping condition: early exit reduces evaluation work only where a remaining-weight certificate secures the class winner. Table 4 then quantifies the practical benefit under the pre-specified 17 November serving session."
+  },
+  {
+    "index": 90,
+    "kind": "paragraph",
+    "text": "In the 30-repeat replay workload, native full serving averages 2.8265 s and compact certified serving averages 1.1150 s, a 60.55% reduction. Relative to native certified serving at 1.7811 s, compact certified serving saves 37.40% or 0.6661 s per replay (95% paired-bootstrap CI [0.6234, 0.7146] s)."
+  },
+  {
+    "index": 91,
+    "kind": "paragraph",
+    "text": "Compact full serving averages 1.5578 s, demonstrating that encoding reuse improves even the path where all expert probabilities remain necessary. The crossed design produces an estimated encoding-by-stopping interaction of about 0.60 s (95% CI [0.5347, 0.6733] s; Table S109), so component savings should not be treated as additive. These timings describe model-serving paths, not end-to-end generation of complete SHAP explanations."
+  },
+  {
+    "index": 92,
+    "kind": "paragraph",
+    "text": "Table 4: WV serving ablation in the controlled 17 November eight-policy session."
+  },
+  {
+    "index": 93,
+    "kind": "table",
+    "rows": [
+      [
+        "WV Serving Policy",
+        "1-Row (ms)",
+        "1,000-Row (ms)",
+        "Feature Delta (MiB)",
+        "Replay (s)",
+        "Replay Delta (MiB)"
+      ],
+      [
+        "WV native / full",
+        "17.480",
+        "61.089",
+        "2.147",
+        "2.8265",
+        "4.748"
+      ],
+      [
+        "WV native / certified",
+        "8.738",
+        "56.615",
+        "2.758",
+        "1.7811",
+        "4.171"
+      ],
+      [
+        "WV compact / full",
+        "7.946",
+        "48.669",
+        "2.362",
+        "1.5578",
+        "4.338"
+      ],
+      [
+        "WV compact / certified",
+        "5.219",
+        "43.515",
+        "2.520",
+        "1.1150",
+        "3.909"
+      ]
+    ]
+  },
+  {
+    "index": 94,
+    "kind": "paragraph",
+    "text": "Feature latency: median of 30 calls after 5 warm-ups; feature delta RSS refers to 1,000-row batch. Replay: mean of 30 repetitions over 15,665 packets / 160 decisions. RSS: mean post-load delta peak across 5 cold processes sampled every 2 ms. Equally compact RF/LR controls appear in Supplementary Table S124."
+  },
+  {
+    "index": 95,
+    "kind": "paragraph",
+    "text": "The earlier 3 November session provides a separate check on the direction of the serving gain. In its randomized 30-pair comparison, mean replay time decreases from 1.5791 s for native certified WV to 0.9198 s for compact certified WV, a 41.75% reduction (Figure 3; Supplementary Table S105). The paired mean saving is 0.6593 s, with a 95% interval of [0.5965, 0.7313] s; medians are 1.5135 and 0.9310 s, with corresponding standard deviations of 0.2243 and 0.1137 s. All 30 paired differences favor compact execution. An earlier five-pair archive nevertheless contains one slower compact repetition, for which the retained operating-system telemetry does not establish a cause. These sessions are reported separately because they differ in measurement scope; the later evidence does not retrospectively explain the earlier reversal. Optimized singleton RF and LR models remain faster on prepared batches (Supplementary Table S124), which does not change the preservation result for fixed WV."
+  },
+  {
+    "index": 96,
+    "kind": "paragraph",
+    "text": ""
+  },
+  {
+    "index": 97,
+    "kind": "paragraph",
+    "text": "Figure 3. Thirty paired replay measurements from 3 November, with randomized native-versus-compact execution order within each pair. The left panel shows paired replay times for native certified and compact certified WV; the right panel gives their paired differences. Positive differences indicate faster compact execution on the measured workload."
+  },
+  {
+    "index": 98,
+    "kind": "paragraph",
+    "text": "5.3. Explanation consistency, sensitivity, and faithfulness (RQ3)"
+  },
+  {
+    "index": 99,
+    "kind": "paragraph",
+    "text": "The archived seven-group test addresses implementation consistency directly. Across 300 games, comprising 38,400 coalition values and 1,228,800 donor hybrids, native and compact full-posterior execution produce identical observed coalition outputs and derived Shapley attributions. The comparison also satisfies additivity and weighted-linearity checks. It therefore supports equivalence of those tested finite games, without certifying all possible inputs or the separate nine-group game. This distinction establishes the first component of RQ3 before evaluating explanation behavior under different donors."
+  },
+  {
+    "index": 100,
+    "kind": "paragraph",
+    "text": "The nine-group experiment examines the distribution of attributed importance across feature families. Using the A32 donors and 100 V targets, the 10 s history window contributes 84.49% of mean absolute attribution share, compared with 8.86% for 1 s, 5.21% for 0.1 s, and 1.44% in total across the six protocol families (Figure 4). Under the specified B32 interventions, the resulting ranking yields deletion and insertion gains of 0.3203 and 0.3270 (Table 5). The values indicate that the grouped ranking changes the model's predicted-class probability more than random order under these interventions. They do not directly validate attack labels or establish a causal contribution of the history windows."
+  },
+  {
+    "index": 101,
+    "kind": "paragraph",
+    "text": "Table 5: Nine-group cross-background explanation faithfulness audit (100 V targets)."
+  },
+  {
+    "index": 102,
+    "kind": "table",
+    "rows": [
+      [
+        "Predictor",
+        "Deletion AUC",
+        "Insertion AUC",
+        "Deletion Gain (Delta_D)",
+        "Insertion Gain (Delta_I)"
+      ],
+      [
+        "Weighted voting (WV)",
+        "0.2600",
+        "0.9073",
+        "0.3203",
+        "0.3270"
+      ]
+    ]
+  },
+  {
+    "index": 103,
+    "kind": "paragraph",
+    "text": "Signed rankings computed on A32 donor background; interventions executed on disjoint B32 background. Gains represent probability-area improvements over exact random-order expectation. Retained RF/LR controls appear in Supplementary Table S125."
+  },
+  {
+    "index": 104,
+    "kind": "paragraph",
+    "text": ""
+  },
+  {
+    "index": 105,
+    "kind": "paragraph",
+    "text": "Figure 4. Mean absolute attribution shares for the nine-group A32 donor game across 100 V targets. Each history window contains 20 fields; the six packet-protocol groups are combined for display."
+  },
+  {
+    "index": 106,
+    "kind": "paragraph",
+    "text": "Background replacement changes attribution magnitudes and some rankings even when the leading groups are stable. Across the A32/B32 nine-group comparison, top-three membership is identical (Jaccard 1.0000) and the top-ranked group is unchanged for all 100 targets. Nevertheless, normalized L1 distance is 0.028066, a top-three order swap is observed, and mean full-rank Kendall τ_b is 0.8320, with a minimum of 0.6789 (Supplementary Table S112). Under the archived seven-group definition, top-three Jaccard is 0.5520 despite cosine similarity of 0.999948. This difference is not a contradiction between repeat measurements: changing group boundaries defines a different cooperative game and a different object of attribution."
+  },
+  {
+    "index": 107,
+    "kind": "paragraph",
+    "text": "Correctness-stratified results reinforce the distinction between explanatory fidelity and predictive correctness. Among 97 correctly classified targets, deletion and insertion gains are 0.3250 and 0.3296; among the three misclassified targets, the observed gains are 0.1692 and 0.2430 (Supplementary Tables S110–S111). These positive values show that an attribution can track the predictor's behavior even when the predictor is wrong about the label. However, three errors are insufficient to characterize general faithfulness behavior on misclassified traffic. Accordingly, RQ3 supports finite-game implementation and intervention findings under the stated donor choices, rather than a general explanation guarantee."
+  },
+  {
+    "index": 108,
+    "kind": "paragraph",
+    "text": "5.4. Stress-testing: false alarms, local repair, and external boundaries"
+  },
+  {
+    "index": 109,
+    "kind": "paragraph",
+    "text": "The benign stress test reveals a substantial error mode that the main temporal score does not expose. On 760 matched Normal targets from additional existing Edge-IIoTset sources, WV raises 324 SQL false alarms (42.63%), concentrated in five sensor sources, while its retained RF component raises none (Supplementary Table S126). Converting three hexadecimal flag fields to decimal reduces WV false alarms only to 321/760 (42.24%). Among these aligned errors, the combined weighted SQL-minus-Normal contributions from DT, LR, and LightGBM exceed the offsetting RF and XGBoost contribution by a mean margin of +0.0998. This decomposition locates the disagreement in the existing ensemble rather than attributing all errors to flag encoding."
+  },
+  {
+    "index": 110,
+    "kind": "paragraph",
+    "text": "Adding payload features does not resolve the observed benign failure. Of the 321 aligned false alarms, 257 correspond to packets without TCP payload. Refits using syntax indicators, character n-gram TF-IDF, and the combined representation still produce 310, 312, and 331 false alarms, respectively. Those changes also increase V attack-to-Normal misses from two to three or four (Supplementary Tables S46–S73). The mixed result motivates a separate rule-based diagnostic, but it does not justify changing the verified WV function without explicitly re-evaluating that new predictor."
+  },
+  {
+    "index": 111,
+    "kind": "paragraph",
+    "text": "Guarded voting is therefore reported as a local repair experiment rather than as a continuation of RQ2. After the rule is specified using the initial benign cohort and blocks 1–2, it reduces post-freeze block 3 false alarms from 396/697 for WV (56.8149%) to 1/697 for GV (0.1435%), matching RF on scored targets (Table 6). Counting all three unmatched candidates as alarms gives a conservative coverage bound of 4/700 (0.5714%). However, the block uses new target IDs from source families already represented in rule development. On reused V Normal observations, GV increases false-positive rate from 36/3,860 (0.9326%) to 39/3,860 (1.0104%) and reduces macro-F1 from 97.8800% to 97.8503%. Two previously Scan-to-Normal errors instead become Scan-to-Ransomware predictions, leaving typed attack recalls unchanged. The results support source-conditioned alarm mitigation rather than independent new-source generalization."
+  },
+  {
+    "index": 112,
+    "kind": "paragraph",
+    "text": "Table 6: Benign false-alarm diagnostics comparing reference WV and guarded GV across evaluation roles."
+  },
+  {
+    "index": 113,
+    "kind": "table",
+    "rows": [
+      [
+        "Cohort",
+        "n",
+        "WV: FP (FPR)",
+        "GV: FP (FPR)",
+        "Evaluation Role"
+      ],
+      [
+        "Initial benign",
+        "760",
+        "321 (42.2368%)",
+        "0 (0.0000%)",
+        "Observed before rule"
+      ],
+      [
+        "Later block 1",
+        "769",
+        "401 (52.1456%)",
+        "0 (0.0000%)",
+        "Observed before rule"
+      ],
+      [
+        "Later block 2",
+        "699",
+        "407 (58.2260%)",
+        "0 (0.0000%)",
+        "Observed before rule"
+      ],
+      [
+        "Later block 3",
+        "697",
+        "396 (56.8149%)",
+        "1 (0.1435%)",
+        "Frozen before scoring"
+      ],
+      [
+        "V Normal",
+        "3,860",
+        "36 (0.9326%)",
+        "39 (1.0104%)",
+        "Reused validation"
+      ]
+    ]
+  },
+  {
+    "index": 114,
+    "kind": "paragraph",
+    "text": "FPR is computed over Normal support. Later blocks are distinct target IDs from previously used Edge-IIoTset sources. RF component results appear in Supplementary Table S126."
+  },
+  {
+    "index": 115,
+    "kind": "paragraph",
+    "text": "Frozen external evaluation places the local GV repair in a different traffic setting. On CICIoT2023 Normal targets, GV increases false-positive rate from 30.15% for WV to 31.90%; on flow-mapped TON_IoT Normal targets, it reduces the rate from 24.35% to 18.85% (Table 7; Figure 5). The guard removes 27 CIC Normal alarms but introduces 62, whereas on TON it removes 205 and introduces 95. In the CIC Scan and SYN scenario cohorts, Normal predictions rise from 465 and 2 under WV to 555 and 12 under GV, respectively. Because CIC labels denote capture-scenario assignments, these counts are diagnostics rather than confirmed packet-level attack misses. The direction and consequences of expert switching therefore depend on the source environment, and the findings cannot be interpreted as generalizable alarm repair."
+  },
+  {
+    "index": 116,
+    "kind": "paragraph",
+    "text": "Detection of flow-mapped TON_IoT Ransomware remains particularly weak after the repair. GV assigns the Normal class to 1,657 of 2,000 Ransomware targets (82.85%), leaving a binary alarm recall of 17.15% and correct-type recall of only 1.55%; WV predicts Normal for 1,630 such targets and has 1.35% correct-type recall. All-packet in-scope mapping coverage is 62.90% and 6.66% for the two TON files when warm-up packets remain in the denominator (Supplementary Table S90). These coverage and label constraints limit population-level interpretation, but they do not remove the observed weakness of the frozen classifiers on the selected external rows. The external tests therefore restrict deployment claims rather than disproving the separate execution-preservation result."
+  },
+  {
+    "index": 117,
+    "kind": "paragraph",
+    "text": "Table 7: Frozen external stress-test results on CICIoT2023 and TON_IoT (retaining dataset-specific label scopes)."
+  },
+  {
+    "index": 118,
+    "kind": "table",
+    "rows": [
+      [
+        "External Target Cohort",
+        "n",
+        "Metric",
+        "WV (%)",
+        "GV (%)"
+      ],
+      [
+        "CICIoT2023 Normal",
+        "2,000",
+        "Normal FPR",
+        "30.15",
+        "31.90"
+      ],
+      [
+        "TON_IoT Normal (flow-mapped)",
+        "2,000",
+        "Normal FPR",
+        "24.35",
+        "18.85"
+      ],
+      [
+        "CICIoT2023 SQL",
+        "1,000",
+        "Scenario match",
+        "29.80",
+        "32.10"
+      ],
+      [
+        "CICIoT2023 Scan",
+        "1,000",
+        "Scenario match",
+        "3.80",
+        "4.00"
+      ],
+      [
+        "CICIoT2023 SYN",
+        "1,000",
+        "Scenario match",
+        "62.10",
+        "62.10"
+      ],
+      [
+        "TON_IoT Ransomware (flow-mapped)",
+        "2,000",
+        "Correct-type recall",
+        "1.35",
+        "1.55"
+      ]
+    ]
+  },
+  {
+    "index": 119,
+    "kind": "paragraph",
+    "text": "Zero external fitting or threshold tuning. CIC attack labels denote capture-scenario assignments; TON labels derive from uniquely matched bidirectional flows. Per-file breakdowns and RF controls appear in Supplementary Tables S87–S92, S103–S104, and S127."
+  },
+  {
+    "index": 120,
+    "kind": "paragraph",
+    "text": ""
+  },
+  {
+    "index": 121,
+    "kind": "paragraph",
+    "text": "Figure 5. Reference WV and guarded-voting Normal false-positive rates across (a) Edge-IIoTset benign cohorts and (b) individual external Normal files: CIC N0, CIC N3, TON 1*, and TON 2*. The initial cohort and blocks 1–2 informed the guard, block 3 was scored after freezing, and V was reused. Asterisks denote uniquely flow-mapped TON targets. The dashed 8% line indicates a study-specific operational target, not a universal IDS threshold."
+  },
+  {
+    "index": 122,
+    "kind": "paragraph",
+    "text": "6. Discussion"
+  },
+  {
+    "index": 123,
+    "kind": "paragraph",
+    "text": "6.1. Representation gains versus history sensitivity (RQ1)"
+  },
+  {
+    "index": 124,
+    "kind": "paragraph",
+    "text": "RQ1 identifies a measurable benefit from emitting longer endpoint statistics, but the benefit has a specific evaluation meaning. Across both fixed ordering policies, extending C40 to C60 adds approximately 1.14–1.15 percentage points of temporal macro-F1 without increasing the 1 MiB record-array budget. Because C40/O10 still uses 10 s history to assign endpoint slots, the estimated effect concerns additional emitted features rather than the presence or absence of all long-window information. The packet-private and shared-density diagnostics then show that some apparent signature robustness depends on traffic allocation, density, and history warm-up. These observations strengthen the interpretation of a bounded within-trace feature gain while withholding claims of attack-signature independence or quantified leakage."
+  },
+  {
+    "index": 125,
+    "kind": "paragraph",
+    "text": "6.2. Practical value of prediction-preserving execution (RQ2)"
+  },
+  {
+    "index": 126,
+    "kind": "paragraph",
+    "text": "RQ2 establishes that serving efficiency and prediction preservation need not be competing objectives for the tested WV function. Shared fitted encoding reduces duplicated transformations, and the sufficient remaining-weight certificate avoids unnecessary expert evaluations when a label is already secured. Their combination reduces replay time by 60.55% relative to native full execution and 37.40% relative to native certified execution on the controlled workstation workload. The empirical result is supported by unchanged labels on tested development inputs and by posterior agreement within 10⁻¹² on full-probability requests, while the mathematical certificate supplies the label-stopping argument. Since complete SHAP generation and embedded throughput were not benchmarked, those operational gains are not extrapolated beyond the measured serving paths. Likewise, faster singleton RF/LR controls indicate that WV should be retained only when its particular mixture behavior is required."
+  },
+  {
+    "index": 127,
+    "kind": "paragraph",
+    "text": "6.3. Auditable XAI: separating consistency, sensitivity, and faithfulness (RQ3)"
+  },
+  {
+    "index": 128,
+    "kind": "paragraph",
+    "text": "RQ3 demonstrates why an explanation audit must specify both its software target and its feature-intervention game. The seven-group re-execution verifies that native and compact versions produce the same observed coalition values for the archived test, protecting those explanations from implementation-induced drift in that setting. The separate nine-group study reveals that top-three agreement can conceal changes in secondary ordering and that changing feature groups changes the attribution estimand. Positive deletion/insertion gains show intervention-specific faithfulness to the reference probability, including on three misclassified observations, but they do not validate the underlying labels or support general conclusions from the small error subset. An auditable IDS consequently requires both explanation consistency checks and independent assessment of predictive behavior under distribution shift."
+  },
+  {
+    "index": 129,
+    "kind": "paragraph",
+    "text": "6.4. Local repair versus cross-dataset shift"
+  },
+  {
+    "index": 130,
+    "kind": "paragraph",
+    "text": "The GV results illustrate the difference between correcting a local error pattern and obtaining a transportable detector. Its post-freeze reduction to one false alarm among 697 matched benign targets is substantial, but all of those targets come from previously encountered source families. When applied without retuning to CICIoT2023, the same rule increases Normal FPR, whereas on flow-mapped TON_IoT it decreases benign FPR but still classifies most Ransomware targets as Normal. Protocol composition, endpoint context, and differing scenario-versus-flow labels can change how often RF and WV disagree and whether switching helps. Therefore, the GV branch diagnoses the limits of a source-conditioned repair; it does not inherit WV's execution certificate or establish readiness for new deployment environments."
+  },
+  {
+    "index": 131,
+    "kind": "paragraph",
+    "text": "6.5. Threats to validity and scope of inference"
+  },
+  {
+    "index": 132,
+    "kind": "paragraph",
+    "text": "Interpretation of the results depends on five methodological boundaries. Each boundary limits a different inference: selection history, function equivalence, computational resources, representation assumptions, or external-label transportability. These qualifications are consolidated here to keep the Results focused on observations while making explicit which conclusions the evidence can and cannot support."
+  },
+  {
+    "index": 133,
+    "kind": "paragraph",
+    "text": "Adaptive model selection limits claims of predictive superiority. Development outcomes and historical holdout results had been observed during the preceding research program, and the WV preference criterion changed after those observations [3, 4]. Freezing later serving configurations, the GV rule, and external scoring clarifies subsequent analysis but cannot retroactively remove earlier selection adaptivity. Accordingly, the within-trace comparisons are conditional findings for a chosen reference function rather than an independent ranking of all possible classifiers."
+  },
+  {
+    "index": 134,
+    "kind": "paragraph",
+    "text": "Function-specific and numerical guarantees must not be conflated. The stopping certificate applies to the unchanged, nonnegative-weight WV mixture and a label-only decision; it does not create probabilities for experts that were skipped. Exact class agreement on 52,684 tested inputs and posterior agreement within 10⁻¹² are empirical checks under the current implementation, not evidence of bitwise identity across every unseen input. The function-changing GV predictor requires separate validation and cannot inherit WV certificates. Likewise, observed seven-group SHAP equivalence does not automatically extend to different nine-group donor hybrids."
+  },
+  {
+    "index": 135,
+    "kind": "paragraph",
+    "text": "Memory and workload bounds refer to specific components and experimental conditions. The 1 MiB limit covers the endpoint history record array but excludes model weights, encoded matrices, and process memory. Runtime measurements come from one Windows laptop and a replay of 15,665 packets containing 160 decisions, not from continuous inference on embedded hardware. Consequently, neither packet-line-rate throughput, energy savings, nor end-to-end SHAP generation time is established by these measurements. The measured reductions remain informative for the defined workstation workload."
+  },
+  {
+    "index": 136,
+    "kind": "paragraph",
+    "text": "Representation and explanation assumptions constrain causal interpretation. Encoded-space SMOTE may create categorical combinations that would not occur in physical traffic, and high-rate DDoS activity can evict records before nominal 10 s windows are complete. C40/O10 includes long-window ordering information, while ownership and density controls alter multiple aspects of the history stream. Finite donor-game Shapley values measure the specified feature-replacement game rather than causal effects, and the three misclassified observations offer limited evidence about error-conditioned faithfulness. Each result must therefore be interpreted within its construction protocol."
+  },
+  {
+    "index": 137,
+    "kind": "paragraph",
+    "text": "External-label scope limits comparison across datasets. CICIoT2023 attack labels represent capture scenarios, whereas the selected TON_IoT labels are derived from uniquely mapped bidirectional flows with unequal coverage across files. The resulting measures should not be pooled as if they shared a uniform packet-level five-class ground truth. High external Normal false-positive rates and very low TON Ransomware correct-type recall nevertheless identify serious transfer failures on the sampled, mapped rows. These findings prevent a deployment-readiness claim without additional independent-domain evaluation."
+  },
+  {
+    "index": 138,
+    "kind": "paragraph",
+    "text": "7. Conclusion"
+  },
+  {
+    "index": 139,
+    "kind": "paragraph",
+    "text": "This study addresses three connected engineering objectives using a fixed five-expert WV intrusion detector. For RQ1, explicit 10 s endpoint statistics improve within-trace temporal macro-F1 by approximately 1.14–1.15 percentage points under matched ordering policies, while ownership controls reveal dependence on surrounding traffic context. For RQ2, shared preprocessing and certified early termination preserve every tested development label, match requested complete posteriors within 10⁻¹², and reduce mean replay time by 60.55% against native full serving and 37.40% against native certified serving. For RQ3, the archived seven-group finite-game audit establishes observed native–compact explanation consistency, while a distinct nine-group donor analysis characterizes attribution stability and deletion/insertion gains of 0.3203/0.3270. Together, these results demonstrate how bounded context construction, efficient serving, and explanation verification can be studied under separately specified contracts."
+  },
+  {
+    "index": 140,
+    "kind": "paragraph",
+    "text": "The diagnostic branch identifies an important limit on those achievements. A frozen GV rule reduces benign false alarms to 1/697 within previously observed source families but does not eliminate cross-dataset failures: GV Normal false-positive rates reach 31.90% on CICIoT2023 and 18.85% on flow-mapped TON_IoT, with only 1.55% correct-type recall for TON Ransomware. These observations do not negate the exact-function serving result; they show that preserving a function is different from validating that function in a new environment. The principal contribution is therefore a reproducible, bounded verification workflow, not evidence that the current WV or GV predictor is ready for cross-domain deployment. Future work should test domain-adaptive predictors and constrained hardware using independently acquired source-level evaluations."
+  },
+  {
+    "index": 141,
+    "kind": "paragraph",
+    "text": "Data and Software Availability"
+  },
+  {
+    "index": 142,
+    "kind": "paragraph",
+    "text": "Edge-IIoTset is distributed through IEEE DataPort [1], CICIoT2023 through the University of New Brunswick (UNB) [7], and TON_IoT through the University of New South Wales (UNSW) [8, 30]. The companion reproducibility materials comprise code, frozen configurations, SHA256 manifests, split and target identifiers, saved model probabilities and labels, explanation arrays, raw replay-time and memory logs, and derived external-label mappings. Review notebooks inspect retained results without refitting estimators or deserializing trained models. Full third-party datasets are not redistributed; reproducing raw extraction requires access to the provider datasets, the applicable permissions, and the documented processing environment. Supplementary Tables S1–S128 provide the detailed experimental records, including external mapping resources, methods and auditing protocols, and retained classifier and serving controls."
+  },
+  {
+    "index": 143,
+    "kind": "paragraph",
+    "text": "Funding & Competing Interests"
+  },
+  {
+    "index": 144,
+    "kind": "paragraph",
+    "text": "Funding: This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors."
+  },
+  {
+    "index": 145,
+    "kind": "paragraph",
+    "text": "Declaration of competing interests: The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper."
+  },
+  {
+    "index": 146,
+    "kind": "paragraph",
+    "text": "CRediT authorship contribution statement: M Hafid Ramadhan: Software, Investigation, Formal analysis, Visualization, Writing – original draft. Satria Mandala: Supervision, Methodology, Validation, Writing – review & editing."
+  },
+  {
+    "index": 147,
+    "kind": "paragraph",
+    "text": "Declaration of generative AI and AI-assisted technologies in the manuscript preparation process"
+  },
+  {
+    "index": 148,
+    "kind": "paragraph",
+    "text": "During the preparation of this manuscript, the authors used ChatGPT (OpenAI) for academic-language refinement, argument organization, and narrative cohesion, and OpenAI Codex (OpenAI) for code development, computational checking, literature organization, and programmatic visualization scripts. The authors reviewed and edited the outputs as needed and take full responsibility for the accuracy, interpretation, and content of the manuscript."
+  },
+  {
+    "index": 149,
+    "kind": "paragraph",
+    "text": "References"
+  },
+  {
+    "index": 150,
+    "kind": "paragraph",
+    "text": "[1] M. A. Ferrag, O. Friha, D. Hamouda, L. Maglaras, H. Janicke, Edge-IIoTset: A New Comprehensive Realistic Cyber Security Dataset of IoT and IIoT Applications for Centralized and Federated Learning, IEEE Access 10 (2022) 40281–40306. doi:10.1109/access.2022.3165809."
+  },
+  {
+    "index": 151,
+    "kind": "paragraph",
+    "text": "[2] L. D'hooge, M. Verkerken, B. Volckaert, T. Wauters, F. De Turck, Establishing the Contaminating Effect of Metadata Feature Inclusion in Machine-Learned Network Intrusion Detection Models, in: DIMVA, LNCS 13358, Springer, 2022, pp. 23–41. doi:10.1007/978-3-031-09484-2_2."
+  },
+  {
+    "index": 152,
+    "kind": "paragraph",
+    "text": "[3] G. C. Cawley, N. L. C. Talbot, On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation, Journal of Machine Learning Research 11(70) (2010) 2079–2107."
+  },
+  {
+    "index": 153,
+    "kind": "paragraph",
+    "text": "[4] S. Kapoor, A. Narayanan, Leakage and the reproducibility crisis in machine-learning-based science, Patterns 4(9) (2023) 100804. doi:10.1016/j.patter.2023.100804."
+  },
+  {
+    "index": 154,
+    "kind": "paragraph",
+    "text": "[5] Y. Mirsky, T. Doitshman, Y. Elovici, A. Shabtai, Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection, NDSS (2018)."
+  },
+  {
+    "index": 155,
+    "kind": "paragraph",
+    "text": "[6] A. Habibi Lashkari, G. Draper Gil, M. S. I. Mamun, A. A. Ghorbani, Characterization of Tor Traffic using Time based Features, in: ICISSP, SCITEPRESS, 2017, pp. 253–262. doi:10.5220/0006105602530262."
+  },
+  {
+    "index": 156,
+    "kind": "paragraph",
+    "text": "[7] E. C. P. Neto, S. Dadkhah, R. Ferreira, A. Zohourian, R. Lu, A. A. Ghorbani, CICIoT2023: A Real-Time Dataset and Benchmark for Large-Scale Attacks in IoT Environment, Sensors 23(13) (2023) 5941. doi:10.3390/s23135941."
+  },
+  {
+    "index": 157,
+    "kind": "paragraph",
+    "text": "[8] N. Moustafa, A new distributed architecture for evaluating AI-based security systems at the edge: Network TON_IoT datasets, Sustainable Cities and Society 72 (2021) 102994. doi:10.1016/j.scs.2021.102994."
+  },
+  {
+    "index": 158,
+    "kind": "paragraph",
+    "text": "[9] T. M. Booij, I. Chiscop, E. Meeuwissen, N. Moustafa, F. T. H. d. Hartog, TON_IoT: The Role of Heterogeneity and the Need for Standardization of Features and Attack Types in IoT Network Intrusion Data Sets, IEEE Internet of Things Journal 9(1) (2022) 485–496. doi:10.1109/jiot.2021.3085194."
+  },
+  {
+    "index": 159,
+    "kind": "paragraph",
+    "text": "[10] S. Wang, M. Gupta, S. You, Quit When You Can: Efficient Evaluation of Ensembles with Ordering Optimization, arXiv:1806.11202 (2018)."
+  },
+  {
+    "index": 160,
+    "kind": "paragraph",
+    "text": "[11] S. Nakandala, K. Saur, G.-I. Yu, K. Karanasos, C. Curino, M. Weimer, M. Interlandi, A Tensor Compiler for Unified Machine Learning Prediction Serving, 14th USENIX OSDI (2020) 899–917."
+  },
+  {
+    "index": 161,
+    "kind": "paragraph",
+    "text": "[12] G. Wan, S. Liu, F. Bronzino, N. Feamster, Z. Durumeric, CATO: End-to-End Optimization of ML-Based Traffic Analysis Pipelines, 22nd USENIX NSDI (2025) 1523–1540."
+  },
+  {
+    "index": 162,
+    "kind": "paragraph",
+    "text": "[13] S. M. Lundberg, S.-I. Lee, A Unified Approach to Interpreting Model Predictions, NeurIPS 30 (2017)."
+  },
+  {
+    "index": 163,
+    "kind": "paragraph",
+    "text": "[14] O. Arreche, T. R. Guntur, J. W. Roberts, M. Abdallah, E-XAI: Evaluating Black-Box Explainable AI Frameworks for Network Intrusion Detection, IEEE Access 12 (2024) 23954–23988. doi:10.1109/access.2024.3365140."
+  },
+  {
+    "index": 164,
+    "kind": "paragraph",
+    "text": "[15] D. Hendro, Y. Mei, I. Welch, An Investigation of Feature-Grouping for Robust SHAP Explanations in IoT Intrusion Detection, IEEE 35th ITNAC (2025) 1–8. doi:10.1109/itnac66378.2025.11302604."
+  },
+  {
+    "index": 165,
+    "kind": "paragraph",
+    "text": "[16] R. Kalakoti, H. Bahsi, S. Nomm, Synthetic Data-Driven Explainability for Federated Learning-Based Intrusion Detection System, IEEE Internet of Things Journal 13(4) (2026) 5918–5944. doi:10.1109/jiot.2025.3633946."
+  },
+  {
+    "index": 166,
+    "kind": "paragraph",
+    "text": "[17] M. A. Hossain, M. S. Islam, Ensuring network security with a robust intrusion detection system using ensemble-based machine learning, Array 19 (2023) 100306. doi:10.1016/j.array.2023.100306."
+  },
+  {
+    "index": 167,
+    "kind": "paragraph",
+    "text": "[18] A. Alharthi, M. Alaryani, S. Kaddoura, A comparative study of machine learning and deep learning models in binary and multiclass classification for intrusion detection systems, Array 26 (2025) 100406. doi:10.1016/j.array.2025.100406."
+  },
+  {
+    "index": 168,
+    "kind": "paragraph",
+    "text": "[19] W. Ahmed, A. Masood, J. Manzoor, Toward realistic and lightweight intrusion detection for ADS-B: A comprehensive threat model and multi-attack machine learning evaluation, Array 31 (2026) 101012. doi:10.1016/j.array.2026.101012."
+  },
+  {
+    "index": 169,
+    "kind": "paragraph",
+    "text": "[20] Helen Sharmila A., Deepanramkumar P., Explanation stability assessment for federated explainable intrusion detection in wireless sensor networks, Array 31 (2026) 101114. doi:10.1016/j.array.2026.101114."
+  },
+  {
+    "index": 170,
+    "kind": "paragraph",
+    "text": "[21] M. B. Tulla, L. Yuan, J. Zhang, X. Pu, G. Jeon, Silent corruption: Logic collapse and attribution fidelity failure in compressed intrusion detection systems, Information Sciences 757 (2026) 123908. doi:10.1016/j.ins.2026.123908."
+  },
+  {
+    "index": 171,
+    "kind": "paragraph",
+    "text": "[22] V. Petsiuk, A. Das, K. Saenko, RISE: Randomized Input Sampling for Explanation of Black-box Models, BMVC (2018)."
+  },
+  {
+    "index": 172,
+    "kind": "paragraph",
+    "text": "[23] K. Aas, M. Jullum, A. Løland, Explaining individual predictions when features are dependent: More accurate approximations to Shapley values, Artificial Intelligence 298 (2021) 103502. doi:10.1016/j.artint.2021.103502."
+  },
+  {
+    "index": 173,
+    "kind": "paragraph",
+    "text": "[24] I. Covert, S. Lundberg, S.-I. Lee, Explaining by Removing: A Unified Framework for Model Explanation, Journal of Machine Learning Research 22(209) (2021) 1–90."
+  },
+  {
+    "index": 174,
+    "kind": "paragraph",
+    "text": "[25] L. Breiman, Random Forests, Machine Learning 45(1) (2001) 5–32. doi:10.1023/a:1010933404324."
+  },
+  {
+    "index": 175,
+    "kind": "paragraph",
+    "text": "[26] T. Chen, C. Guestrin, XGBoost: A Scalable Tree Boosting System, ACM SIGKDD (2016) 785–794. doi:10.1145/2939672.2939785."
+  },
+  {
+    "index": 176,
+    "kind": "paragraph",
+    "text": "[27] G. Ke, Q. Meng, T. Finley, T. Wang, W. Chen, W. Ma, Q. Ye, T.-Y. Liu, LightGBM: A Highly Efficient Gradient Boosting Decision Tree, NeurIPS 30 (2017)."
+  },
+  {
+    "index": 177,
+    "kind": "paragraph",
+    "text": "[28] N. V. Chawla, K. W. Bowyer, L. O. Hall, W. P. Kegelmeyer, SMOTE: Synthetic Minority Over-sampling Technique, JAIR 16 (2002) 321–357. doi:10.1613/jair.953."
+  },
+  {
+    "index": 178,
+    "kind": "paragraph",
+    "text": "[29] F. Pedregosa et al., Scikit-learn: Machine learning in Python, JMLR 12(85) (2011) 2825–2830."
+  },
+  {
+    "index": 179,
+    "kind": "paragraph",
+    "text": "[30] UNSW Canberra, The TON_IoT Datasets, official dataset description and academic-use terms; accessed 10 November 2026 (2021)."
+  }
+]

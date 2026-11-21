@@ -1,0 +1,132 @@
+[
+  {
+    "path": "configuration_freeze.json",
+    "bytes": 354,
+    "sha256": "e8afcbc1732ba148960dbab6cc9195b8eae62b19256ce271bb04958165a0a95d"
+  },
+  {
+    "path": "metrics.csv",
+    "bytes": 12513,
+    "sha256": "4b143847873b9fee3f88b8189b244f9d36a9862d81288b5e8ea351fe77914205"
+  },
+  {
+    "path": "source/array_svm_20261118.py",
+    "bytes": 2423,
+    "sha256": "150615666d163d2fb2b1e3f508086cfe33e399e3b66162a4411b8f2c08edb996"
+  },
+  {
+    "path": "source/ARRAY_SVM_COMPARATOR_PROTOCOL_20261118.md",
+    "bytes": 6670,
+    "sha256": "bc948fd5377071a9b5e89151085e42a9c3bd5ec50e1bd379e6875838149325ae"
+  },
+  {
+    "path": "source/evaluate_array_svm_20261118.py",
+    "bytes": 6887,
+    "sha256": "0bae3e1b03de77387308ca9c0dd4790fff4be2bd22f8f64dd68c6f55ed352fb5"
+  },
+  {
+    "path": "stages/private_fold1/checks.json",
+    "bytes": 548,
+    "sha256": "cb46ce9a044947a1993874a8c28d90734cd0f4ed26daee5906f122dba6fa4b2a"
+  },
+  {
+    "path": "stages/private_fold1/evaluation.npz",
+    "bytes": 58718,
+    "sha256": "5187017a0f4aa94eb2f2746aa6ce2b7c2a6d1802fdda538bd6bb9f1717cfa01d"
+  },
+  {
+    "path": "stages/private_fold1/metrics.csv",
+    "bytes": 2228,
+    "sha256": "8b1e65d1a599682fc9b8d8c77693f204d90097c77e568be7d6e9b339f3ce7130"
+  },
+  {
+    "path": "stages/private_fold2/checks.json",
+    "bytes": 551,
+    "sha256": "4d583a8c88604a1ff3268f4c01422f703990fbca80419df86654a41a36a36cfc"
+  },
+  {
+    "path": "stages/private_fold2/evaluation.npz",
+    "bytes": 56741,
+    "sha256": "add261a099a6ad0a79f2ffdf6c1317997586dbc36e3fb4a2c437056d5c9f2182"
+  },
+  {
+    "path": "stages/private_fold2/metrics.csv",
+    "bytes": 2270,
+    "sha256": "4884532d21af027760a019266ed07daf52617818cd44a9c56da4538a7bae0861"
+  },
+  {
+    "path": "stages/signature_fold1/checks.json",
+    "bytes": 652,
+    "sha256": "f7be758819cac730b2fc89d2006d86be4ec27350ffc41d3e7573957790f7bfd4"
+  },
+  {
+    "path": "stages/signature_fold1/evaluation.npz",
+    "bytes": 50623,
+    "sha256": "6158a0898d208e110e9251b54c8e26f69e9eecfb32325f79c74177ce21e5adf1"
+  },
+  {
+    "path": "stages/signature_fold1/metrics.csv",
+    "bytes": 2173,
+    "sha256": "80bde9d478d6b03f384da09167ddf61d34ee100ae63fb82ec84d26e55f914715"
+  },
+  {
+    "path": "stages/signature_fold2/checks.json",
+    "bytes": 654,
+    "sha256": "a3664bad02e46c96e213e3a3b40d84d1da0ad7af2f917aab609c54394b7db2bd"
+  },
+  {
+    "path": "stages/signature_fold2/evaluation.npz",
+    "bytes": 53880,
+    "sha256": "7ccd3a41a5ae1f8e5dd1285a5e07bdcbd7f44499ac3352e7b3665d32f6450e12"
+  },
+  {
+    "path": "stages/signature_fold2/metrics.csv",
+    "bytes": 2310,
+    "sha256": "ba547d19e80d32397f791f429b1759d0388188d2d2fa1dea761e9c795c7d06a7"
+  },
+  {
+    "path": "stages/temporal_seed42/checks.json",
+    "bytes": 655,
+    "sha256": "57f760678718691808e0afa3df36be563d3d860eece5acb9459f13d403959915"
+  },
+  {
+    "path": "stages/temporal_seed42/evaluation.npz",
+    "bytes": 21986,
+    "sha256": "2521c0825619f4c828321c5ee0829e8d041fdfc161d0fbc80056fd86b221c6ec"
+  },
+  {
+    "path": "stages/temporal_seed42/metrics.csv",
+    "bytes": 2151,
+    "sha256": "d657835ed2b6db1a520066d357dd9727baf09399fdb30b97cfd3bcdc10f43d90"
+  },
+  {
+    "path": "stages/temporal_seed43/checks.json",
+    "bytes": 655,
+    "sha256": "4f511529b3db09a4132ebea7386df20a199abccb9e9121d9876633dc8eb70e56"
+  },
+  {
+    "path": "stages/temporal_seed43/evaluation.npz",
+    "bytes": 21926,
+    "sha256": "8a4b33c0b8d60f9ee48d06013100911a1e48501e47b87d4e8ff6a23c4b4d70b2"
+  },
+  {
+    "path": "stages/temporal_seed43/metrics.csv",
+    "bytes": 2125,
+    "sha256": "5342ea81bcaf54ae6b5b0ec02e319702299ace1abbaa4a9e893a2b9eb941dc60"
+  },
+  {
+    "path": "stages/temporal_seed44/checks.json",
+    "bytes": 656,
+    "sha256": "d60d5575a0d92eab9f0d9b577cdd89000a769d5a95faf18e6242a694807b43f4"
+  },
+  {
+    "path": "stages/temporal_seed44/evaluation.npz",
+    "bytes": 21977,
+    "sha256": "850bdd7a8e7ba9a29ae89f04b9781166272ec4dc7173431cd3fda4ec778a11c3"
+  },
+  {
+    "path": "stages/temporal_seed44/metrics.csv",
+    "bytes": 2136,
+    "sha256": "8381c85e600ea6f6ddde8eb9a5e8646b29b06f79652ff5a18e98eee2c8664a74"
+  }
+]

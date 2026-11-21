@@ -1,0 +1,9 @@
+{
+  "policy": "random_forest",
+  "workload": "feature",
+  "repeat": 1,
+  "baseline_mib": 186.84375,
+  "peak_mib": 187.5625,
+  "delta_mib": 0.71875,
+  "samples": 4
+}

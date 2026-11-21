@@ -1,0 +1,11 @@
+{
+  "policy": "WV_native_full",
+  "workload": "replay",
+  "repeat": 0,
+  "baseline_mib": 293.68359375,
+  "peak_mib": 299.0234375,
+  "delta_mib": 5.33984375,
+  "samples": 138,
+  "interval_seconds": 0.002,
+  "labels_match": true
+}

@@ -1,0 +1,102 @@
+{
+  "experiment": "ARRAY_FACTORIAL_20261103",
+  "data_folder": "runs/MULTISCALE_DATA_20261020_01",
+  "source_run": "runs/WB_RESEARCH_FULL_20261019_01",
+  "views": [
+    "c40_o1",
+    "c40_o10",
+    "c60_o1",
+    "c60_o10"
+  ],
+  "cases": [
+    "balanced"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "signature_seed": 42,
+  "runtime_workers": 3,
+  "weight_alphas": [
+    0.5,
+    0.6,
+    0.7
+  ],
+  "lr_max_iter": 10000,
+  "lr_tol": 1e-06,
+  "port_bijection_offset": 32768,
+  "bootstrap_repeats": 2000,
+  "bootstrap_block_seconds": [
+    1,
+    5,
+    10
+  ],
+  "bootstrap_seed": 20261020,
+  "historical_holdout_used": false,
+  "new_data_or_captures": false,
+  "selection": "G only; maximize 0.5 Macro-F1 + 0.5 F2 DDoS; exact tie prefers smaller serialized pipeline, then lexical name; baseline eligible",
+  "interpretation": "Post-observation exploratory feature repair. No guarantee of improvement, independent test, or algorithmic novelty. No second search after V.",
+  "params": {
+    "decision_tree": {
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "min_samples_split": 20,
+      "criterion": "log_loss",
+      "ddos_loss_weight": 1.0
+    },
+    "random_forest": {
+      "n_estimators": 75,
+      "max_depth": 10,
+      "min_samples_leaf": 2,
+      "min_samples_split": 4,
+      "max_features": "sqrt",
+      "ddos_loss_weight": 1.0
+    },
+    "xgboost": {
+      "n_estimators": 100,
+      "max_depth": 5,
+      "learning_rate": 0.05,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "reg_alpha": 0.05,
+      "reg_lambda": 1.0,
+      "ddos_loss_weight": 1.5
+    },
+    "lightgbm": {
+      "n_estimators": 150,
+      "max_depth": 8,
+      "num_leaves": 63,
+      "learning_rate": 0.05,
+      "min_child_samples": 10,
+      "reg_alpha": 0.05,
+      "reg_lambda": 1.0,
+      "ddos_loss_weight": 1.25
+    },
+    "logistic_regression": {
+      "C": 1.0,
+      "ddos_loss_weight": 1.5
+    }
+  },
+  "smoke_test": false,
+  "model_order": [
+    "decision_tree",
+    "random_forest",
+    "xgboost",
+    "lightgbm",
+    "logistic_regression"
+  ],
+  "class_order": [
+    "Normal",
+    "DDoS_TCP",
+    "Port_Scanning",
+    "SQL_injection",
+    "Ransomware"
+  ],
+  "dataset_sha256": "53101fad091af20bee815860962a5016b802ee45d456a141042f6183094c3c1a",
+  "data_catalog_sha256": "2597a4f4e825cde4d615a6bbde352085a96a2282b392e2c050859d837cc567fa",
+  "source_catalog_sha256": "8f406b82b396b58a5fe307726eb3af367e31e25a6adb870b705104285d1c4197",
+  "created_local": "2026-10-20T12:26:19.320866+07:00",
+  "weight_policy": "fixed_per_stage_C60_O10",
+  "new_selection_on_V": false
+}

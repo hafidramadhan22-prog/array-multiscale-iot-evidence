@@ -1,0 +1,36 @@
+{
+  "status": "LABELS_AND_TARGETS_FROZEN_BEFORE_TON_SCORING",
+  "sources": [
+    {
+      "name": "normal_runsomware1",
+      "total_packets": 357819,
+      "mapping_counts": {
+        "warmup": 4256,
+        "normal": 172410,
+        "unmapped": 128482,
+        "ransomware": 52671
+      },
+      "selected_counts": {
+        "0": 1000,
+        "4": 1000
+      }
+    },
+    {
+      "name": "normal_runsomware2",
+      "total_packets": 1905124,
+      "mapping_counts": {
+        "warmup": 475,
+        "ransomware": 47940,
+        "normal": 78945,
+        "unmapped": 1777764
+      },
+      "selected_counts": {
+        "4": 1000,
+        "0": 1000
+      }
+    }
+  ],
+  "exact_naive_first_file_comparison": true,
+  "label_scope": "author-derived flow labels, bidirectional5tuple, quantized timestamp interval; not original per-packet annotations",
+  "new_model_scoring": false
+}

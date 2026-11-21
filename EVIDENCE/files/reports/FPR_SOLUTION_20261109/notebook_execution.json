@@ -1,0 +1,16 @@
+{
+  "status": "PASS_ALL_CELLS_EXECUTED",
+  "notebook": "C:\\Users\\PREDATOR NEO 16\\Downloads\\TA_HAFID_PAKET_CODEX_20261010\\TA_HAFID_CODEX_HANDOFF\\notebooks\\fpr_solution_20261109\\FPR_SOLUSI_DAN_PREDIKSI_20261109.ipynb",
+  "sha256": "96f58d7c6756fa388b289e44bd242bd245ced9cb20f237c7526914c4702e68d6",
+  "code_cells": 14,
+  "images": 12,
+  "paper_tables": 0,
+  "paper_figures": 0,
+  "errors": 0,
+  "guarded_model_loading": true,
+  "guarded_fitting": true,
+  "new_training": 0,
+  "new_inference": 0,
+  "frozen_catalogs_unchanged": true,
+  "execution_cwd": "C:\\Users\\PREDATOR NEO 16\\Downloads\\TA_HAFID_PAKET_CODEX_20261010\\TA_HAFID_CODEX_HANDOFF\\notebooks\\fpr_solution_20261109"
+}

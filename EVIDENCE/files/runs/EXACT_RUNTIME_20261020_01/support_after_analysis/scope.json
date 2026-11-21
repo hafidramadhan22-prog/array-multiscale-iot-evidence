@@ -1,0 +1,22 @@
+{
+  "files": [
+    "scripts/analyze_time_repair.py",
+    "scripts/profile_exact_runtime.py",
+    "scripts/verify_exact_runtime.py",
+    "scripts/verify_exact_xai.py",
+    "scripts/predict_exact_runtime.py",
+    "scripts/build_time_runtime_report.py",
+    "scripts/build_time_runtime_review.py",
+    "scripts/finalize_time_runtime.py",
+    "scripts/prepare_time_context.py",
+    "scripts/create_time_runners.py",
+    "src/exact_runtime.py",
+    "tests/test_exact_runtime.py",
+    "tests/test_time_context.py",
+    "docs/TIME_RUNTIME_LITERATURE_20261020.md",
+    "docs/TIME_RUNTIME_PROTOCOL_20261020.md",
+    "docs/TIME_RUNTIME_REPORT_TEMPLATE.md",
+    "docs/HASIL_TIME_RUNTIME_20261020.md"
+  ],
+  "role": "Reporting and verification support copied after fitting; prefit snapshot remains separate"
+}

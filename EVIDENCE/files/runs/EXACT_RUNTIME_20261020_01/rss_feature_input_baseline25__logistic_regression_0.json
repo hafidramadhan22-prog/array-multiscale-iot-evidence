@@ -1,0 +1,13 @@
+{
+  "policy": "baseline25__logistic_regression",
+  "workload": "feature_input",
+  "run": 0,
+  "baseline_rss_mib": 186.80859375,
+  "peak_rss_mib": 187.0859375,
+  "delta_peak_inference_mib": 0.27734375,
+  "samples": 3,
+  "interval_seconds": 0.002,
+  "labels_match": true,
+  "cold_first_prediction": true,
+  "ring_included": false
+}

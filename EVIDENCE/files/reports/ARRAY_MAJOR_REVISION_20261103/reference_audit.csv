@@ -1,0 +1,26 @@
+key,status,url,doi,claim_scope
+r1,200,https://api.crossref.org/works/10.1109/ACCESS.2022.3165809,10.1109/ACCESS.2022.3165809,Conceptual precedent; no external published score treated as matched baseline
+r2,200,https://api.crossref.org/works/10.1007/978-3-031-09484-2_2,10.1007/978-3-031-09484-2_2,Conceptual precedent; no external published score treated as matched baseline
+r3,200,https://www.jmlr.org/papers/v11/cawley10a.html,,Conceptual precedent; no external published score treated as matched baseline
+r4,200,https://api.crossref.org/works/10.1016/j.patter.2023.100804,10.1016/j.patter.2023.100804,Conceptual precedent; no external published score treated as matched baseline
+r5,200,https://arxiv.org/abs/1802.09089,,Conceptual precedent; no external published score treated as matched baseline
+r6,200,https://arxiv.org/abs/1806.11202,,Conceptual precedent; no external published score treated as matched baseline
+r7,200,https://www.usenix.org/conference/osdi20/presentation/nakandala,,Conceptual precedent; no external published score treated as matched baseline
+r8,200,https://www.usenix.org/conference/nsdi25/presentation/wan-gerry,,Conceptual precedent; no external published score treated as matched baseline
+r9,200,https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html,,Conceptual precedent; no external published score treated as matched baseline
+r10,200,https://api.crossref.org/works/10.1109/ACCESS.2024.3365140,10.1109/ACCESS.2024.3365140,Conceptual precedent; no external published score treated as matched baseline
+r11,200,https://api.crossref.org/works/10.1109/ITNAC66378.2025.11302604,10.1109/ITNAC66378.2025.11302604,Conceptual precedent; no external published score treated as matched baseline
+r12,200,https://api.crossref.org/works/10.1109/JIOT.2025.3633946,10.1109/JIOT.2025.3633946,Conceptual precedent; no external published score treated as matched baseline
+r13,200,https://arxiv.org/abs/1806.07421,,Conceptual precedent; no external published score treated as matched baseline
+r14,200,https://api.crossref.org/works/10.1016/j.artint.2021.103502,10.1016/j.artint.2021.103502,Conceptual precedent; no external published score treated as matched baseline
+r15,200,https://www.jmlr.org/papers/v22/20-1316.html,,Conceptual precedent; no external published score treated as matched baseline
+r16,200,https://api.crossref.org/works/10.1613/jair.953,10.1613/jair.953,Conceptual precedent; no external published score treated as matched baseline
+r17,200,https://api.crossref.org/works/10.1023/A:1010933404324,10.1023/A:1010933404324,Conceptual precedent; no external published score treated as matched baseline
+r18,200,https://api.crossref.org/works/10.1145/2939672.2939785,10.1145/2939672.2939785,Conceptual precedent; no external published score treated as matched baseline
+r19,200,https://proceedings.neurips.cc/paper/2017/hash/6449f44a102fde848669bdd9eb6b76fa-Abstract.html,,Conceptual precedent; no external published score treated as matched baseline
+r20,200,https://api.crossref.org/works/10.5220/0006105602530262,10.5220/0006105602530262,Conceptual precedent; no external published score treated as matched baseline
+r21,200,https://api.crossref.org/works/10.1016/j.array.2023.100306,10.1016/j.array.2023.100306,Conceptual precedent; no external published score treated as matched baseline
+r22,200,https://api.crossref.org/works/10.1016/j.array.2025.100406,10.1016/j.array.2025.100406,Conceptual precedent; no external published score treated as matched baseline
+r23,200,https://api.crossref.org/works/10.1016/j.array.2026.101012,10.1016/j.array.2026.101012,Conceptual precedent; no external published score treated as matched baseline
+r24,200,https://api.crossref.org/works/10.1016/j.array.2026.101114,10.1016/j.array.2026.101114,Conceptual precedent; no external published score treated as matched baseline
+r25,200,https://api.crossref.org/works/10.1016/j.ins.2026.123908,10.1016/j.ins.2026.123908,Conceptual precedent; no external published score treated as matched baseline

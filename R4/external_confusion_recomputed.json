@@ -1,0 +1,422 @@
+[
+  {
+    "source": "CIC_DDoS_SYN",
+    "policy": "random_forest",
+    "n": 1000,
+    "confusion_counts": {
+      "DDoS_TCP": {
+        "DDoS_TCP": 981
+      },
+      "Normal": {
+        "DDoS_TCP": 12
+      },
+      "Port_Scanning": {
+        "DDoS_TCP": 7
+      }
+    }
+  },
+  {
+    "source": "CIC_DDoS_SYN",
+    "policy": "sql_guard_rf_rescue",
+    "n": 1000,
+    "confusion_counts": {
+      "DDoS_TCP": {
+        "DDoS_TCP": 621
+      },
+      "Normal": {
+        "DDoS_TCP": 12
+      },
+      "Port_Scanning": {
+        "DDoS_TCP": 7
+      },
+      "SQL_injection": {
+        "DDoS_TCP": 360
+      }
+    }
+  },
+  {
+    "source": "CIC_DDoS_SYN",
+    "policy": "weighted_reference",
+    "n": 1000,
+    "confusion_counts": {
+      "DDoS_TCP": {
+        "DDoS_TCP": 621
+      },
+      "Normal": {
+        "DDoS_TCP": 2
+      },
+      "Port_Scanning": {
+        "DDoS_TCP": 7
+      },
+      "SQL_injection": {
+        "DDoS_TCP": 370
+      }
+    }
+  },
+  {
+    "source": "CIC_Normal0",
+    "policy": "random_forest",
+    "n": 1000,
+    "confusion_counts": {
+      "Normal": {
+        "Normal": 671
+      },
+      "Port_Scanning": {
+        "Normal": 24
+      },
+      "Ransomware": {
+        "Normal": 201
+      },
+      "SQL_injection": {
+        "Normal": 104
+      }
+    }
+  },
+  {
+    "source": "CIC_Normal0",
+    "policy": "sql_guard_rf_rescue",
+    "n": 1000,
+    "confusion_counts": {
+      "Normal": {
+        "Normal": 653
+      },
+      "Port_Scanning": {
+        "Normal": 24
+      },
+      "Ransomware": {
+        "Normal": 213
+      },
+      "SQL_injection": {
+        "Normal": 110
+      }
+    }
+  },
+  {
+    "source": "CIC_Normal0",
+    "policy": "weighted_reference",
+    "n": 1000,
+    "confusion_counts": {
+      "Normal": {
+        "Normal": 669
+      },
+      "Port_Scanning": {
+        "Normal": 24
+      },
+      "Ransomware": {
+        "Normal": 198
+      },
+      "SQL_injection": {
+        "Normal": 109
+      }
+    }
+  },
+  {
+    "source": "CIC_Normal3",
+    "policy": "random_forest",
+    "n": 1000,
+    "confusion_counts": {
+      "Normal": {
+        "Normal": 717
+      },
+      "Port_Scanning": {
+        "Normal": 31
+      },
+      "Ransomware": {
+        "Normal": 220
+      },
+      "SQL_injection": {
+        "Normal": 32
+      }
+    }
+  },
+  {
+    "source": "CIC_Normal3",
+    "policy": "sql_guard_rf_rescue",
+    "n": 1000,
+    "confusion_counts": {
+      "Normal": {
+        "Normal": 709
+      },
+      "Port_Scanning": {
+        "Normal": 30
+      },
+      "Ransomware": {
+        "Normal": 235
+      },
+      "SQL_injection": {
+        "Normal": 26
+      }
+    }
+  },
+  {
+    "source": "CIC_Normal3",
+    "policy": "weighted_reference",
+    "n": 1000,
+    "confusion_counts": {
+      "Normal": {
+        "Normal": 728
+      },
+      "Port_Scanning": {
+        "Normal": 30
+      },
+      "Ransomware": {
+        "Normal": 218
+      },
+      "SQL_injection": {
+        "Normal": 24
+      }
+    }
+  },
+  {
+    "source": "CIC_PortScan",
+    "policy": "random_forest",
+    "n": 1000,
+    "confusion_counts": {
+      "Normal": {
+        "Port_Scanning": 571
+      },
+      "Port_Scanning": {
+        "Port_Scanning": 42
+      },
+      "Ransomware": {
+        "Port_Scanning": 216
+      },
+      "SQL_injection": {
+        "Port_Scanning": 171
+      }
+    }
+  },
+  {
+    "source": "CIC_PortScan",
+    "policy": "sql_guard_rf_rescue",
+    "n": 1000,
+    "confusion_counts": {
+      "Normal": {
+        "Port_Scanning": 555
+      },
+      "Port_Scanning": {
+        "Port_Scanning": 40
+      },
+      "Ransomware": {
+        "Port_Scanning": 238
+      },
+      "SQL_injection": {
+        "Port_Scanning": 167
+      }
+    }
+  },
+  {
+    "source": "CIC_PortScan",
+    "policy": "weighted_reference",
+    "n": 1000,
+    "confusion_counts": {
+      "Normal": {
+        "Port_Scanning": 465
+      },
+      "Port_Scanning": {
+        "Port_Scanning": 38
+      },
+      "Ransomware": {
+        "Port_Scanning": 222
+      },
+      "SQL_injection": {
+        "Port_Scanning": 275
+      }
+    }
+  },
+  {
+    "source": "CIC_SQL",
+    "policy": "random_forest",
+    "n": 1000,
+    "confusion_counts": {
+      "Normal": {
+        "SQL_injection": 228
+      },
+      "Port_Scanning": {
+        "SQL_injection": 40
+      },
+      "Ransomware": {
+        "SQL_injection": 402
+      },
+      "SQL_injection": {
+        "SQL_injection": 330
+      }
+    }
+  },
+  {
+    "source": "CIC_SQL",
+    "policy": "sql_guard_rf_rescue",
+    "n": 1000,
+    "confusion_counts": {
+      "Normal": {
+        "SQL_injection": 211
+      },
+      "Port_Scanning": {
+        "SQL_injection": 41
+      },
+      "Ransomware": {
+        "SQL_injection": 427
+      },
+      "SQL_injection": {
+        "SQL_injection": 321
+      }
+    }
+  },
+  {
+    "source": "CIC_SQL",
+    "policy": "weighted_reference",
+    "n": 1000,
+    "confusion_counts": {
+      "Normal": {
+        "SQL_injection": 261
+      },
+      "Port_Scanning": {
+        "SQL_injection": 40
+      },
+      "Ransomware": {
+        "SQL_injection": 401
+      },
+      "SQL_injection": {
+        "SQL_injection": 298
+      }
+    }
+  },
+  {
+    "source": "TON_Ransom1",
+    "policy": "random_forest",
+    "n": 2000,
+    "confusion_counts": {
+      "DDoS_TCP": {
+        "Normal": 31,
+        "Ransomware": 42
+      },
+      "Normal": {
+        "Normal": 849,
+        "Ransomware": 954
+      },
+      "Ransomware": {
+        "Normal": 9,
+        "Ransomware": 2
+      },
+      "SQL_injection": {
+        "Normal": 111,
+        "Ransomware": 2
+      }
+    }
+  },
+  {
+    "source": "TON_Ransom1",
+    "policy": "sql_guard_rf_rescue",
+    "n": 2000,
+    "confusion_counts": {
+      "DDoS_TCP": {
+        "Normal": 4,
+        "Ransomware": 41
+      },
+      "Normal": {
+        "Normal": 846,
+        "Ransomware": 954
+      },
+      "Ransomware": {
+        "Normal": 12,
+        "Ransomware": 2
+      },
+      "SQL_injection": {
+        "Normal": 138,
+        "Ransomware": 3
+      }
+    }
+  },
+  {
+    "source": "TON_Ransom1",
+    "policy": "weighted_reference",
+    "n": 2000,
+    "confusion_counts": {
+      "DDoS_TCP": {
+        "Normal": 1,
+        "Ransomware": 0
+      },
+      "Normal": {
+        "Normal": 685,
+        "Ransomware": 950
+      },
+      "Ransomware": {
+        "Normal": 11,
+        "Ransomware": 2
+      },
+      "SQL_injection": {
+        "Normal": 303,
+        "Ransomware": 48
+      }
+    }
+  },
+  {
+    "source": "TON_Ransom2",
+    "policy": "random_forest",
+    "n": 2000,
+    "confusion_counts": {
+      "Normal": {
+        "Normal": 782,
+        "Ransomware": 704
+      },
+      "Port_Scanning": {
+        "Normal": 0,
+        "Ransomware": 1
+      },
+      "Ransomware": {
+        "Normal": 19,
+        "Ransomware": 28
+      },
+      "SQL_injection": {
+        "Normal": 199,
+        "Ransomware": 267
+      }
+    }
+  },
+  {
+    "source": "TON_Ransom2",
+    "policy": "sql_guard_rf_rescue",
+    "n": 2000,
+    "confusion_counts": {
+      "Normal": {
+        "Normal": 777,
+        "Ransomware": 703
+      },
+      "Port_Scanning": {
+        "Normal": 0,
+        "Ransomware": 1
+      },
+      "Ransomware": {
+        "Normal": 25,
+        "Ransomware": 29
+      },
+      "SQL_injection": {
+        "Normal": 198,
+        "Ransomware": 267
+      }
+    }
+  },
+  {
+    "source": "TON_Ransom2",
+    "policy": "weighted_reference",
+    "n": 2000,
+    "confusion_counts": {
+      "Normal": {
+        "Normal": 828,
+        "Ransomware": 680
+      },
+      "Port_Scanning": {
+        "Normal": 0,
+        "Ransomware": 1
+      },
+      "Ransomware": {
+        "Normal": 22,
+        "Ransomware": 25
+      },
+      "SQL_injection": {
+        "Normal": 150,
+        "Ransomware": 294
+      }
+    }
+  }
+]

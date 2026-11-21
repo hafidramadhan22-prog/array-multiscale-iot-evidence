@@ -1,0 +1,52 @@
+[
+  {
+    "path": "README.pdf",
+    "url": "https://cicresearch.ca/IOTDataset/CIC_IOT_Dataset2023/download.php?file=README.pdf",
+    "bytes": 3819227,
+    "sha256": "0f48daba395be03985f612ce706d33f1a25e4008cb94c3ad7b6f6332fbdbee92",
+    "time_utc": "2026-11-09T15:19:13.316502+00:00",
+    "seconds": 61.38999999999942,
+    "official_source": true,
+    "download_complete_EOF": true
+  },
+  {
+    "path": "PCAP/README_PCAP.pdf",
+    "url": "https://cicresearch.ca/IOTDataset/CIC_IOT_Dataset2023/download.php?file=PCAP%2FREADME_PCAP.pdf",
+    "bytes": 69004,
+    "sha256": "45d37b9c64191c525dcdd9f9819e5e5af6dca3db9668c18cad7ad5fc1e66da7c",
+    "time_utc": "2026-11-09T15:19:15.767275+00:00",
+    "seconds": 2.4530000000013388,
+    "official_source": true,
+    "download_complete_EOF": true
+  },
+  {
+    "path": "Supplementary Materials/README.pdf",
+    "url": "https://cicresearch.ca/IOTDataset/CIC_IOT_Dataset2023/download.php?file=Supplementary+Materials%2FREADME.pdf",
+    "bytes": 63886,
+    "sha256": "a748399c72fbacc2cd2e6e2e4091561bc53b7d8b9a50c2b1d7ed3a17a073f581",
+    "time_utc": "2026-11-09T15:19:18.305461+00:00",
+    "seconds": 2.5319999999992433,
+    "official_source": true,
+    "download_complete_EOF": true
+  },
+  {
+    "path": "Supplementary Materials/README_Victims_List.pdf",
+    "url": "https://cicresearch.ca/IOTDataset/CIC_IOT_Dataset2023/download.php?file=Supplementary+Materials%2FREADME_Victims_List.pdf",
+    "bytes": 479995,
+    "sha256": "125549276d75992a31ad2a49af230fee5b731c69b28c8e6cb75a880378956e8e",
+    "time_utc": "2026-11-09T15:19:28.205790+00:00",
+    "seconds": 9.890999999999622,
+    "official_source": true,
+    "download_complete_EOF": true
+  },
+  {
+    "path": "PCAP/SqlInjection/SqlInjection.pcap",
+    "url": "https://cicresearch.ca/IOTDataset/CIC_IOT_Dataset2023/download.php?file=PCAP%2FSqlInjection%2FSqlInjection.pcap",
+    "bytes": 9823016,
+    "sha256": "712750bd64f8250861bd8a76bd1c33a44a4fe8d3dc2f34e2043c208edc19bde7",
+    "time_utc": "2026-11-09T15:21:33.211067+00:00",
+    "seconds": 125.0,
+    "official_source": true,
+    "download_complete_EOF": true
+  }
+]

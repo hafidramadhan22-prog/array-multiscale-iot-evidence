@@ -1,0 +1,62 @@
+{
+  "quality_run": "runs\\IAT_REPAIR_FULL_20261020_01",
+  "views": [
+    "baseline25"
+  ],
+  "modes": [
+    "native_shared",
+    "native_certified",
+    "compact_shared",
+    "compact_certified",
+    "logistic_regression",
+    "random_forest"
+  ],
+  "seed": 20261020,
+  "batches": [
+    1,
+    1000
+  ],
+  "warmups": 5,
+  "blocks": 3,
+  "repeats": 15,
+  "memory_runs": 3,
+  "memory_interval_seconds": 0.002,
+  "replay_timed_repeats": 5,
+  "posterior_tolerance": 1e-12,
+  "no_fitting": true,
+  "source_manifest": [
+    {
+      "path": "scripts/profile_exact_runtime.py",
+      "sha256": "85501d588fb04116a3bf4b9a6d0b00482b328771147b3a5e0c4ef690986d824f"
+    },
+    {
+      "path": "src/exact_runtime.py",
+      "sha256": "90c665d28953dd158759720a9d965e0fddb6a5d13dd3312e35b439a3b18005c8"
+    },
+    {
+      "path": "src/time_context.py",
+      "sha256": "65aa16553aced8da2cca5c0061b5ca9bcca068fd3bb3046c8f0340983fb8e496"
+    },
+    {
+      "path": "src/multiscale_context.py",
+      "sha256": "5259bc739c52472d83151b2232ef9cb9cbb1e1fe307bf025ef3c35e78a48ac83"
+    },
+    {
+      "path": "src/wb_research.py",
+      "sha256": "3c0575f1afba9cefcaf57becfcaa7ac0cc3972b1f28bb1549fa656f6663deb7c"
+    },
+    {
+      "path": "src/wb_scheduler.py",
+      "sha256": "0f40ec59638b92465283a0401acaba571bab79aebe572c6ebc878b9d6a7b4209"
+    },
+    {
+      "path": "docs/TIME_RUNTIME_PROTOCOL_20261020.md",
+      "sha256": "f1bf421d69f01d72cfe9d85e88a8ba2a12fea1d8d4b32de4ff2de321d395afb7"
+    },
+    {
+      "path": "docs/TIME_RUNTIME_LITERATURE_20261020.md",
+      "sha256": "847c2bba436706cf4686de6307b643a4c10d81a273c66856d31e6ee895838de3"
+    }
+  ],
+  "limitation": "Laptop; supplied legacy features. Replay adds decode, retained context, framing and prediction, not raw legacy extraction or SHAP."
+}

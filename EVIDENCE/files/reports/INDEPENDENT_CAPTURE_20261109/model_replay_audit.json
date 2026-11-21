@@ -1,0 +1,12 @@
+{
+  "status": "PASS_FROZEN_MODEL_REPLAY",
+  "inputs": 9000,
+  "predictions": 27000,
+  "no_fit": true,
+  "model_sha256": "77aa1beb6980f4eb9db9838af6505949899c5aa574f3be49d55adfdc1efcf31d",
+  "frozen_catalog_sha256": "9b25f63c75777d7c1aad4d04c75405832062d994c2410985e58fc53f6513d537",
+  "features_sha256": "e8aea301472ea6114ee3728c792ad0288bf516d59f38b9fefa7c30257781e87c",
+  "prediction_sha256": "44e67026ec0df4fd669cb40126ebcea558234e53854d9f23c477d64401f315be",
+  "saved_labels_identical": true,
+  "max_probability_difference": 0.0
+}

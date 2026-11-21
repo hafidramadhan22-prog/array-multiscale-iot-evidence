@@ -1,0 +1,6 @@
+,Normal,DDoS_TCP,Port_Scanning,SQL_injection,Ransomware
+Normal,3821,0,12,0,27
+DDoS_TCP,0,1575,0,0,0
+Port_Scanning,0,0,1460,0,61
+SQL_injection,0,0,0,1644,8
+Ransomware,0,0,82,0,1668

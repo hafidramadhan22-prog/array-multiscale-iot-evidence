@@ -1,0 +1,8 @@
+{
+  "status": "TIME_RUNTIME_COMPLETE_VERIFIED",
+  "artifacts": 131,
+  "catalog_sha256": "c627174511eea044ad7eb053478ba4561f3277b79661891a99a420abe522f0af",
+  "historical_holdout_used": false,
+  "independent_capture_validation": false,
+  "old_runs_preserved": true
+}

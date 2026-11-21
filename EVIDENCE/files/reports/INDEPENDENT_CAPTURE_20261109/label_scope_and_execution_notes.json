@@ -1,0 +1,10 @@
+{
+  "CIC_label_scope": "Normal captures: declared benign by source; attacks: capture-scenario labels, not independently confirmed packet attack annotations",
+  "TON_label_scope": "Derived author flow labels using unique bidirectional5tuple/time-interval mapping; one-second timestamp quantization",
+  "TON_scope_excludes_unmapped_packets": true,
+  "two_files_do_not_prove_two_independent_sessions": true,
+  "SYN_native_TShark_interrupted_for_low_RAM": true,
+  "SYN_optimization": "Retain full selected TCP flows, all non-TCP, all IP fragments and all TCP DNS for protocol dissection; use every original packet for history",
+  "execution_validation_control": "All85 features on1000 native CIC_Normal3 targets match exactly before use for SYN",
+  "model_retuning_after_external_results": false
+}

@@ -1,0 +1,5 @@
+{
+  "path": "scripts/map_ton_intervals_fast_20261109.py",
+  "sha256": "629ae05ca0340aae7284533a610f00a80791105a13b1ccff715d5a2fa05dbce5",
+  "reason": "Exact interval unions replace linear scans; no label definitions or sampling changes"
+}

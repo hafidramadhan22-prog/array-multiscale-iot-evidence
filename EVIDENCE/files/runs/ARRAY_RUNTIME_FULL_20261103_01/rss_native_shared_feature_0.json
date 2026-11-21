@@ -1,0 +1,9 @@
+{
+  "policy": "native_shared",
+  "workload": "feature",
+  "repeat": 0,
+  "baseline_mib": 294.3125,
+  "peak_mib": 296.5234375,
+  "delta_mib": 2.2109375,
+  "samples": 8
+}

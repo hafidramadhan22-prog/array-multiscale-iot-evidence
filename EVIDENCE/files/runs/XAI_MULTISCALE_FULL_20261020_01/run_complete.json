@@ -1,0 +1,9 @@
+{
+  "status": "REPAIR_COMPLETE_VERIFIED",
+  "run": "XAI_MULTISCALE_FULL_20261020_01",
+  "catalog_sha256": "95db44df22b6d6933a4bc494662171609f2ee34a0237b529d65645e261d25d31",
+  "artifacts": 38,
+  "historical_holdout_used": false,
+  "independent_capture_validation": false,
+  "old_runs_preserved": true
+}

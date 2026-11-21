@@ -1,0 +1,11 @@
+{
+  "weights": [
+    0.22386323037385172,
+    0.187086276652741,
+    0.18453338361651223,
+    0.18273380502474085,
+    0.2217833043321542
+  ],
+  "source": "runs\\MULTISCALE_REPAIR_FULL_20261020_01\\stages\\temporal_seed44\\legacy25_multiscale60__balanced\\selection_before_V.json",
+  "role": "Previously frozen G; identical weights in all four factorial cells"
+}

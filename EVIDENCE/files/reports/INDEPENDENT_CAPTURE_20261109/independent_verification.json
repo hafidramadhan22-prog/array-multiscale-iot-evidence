@@ -1,0 +1,65 @@
+{
+  "status": "PASS_SAVED_RESULTS_AND_LABEL_MAPPING",
+  "unique_targets": 9000,
+  "primary_policy_predictions": 27000,
+  "sources": [
+    {
+      "source": "CIC_Normal0",
+      "n": 1000,
+      "feature_sha256": "0bb2dc43836c697914f425eab11c6839a85dea9a928c6b17898f3c5773964be9",
+      "posterior_sha256": "c746e1bd677cd8e907f868352afbdc30cbfbb9b8249faf11bacb8f9d74237864",
+      "label_scope": "known_benign_capture"
+    },
+    {
+      "source": "CIC_Normal3",
+      "n": 1000,
+      "feature_sha256": "11374008b937630c02eb9abd876bbdfe4f2eb35478958f6eb54236a60c5dd31e",
+      "posterior_sha256": "07ee69687f12cd95427b3d661ecce7eabd44f88700fe1e02f27c4c9d323ebfe3",
+      "label_scope": "known_benign_capture"
+    },
+    {
+      "source": "CIC_SQL",
+      "n": 1000,
+      "feature_sha256": "0ed0b672235f49b6b14a9abd98dd6e91a56f32768c50b6d734dd3ab114e985c3",
+      "posterior_sha256": "ad48ff75c6d84a0c5c958f5b32d0124e0679e329810f075f7658e38f27e31da0",
+      "label_scope": "capture_scenario_not_verified_packet_attack"
+    },
+    {
+      "source": "CIC_PortScan",
+      "n": 1000,
+      "feature_sha256": "26b35bb48bb05964874f5f1bf855106543474d5aacf3e192fee793f72299d9e0",
+      "posterior_sha256": "545f8de5b5e6431bab507772cb539e54d921dc7bb9e463314b71c5d09e27006d",
+      "label_scope": "capture_scenario_not_verified_packet_attack"
+    },
+    {
+      "source": "CIC_DDoS_SYN",
+      "n": 1000,
+      "feature_sha256": "fc8d185a815eb40625d4170f6ccf777b3eb7ed1983b54f5c6b8e5d42cf3cb57d",
+      "posterior_sha256": "8c0b03b0dc243e9960ac079395f7255a69abd4f7460e367624e11c38a474ef43",
+      "label_scope": "capture_scenario_not_verified_packet_attack"
+    },
+    {
+      "source": "TON_Ransom1",
+      "n": 2000,
+      "feature_sha256": "aa1943a0b2086776a71dfd9f962324070f0bc9694cca8026b9099ecf268b811c",
+      "posterior_sha256": "6be39e1a79c19cc56aab1f5301d6930fae65e67ba60c6846cb6578d41f6cbe72",
+      "label_scope": "author_flow_derived"
+    },
+    {
+      "source": "TON_Ransom2",
+      "n": 2000,
+      "feature_sha256": "1efe9875d97da834fb5e346d108d35b3d4554a68a2bce34106c83d2202766719",
+      "posterior_sha256": "e0c49881255e9147bc2430cfac2dbd4de94eabad7ac449926bcbca0485af306b",
+      "label_scope": "author_flow_derived"
+    }
+  ],
+  "all_five_category_names_covered_across_different_datasets": true,
+  "single_independent_five_class_testbed": false,
+  "independent_FPR_target8_met": false,
+  "CIC_candidate_FPR_percent": 31.9,
+  "TON_labels": "derived author flow labels with quantized time; unmapped excluded",
+  "model_sha256": "77aa1beb6980f4eb9db9838af6505949899c5aa574f3be49d55adfdc1efcf31d",
+  "new_fits": 0,
+  "all_primary_metrics_independently_recomputed": true,
+  "all_4000_TON_labels_checked_against_all_matching_author_flows": true
+}

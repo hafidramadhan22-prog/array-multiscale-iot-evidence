@@ -1,0 +1,11 @@
+{
+  "policy": "WV_compact_certified",
+  "workload": "feature",
+  "repeat": 1,
+  "baseline_mib": 293.65234375,
+  "peak_mib": 296.0078125,
+  "delta_mib": 2.35546875,
+  "samples": 5,
+  "interval_seconds": 0.002,
+  "labels_match": true
+}

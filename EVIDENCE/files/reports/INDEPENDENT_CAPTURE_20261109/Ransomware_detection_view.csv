@@ -1,0 +1,7 @@
+source,policy,attack_support,attack_to_Normal,attack_recall_percent,recall_Ransomware
+TON_Ransom1,RF,1000,954,4.600000000000004,0.2
+TON_Ransom1,Voting lama,1000,950,5.000000000000004,0.2
+TON_Ransom1,SQL guard + RF rescue,1000,954,4.600000000000004,0.2
+TON_Ransom2,RF,1000,704,29.600000000000005,2.8
+TON_Ransom2,Voting lama,1000,680,32.0,2.5
+TON_Ransom2,SQL guard + RF rescue,1000,703,29.700000000000003,2.9

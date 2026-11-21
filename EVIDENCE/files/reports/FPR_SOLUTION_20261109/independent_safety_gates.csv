@@ -1,0 +1,8 @@
+cohort,passed,macro_F1_delta_pp,attack_to_Normal_delta,delta_recall_DDoS_TCP,delta_recall_Port_Scanning,delta_recall_SQL_injection,delta_recall_Ransomware
+C,True,0.0,0,0.0,0.0,0.0,0.0
+G,True,0.0,0,0.0,0.0,0.0,0.0
+signature_fold1,True,0.0,0,0.0,0.0,0.0,0.0
+signature_fold2,True,0.001724545997674909,-10,0.04198152812762146,0.04945598417408803,0.0,0.023004370830463472
+temporal_seed43,True,-0.011653046774540599,-6,0.0,0.0,0.060532687651331685,0.0
+temporal_seed44,True,-0.05492525955740746,-9,0.0,0.0,0.060532687651331685,0.0
+V_seed42,True,-0.02976906918085831,-2,0.0,0.0,0.0,0.0

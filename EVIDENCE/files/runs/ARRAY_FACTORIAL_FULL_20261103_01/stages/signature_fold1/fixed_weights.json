@@ -1,0 +1,11 @@
+{
+  "weights": [
+    0.22279039812053358,
+    0.18645820260493773,
+    0.18512226117406771,
+    0.1839525400839206,
+    0.22167659801654038
+  ],
+  "source": "runs\\MULTISCALE_REPAIR_FULL_20261020_01\\stages\\signature_fold1\\legacy25_multiscale60__balanced\\selection_before_V.json",
+  "role": "Previously frozen G; identical weights in all four factorial cells"
+}

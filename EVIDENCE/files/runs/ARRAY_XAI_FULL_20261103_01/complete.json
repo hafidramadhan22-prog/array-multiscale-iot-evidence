@@ -1,0 +1,7 @@
+{
+  "status": "PASS_XAI_FULL",
+  "games": 200,
+  "coalitions": 512,
+  "training": false,
+  "catalog_sha256": "9f289f3be3f7b32235036d411d9f60d2125ae462de20fb7fe5a856f1d68e21b5"
+}

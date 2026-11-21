@@ -1,0 +1,14 @@
+{
+  "status": "PASS_G_SELECTED_MULTISCALE_XAI",
+  "view": "legacy25_multiscale60",
+  "rows": 100,
+  "background_A": 32,
+  "background_B": 32,
+  "exact_attributions": 300,
+  "new_classifier_fits": 0,
+  "metric_rows": 2700,
+  "role_G_model_selection": true,
+  "full_posterior_cache_matches": true,
+  "port_inputs_unchanged": true,
+  "query_delay_changed_inputs": 33
+}

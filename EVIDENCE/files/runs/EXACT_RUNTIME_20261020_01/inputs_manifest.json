@@ -1,0 +1,437 @@
+{
+  "configuration": {
+    "quality_run": "runs\\IAT_REPAIR_FULL_20261020_01",
+    "views": [
+      "baseline25"
+    ],
+    "modes": [
+      "native_shared",
+      "native_certified",
+      "compact_shared",
+      "compact_certified",
+      "logistic_regression",
+      "random_forest"
+    ],
+    "seed": 20261020,
+    "batches": [
+      1,
+      1000
+    ],
+    "warmups": 5,
+    "blocks": 3,
+    "repeats": 15,
+    "memory_runs": 3,
+    "memory_interval_seconds": 0.002,
+    "replay_timed_repeats": 5,
+    "posterior_tolerance": 1e-12,
+    "no_fitting": true,
+    "source_manifest": [
+      {
+        "path": "scripts/profile_exact_runtime.py",
+        "sha256": "85501d588fb04116a3bf4b9a6d0b00482b328771147b3a5e0c4ef690986d824f"
+      },
+      {
+        "path": "src/exact_runtime.py",
+        "sha256": "90c665d28953dd158759720a9d965e0fddb6a5d13dd3312e35b439a3b18005c8"
+      },
+      {
+        "path": "src/time_context.py",
+        "sha256": "65aa16553aced8da2cca5c0061b5ca9bcca068fd3bb3046c8f0340983fb8e496"
+      },
+      {
+        "path": "src/multiscale_context.py",
+        "sha256": "5259bc739c52472d83151b2232ef9cb9cbb1e1fe307bf025ef3c35e78a48ac83"
+      },
+      {
+        "path": "src/wb_research.py",
+        "sha256": "3c0575f1afba9cefcaf57becfcaa7ac0cc3972b1f28bb1549fa656f6663deb7c"
+      },
+      {
+        "path": "src/wb_scheduler.py",
+        "sha256": "0f40ec59638b92465283a0401acaba571bab79aebe572c6ebc878b9d6a7b4209"
+      },
+      {
+        "path": "docs/TIME_RUNTIME_PROTOCOL_20261020.md",
+        "sha256": "f1bf421d69f01d72cfe9d85e88a8ba2a12fea1d8d4b32de4ff2de321d395afb7"
+      },
+      {
+        "path": "docs/TIME_RUNTIME_LITERATURE_20261020.md",
+        "sha256": "847c2bba436706cf4686de6307b643a4c10d81a273c66856d31e6ee895838de3"
+      }
+    ],
+    "limitation": "Laptop; supplied legacy features. Replay adds decode, retained context, framing and prediction, not raw legacy extraction or SHAP."
+  },
+  "schemas": {
+    "baseline25": {
+      "numeric": [
+        "http.response",
+        "tcp.connection.fin",
+        "tcp.connection.rst",
+        "tcp.connection.syn",
+        "tcp.connection.synack",
+        "tcp.flags.ack",
+        "tcp.len",
+        "udp.time_delta",
+        "mqtt.len",
+        "dns.qry.name.len__numeric",
+        "multiscale_higher_100ms_log_packets",
+        "multiscale_higher_100ms_log_bytes",
+        "multiscale_higher_100ms_log_peers",
+        "multiscale_higher_100ms_log_local_tcp_ports",
+        "multiscale_higher_100ms_log_peer_tcp_ports",
+        "multiscale_higher_100ms_mean_bytes",
+        "multiscale_higher_100ms_std_bytes",
+        "multiscale_higher_100ms_syn_fraction",
+        "multiscale_higher_100ms_ack_fraction",
+        "multiscale_higher_100ms_rst_fraction",
+        "multiscale_higher_1000ms_log_packets",
+        "multiscale_higher_1000ms_log_bytes",
+        "multiscale_higher_1000ms_log_peers",
+        "multiscale_higher_1000ms_log_local_tcp_ports",
+        "multiscale_higher_1000ms_log_peer_tcp_ports",
+        "multiscale_higher_1000ms_mean_bytes",
+        "multiscale_higher_1000ms_std_bytes",
+        "multiscale_higher_1000ms_syn_fraction",
+        "multiscale_higher_1000ms_ack_fraction",
+        "multiscale_higher_1000ms_rst_fraction",
+        "multiscale_higher_10000ms_log_packets",
+        "multiscale_higher_10000ms_log_bytes",
+        "multiscale_higher_10000ms_log_peers",
+        "multiscale_higher_10000ms_log_local_tcp_ports",
+        "multiscale_higher_10000ms_log_peer_tcp_ports",
+        "multiscale_higher_10000ms_mean_bytes",
+        "multiscale_higher_10000ms_std_bytes",
+        "multiscale_higher_10000ms_syn_fraction",
+        "multiscale_higher_10000ms_ack_fraction",
+        "multiscale_higher_10000ms_rst_fraction",
+        "multiscale_lower_100ms_log_packets",
+        "multiscale_lower_100ms_log_bytes",
+        "multiscale_lower_100ms_log_peers",
+        "multiscale_lower_100ms_log_local_tcp_ports",
+        "multiscale_lower_100ms_log_peer_tcp_ports",
+        "multiscale_lower_100ms_mean_bytes",
+        "multiscale_lower_100ms_std_bytes",
+        "multiscale_lower_100ms_syn_fraction",
+        "multiscale_lower_100ms_ack_fraction",
+        "multiscale_lower_100ms_rst_fraction",
+        "multiscale_lower_1000ms_log_packets",
+        "multiscale_lower_1000ms_log_bytes",
+        "multiscale_lower_1000ms_log_peers",
+        "multiscale_lower_1000ms_log_local_tcp_ports",
+        "multiscale_lower_1000ms_log_peer_tcp_ports",
+        "multiscale_lower_1000ms_mean_bytes",
+        "multiscale_lower_1000ms_std_bytes",
+        "multiscale_lower_1000ms_syn_fraction",
+        "multiscale_lower_1000ms_ack_fraction",
+        "multiscale_lower_1000ms_rst_fraction",
+        "multiscale_lower_10000ms_log_packets",
+        "multiscale_lower_10000ms_log_bytes",
+        "multiscale_lower_10000ms_log_peers",
+        "multiscale_lower_10000ms_log_local_tcp_ports",
+        "multiscale_lower_10000ms_log_peer_tcp_ports",
+        "multiscale_lower_10000ms_mean_bytes",
+        "multiscale_lower_10000ms_std_bytes",
+        "multiscale_lower_10000ms_syn_fraction",
+        "multiscale_lower_10000ms_ack_fraction",
+        "multiscale_lower_10000ms_rst_fraction"
+      ],
+      "categorical": [
+        "arp.opcode",
+        "arp.hw.size",
+        "http.request.method",
+        "http.request.version",
+        "tcp.flags",
+        "dns.qry.qu",
+        "dns.retransmission",
+        "mqtt.conflag.cleansess",
+        "mqtt.conflags",
+        "mqtt.hdrflags",
+        "mqtt.msgtype",
+        "mqtt.proto_len",
+        "mqtt.protoname",
+        "mqtt.topic_len",
+        "mqtt.ver"
+      ],
+      "columns": [
+        "http.response",
+        "tcp.connection.fin",
+        "tcp.connection.rst",
+        "tcp.connection.syn",
+        "tcp.connection.synack",
+        "tcp.flags.ack",
+        "tcp.len",
+        "udp.time_delta",
+        "mqtt.len",
+        "dns.qry.name.len__numeric",
+        "arp.opcode",
+        "arp.hw.size",
+        "http.request.method",
+        "http.request.version",
+        "tcp.flags",
+        "dns.qry.qu",
+        "dns.retransmission",
+        "mqtt.conflag.cleansess",
+        "mqtt.conflags",
+        "mqtt.hdrflags",
+        "mqtt.msgtype",
+        "mqtt.proto_len",
+        "mqtt.protoname",
+        "mqtt.topic_len",
+        "mqtt.ver",
+        "multiscale_higher_100ms_log_packets",
+        "multiscale_higher_100ms_log_bytes",
+        "multiscale_higher_100ms_log_peers",
+        "multiscale_higher_100ms_log_local_tcp_ports",
+        "multiscale_higher_100ms_log_peer_tcp_ports",
+        "multiscale_higher_100ms_mean_bytes",
+        "multiscale_higher_100ms_std_bytes",
+        "multiscale_higher_100ms_syn_fraction",
+        "multiscale_higher_100ms_ack_fraction",
+        "multiscale_higher_100ms_rst_fraction",
+        "multiscale_higher_1000ms_log_packets",
+        "multiscale_higher_1000ms_log_bytes",
+        "multiscale_higher_1000ms_log_peers",
+        "multiscale_higher_1000ms_log_local_tcp_ports",
+        "multiscale_higher_1000ms_log_peer_tcp_ports",
+        "multiscale_higher_1000ms_mean_bytes",
+        "multiscale_higher_1000ms_std_bytes",
+        "multiscale_higher_1000ms_syn_fraction",
+        "multiscale_higher_1000ms_ack_fraction",
+        "multiscale_higher_1000ms_rst_fraction",
+        "multiscale_higher_10000ms_log_packets",
+        "multiscale_higher_10000ms_log_bytes",
+        "multiscale_higher_10000ms_log_peers",
+        "multiscale_higher_10000ms_log_local_tcp_ports",
+        "multiscale_higher_10000ms_log_peer_tcp_ports",
+        "multiscale_higher_10000ms_mean_bytes",
+        "multiscale_higher_10000ms_std_bytes",
+        "multiscale_higher_10000ms_syn_fraction",
+        "multiscale_higher_10000ms_ack_fraction",
+        "multiscale_higher_10000ms_rst_fraction",
+        "multiscale_lower_100ms_log_packets",
+        "multiscale_lower_100ms_log_bytes",
+        "multiscale_lower_100ms_log_peers",
+        "multiscale_lower_100ms_log_local_tcp_ports",
+        "multiscale_lower_100ms_log_peer_tcp_ports",
+        "multiscale_lower_100ms_mean_bytes",
+        "multiscale_lower_100ms_std_bytes",
+        "multiscale_lower_100ms_syn_fraction",
+        "multiscale_lower_100ms_ack_fraction",
+        "multiscale_lower_100ms_rst_fraction",
+        "multiscale_lower_1000ms_log_packets",
+        "multiscale_lower_1000ms_log_bytes",
+        "multiscale_lower_1000ms_log_peers",
+        "multiscale_lower_1000ms_log_local_tcp_ports",
+        "multiscale_lower_1000ms_log_peer_tcp_ports",
+        "multiscale_lower_1000ms_mean_bytes",
+        "multiscale_lower_1000ms_std_bytes",
+        "multiscale_lower_1000ms_syn_fraction",
+        "multiscale_lower_1000ms_ack_fraction",
+        "multiscale_lower_1000ms_rst_fraction",
+        "multiscale_lower_10000ms_log_packets",
+        "multiscale_lower_10000ms_log_bytes",
+        "multiscale_lower_10000ms_log_peers",
+        "multiscale_lower_10000ms_log_local_tcp_ports",
+        "multiscale_lower_10000ms_log_peer_tcp_ports",
+        "multiscale_lower_10000ms_mean_bytes",
+        "multiscale_lower_10000ms_std_bytes",
+        "multiscale_lower_10000ms_syn_fraction",
+        "multiscale_lower_10000ms_ack_fraction",
+        "multiscale_lower_10000ms_rst_fraction"
+      ]
+    }
+  },
+  "policies": {
+    "baseline25__native_shared": {
+      "view": "baseline25",
+      "mode": "native_shared",
+      "model": {
+        "path": "models/baseline25__native_shared.joblib",
+        "bytes": 659668,
+        "sha256": "d27c5b6f0c567efefff37b11dcbd0acd31cb5bc57487a2129c8f958b2741c942"
+      },
+      "origin_folder": "runs\\MULTISCALE_REPAIR_FULL_20261020_01",
+      "origin_model": {
+        "stage": "temporal_seed42",
+        "view": "legacy25_multiscale60",
+        "case": "balanced",
+        "path": "stages/temporal_seed42/legacy25_multiscale60__balanced/model.joblib",
+        "sha256": "b51202085681b6f1b4f18f01b659cc8b7c7508a401970cd8eac848c347750545",
+        "bytes": 644528
+      }
+    },
+    "baseline25__native_certified": {
+      "view": "baseline25",
+      "mode": "native_certified",
+      "model": {
+        "path": "models/baseline25__native_certified.joblib",
+        "bytes": 659668,
+        "sha256": "d27c5b6f0c567efefff37b11dcbd0acd31cb5bc57487a2129c8f958b2741c942"
+      },
+      "origin_folder": "runs\\MULTISCALE_REPAIR_FULL_20261020_01",
+      "origin_model": {
+        "stage": "temporal_seed42",
+        "view": "legacy25_multiscale60",
+        "case": "balanced",
+        "path": "stages/temporal_seed42/legacy25_multiscale60__balanced/model.joblib",
+        "sha256": "b51202085681b6f1b4f18f01b659cc8b7c7508a401970cd8eac848c347750545",
+        "bytes": 644528
+      }
+    },
+    "baseline25__compact_shared": {
+      "view": "baseline25",
+      "mode": "compact_shared",
+      "model": {
+        "path": "models/baseline25__compact_shared.joblib",
+        "bytes": 654905,
+        "sha256": "cedb51469308ad72fd16de2ea70e4a220b4f5f36da89b0852dcff66b88140210"
+      },
+      "origin_folder": "runs\\MULTISCALE_REPAIR_FULL_20261020_01",
+      "origin_model": {
+        "stage": "temporal_seed42",
+        "view": "legacy25_multiscale60",
+        "case": "balanced",
+        "path": "stages/temporal_seed42/legacy25_multiscale60__balanced/model.joblib",
+        "sha256": "b51202085681b6f1b4f18f01b659cc8b7c7508a401970cd8eac848c347750545",
+        "bytes": 644528
+      }
+    },
+    "baseline25__compact_certified": {
+      "view": "baseline25",
+      "mode": "compact_certified",
+      "model": {
+        "path": "models/baseline25__compact_certified.joblib",
+        "bytes": 654908,
+        "sha256": "3cde7a156ea5ca801b347bb36f25ae2e612c67e0cec11ef8763eb830896b44a7"
+      },
+      "origin_folder": "runs\\MULTISCALE_REPAIR_FULL_20261020_01",
+      "origin_model": {
+        "stage": "temporal_seed42",
+        "view": "legacy25_multiscale60",
+        "case": "balanced",
+        "path": "stages/temporal_seed42/legacy25_multiscale60__balanced/model.joblib",
+        "sha256": "b51202085681b6f1b4f18f01b659cc8b7c7508a401970cd8eac848c347750545",
+        "bytes": 644528
+      }
+    },
+    "baseline25__logistic_regression": {
+      "view": "baseline25",
+      "mode": "logistic_regression",
+      "model": {
+        "path": "models/baseline25__logistic_regression.joblib",
+        "bytes": 9212,
+        "sha256": "91d7eb06fb95d325eb73106aac376a47097689ef2341740c17e4a36299d33048"
+      },
+      "origin_folder": "runs\\MULTISCALE_REPAIR_FULL_20261020_01",
+      "origin_model": {
+        "stage": "temporal_seed42",
+        "view": "legacy25_multiscale60",
+        "case": "balanced",
+        "path": "stages/temporal_seed42/legacy25_multiscale60__balanced/model.joblib",
+        "sha256": "b51202085681b6f1b4f18f01b659cc8b7c7508a401970cd8eac848c347750545",
+        "bytes": 644528
+      }
+    },
+    "baseline25__random_forest": {
+      "view": "baseline25",
+      "mode": "random_forest",
+      "model": {
+        "path": "models/baseline25__random_forest.joblib",
+        "bytes": 193035,
+        "sha256": "96f2907ec4cc54331cd49fe8712de48c79582d6c3ed4decdac84fd986f15a80b"
+      },
+      "origin_folder": "runs\\MULTISCALE_REPAIR_FULL_20261020_01",
+      "origin_model": {
+        "stage": "temporal_seed42",
+        "view": "legacy25_multiscale60",
+        "case": "balanced",
+        "path": "stages/temporal_seed42/legacy25_multiscale60__balanced/model.joblib",
+        "sha256": "b51202085681b6f1b4f18f01b659cc8b7c7508a401970cd8eac848c347750545",
+        "bytes": 644528
+      }
+    }
+  },
+  "files": [
+    {
+      "path": "replay/source_00_validation_slice.bin",
+      "bytes": 1866212,
+      "sha256": "13626d6c9e3da1ace5d6c7e0235ac17dddbe967d7913048057074d000154dbc2"
+    },
+    {
+      "path": "replay/source_01_validation_slice.bin",
+      "bytes": 9353,
+      "sha256": "8443308a19807808b2db7ce3f192c7cc228fa5e3eab2131984c618d12091dd21"
+    },
+    {
+      "path": "replay/source_02_validation_slice.bin",
+      "bytes": 10154,
+      "sha256": "90d637d1374bbb033cb2b6ad24a6962acf39d473f570ddd51569422b2fcf3bd0"
+    },
+    {
+      "path": "replay/source_03_validation_slice.bin",
+      "bytes": 32512,
+      "sha256": "8bbfc5e8ddf47813068c45a683aa94d0b920c75fe96497975e5fe9fe3e22a1a2"
+    },
+    {
+      "path": "replay/source_12_validation_slice.bin",
+      "bytes": 177685,
+      "sha256": "489fd513edced107baa777260ad2087c61cb46592b326aebe28f6b23cbe401c4"
+    },
+    {
+      "path": "replay/workload.json",
+      "bytes": 22035,
+      "sha256": "3f72642114cb69cb690e53c20dbcf0251d0793026e3b519b464970bea0b6d8e5"
+    },
+    {
+      "path": "inputs/baseline25_1.csv",
+      "bytes": 3223,
+      "sha256": "23e08e50f0cdaef88eaa2db485560e7ca0b6042576b7da6188deb021f895f848"
+    },
+    {
+      "path": "inputs/baseline25_1000.csv",
+      "bytes": 1050665,
+      "sha256": "29aa87efa35da4b81c292309128fa78674ece906ce672d75eca960d183f60dfc"
+    },
+    {
+      "path": "inputs/baseline25_replay.csv",
+      "bytes": 156479,
+      "sha256": "952f28f6fb6d50269de0f0c520afc2c96fa1943b544fda3bca221f6000afc759"
+    },
+    {
+      "path": "models/baseline25__native_shared.joblib",
+      "bytes": 659668,
+      "sha256": "d27c5b6f0c567efefff37b11dcbd0acd31cb5bc57487a2129c8f958b2741c942"
+    },
+    {
+      "path": "models/baseline25__native_certified.joblib",
+      "bytes": 659668,
+      "sha256": "d27c5b6f0c567efefff37b11dcbd0acd31cb5bc57487a2129c8f958b2741c942"
+    },
+    {
+      "path": "models/baseline25__compact_shared.joblib",
+      "bytes": 654905,
+      "sha256": "cedb51469308ad72fd16de2ea70e4a220b4f5f36da89b0852dcff66b88140210"
+    },
+    {
+      "path": "models/baseline25__compact_certified.joblib",
+      "bytes": 654908,
+      "sha256": "3cde7a156ea5ca801b347bb36f25ae2e612c67e0cec11ef8763eb830896b44a7"
+    },
+    {
+      "path": "models/baseline25__logistic_regression.joblib",
+      "bytes": 9212,
+      "sha256": "91d7eb06fb95d325eb73106aac376a47097689ef2341740c17e4a36299d33048"
+    },
+    {
+      "path": "models/baseline25__random_forest.joblib",
+      "bytes": 193035,
+      "sha256": "96f2907ec4cc54331cd49fe8712de48c79582d6c3ed4decdac84fd986f15a80b"
+    },
+    {
+      "path": "inputs/expected.npz",
+      "bytes": 11776,
+      "sha256": "4f6639c2a5d0d809cea331dd33696cf1e9b4a74d503346adf340f965b9c45ca2"
+    }
+  ],
+  "source_sha256": "85501d588fb04116a3bf4b9a6d0b00482b328771147b3a5e0c4ef690986d824f"
+}

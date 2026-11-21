@@ -1,0 +1,8 @@
+source,Normal_FP_added,Normal_FP_corrected,attack_or_scenario_suppressed,attack_or_scenario_rescued
+CIC_Normal0,39,23,0,0
+CIC_Normal3,23,4,0,0
+CIC_SQL,0,0,37,87
+CIC_PortScan,0,0,142,52
+CIC_DDoS_SYN,0,0,10,0
+TON_Ransom1,30,191,45,41
+TON_Ransom2,65,14,57,34

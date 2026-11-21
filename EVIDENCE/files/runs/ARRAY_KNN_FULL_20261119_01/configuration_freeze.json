@@ -1,0 +1,50 @@
+{
+  "specs": [
+    [
+      1,
+      "uniform"
+    ],
+    [
+      1,
+      "distance"
+    ],
+    [
+      3,
+      "uniform"
+    ],
+    [
+      3,
+      "distance"
+    ],
+    [
+      5,
+      "uniform"
+    ],
+    [
+      5,
+      "distance"
+    ],
+    [
+      11,
+      "uniform"
+    ],
+    [
+      11,
+      "distance"
+    ],
+    [
+      31,
+      "uniform"
+    ],
+    [
+      31,
+      "distance"
+    ]
+  ],
+  "smoke": false,
+  "time": 1795077813.434762,
+  "python": "3.11.15",
+  "sklearn": "1.7.2",
+  "selection": "G only .5F1+.5DDoSF2",
+  "previously_observed_evaluation": true
+}

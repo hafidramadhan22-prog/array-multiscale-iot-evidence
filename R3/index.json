@@ -1,0 +1,277 @@
+[
+  {
+    "path": "EVIDENCE/files/configs/xai_audit.json",
+    "bytes": 847,
+    "sha256": "21ae8e3dad832e15f89d72168f48b71f0f4e12ad4c18977a0d128346c6956425"
+  },
+  {
+    "path": "EVIDENCE/files/configs/xai_background_extension.json",
+    "bytes": 497,
+    "sha256": "ac4218bed3de0524c8c10c45c832e8b5fbef2294773327104e0b8f0e1e02acec"
+  },
+  {
+    "path": "EVIDENCE/files/reports/ARRAY_MAJOR_REVISION_20261103/xai_faithfulness.csv",
+    "bytes": 348,
+    "sha256": "0dcc5566d0b32311a6f6ad8d72a7e34a09fe12892ce8d320ed9cb5e5d89eaece"
+  },
+  {
+    "path": "EVIDENCE/files/reports/ARRAY_MAJOR_REVISION_20261103/xai_sensitivity.csv",
+    "bytes": 226,
+    "sha256": "a1eed57eaaa766c12868c72a77211b48b0dcad11560c40f925617a2ad663f701"
+  },
+  {
+    "path": "EVIDENCE/files/reports/ARRAY_MAJOR_REVISION_20261103/xai_shares.csv",
+    "bytes": 3470,
+    "sha256": "6a2870da85c2eecfb2bb1a1b3b360127cd28ff805f057e6439e8632a11ebfc58"
+  },
+  {
+    "path": "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/background_sensitivity.csv",
+    "bytes": 22039,
+    "sha256": "47b7917ea8e4f49ebcc6f20157f889b747b6268bd5e99a41b09c109c7b960b98"
+  },
+  {
+    "path": "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/catalog.json",
+    "bytes": 1875,
+    "sha256": "9f289f3be3f7b32235036d411d9f60d2125ae462de20fb7fe5a856f1d68e21b5"
+  },
+  {
+    "path": "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/complete.json",
+    "bytes": 183,
+    "sha256": "210ed1942ca62df6994b696c877d56a9db03ccb2d3eb3ea1e82b783e24ef728f"
+  },
+  {
+    "path": "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/configuration_freeze.json",
+    "bytes": 4129,
+    "sha256": "dbf3b253b7a5c063768ee8d81534aae325a2e12a7b3070c6d4fb42461dac645e"
+  },
+  {
+    "path": "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/faithfulness.csv",
+    "bytes": 584265,
+    "sha256": "c34bf848ba6939085bb3b1ad106b0527d3a8147c341954b5249ce38ea56e7ae8"
+  },
+  {
+    "path": "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/groups/A32/coalitions.npz",
+    "bytes": 1588523,
+    "sha256": "eae2cb88e0e486b7c5127aba66bd0a652941ebbb86e3bb68f7fda32236da3601"
+  },
+  {
+    "path": "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/groups/A32/metadata.json",
+    "bytes": 4239,
+    "sha256": "00265cba7e13d2f7cfbf2180b59e39f34c6b018dfd6bca0c21c3b2dfef611179"
+  },
+  {
+    "path": "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/groups/B32/coalitions.npz",
+    "bytes": 650329,
+    "sha256": "998cf921aed585174d891d80194846ef9fb526f720691d906e09d8e96a239a93"
+  },
+  {
+    "path": "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/groups/B32/metadata.json",
+    "bytes": 4239,
+    "sha256": "996bc89cf9540f2513c3a5e2c828fcebcba8fe954c5557edeef6ccd2466a5a48"
+  },
+  {
+    "path": "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/importance.csv",
+    "bytes": 272466,
+    "sha256": "05138a2c58f5dec0e638d3597559549733c6c395ae44ca5b71ce8884f29df5e6"
+  },
+  {
+    "path": "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/source/run_array_xai_20261103.py",
+    "bytes": 4520,
+    "sha256": "957fb3035b0a5b10034f8f43724c1a1d6616a82f541fe6f016d5472333c44a0f"
+  },
+  {
+    "path": "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/source/run_xai_audit.py",
+    "bytes": 20545,
+    "sha256": "7e5ef16a8eeb7a237322d6b53b94b98cbfa8530ca0078617788daea67a4532d1"
+  },
+  {
+    "path": "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/source/xai_audit.py",
+    "bytes": 6996,
+    "sha256": "ad4019fc0cb92e5df2485b385d544cd9e53d67c5ed7ba32b2f2ca01fb7b44d1a"
+  },
+  {
+    "path": "EVIDENCE/files/runs/EXACT_RUNTIME_20261020_01/support_after_analysis/verify_exact_xai.py",
+    "bytes": 4092,
+    "sha256": "c4120e4f560f8f678978461d80d472469e490bdfd897acd9f121ffd9e3c1d02e"
+  },
+  {
+    "path": "EVIDENCE/files/runs/EXACT_RUNTIME_20261020_01/xai_equivalence.json",
+    "bytes": 446,
+    "sha256": "b36f35806cf55912124ab89a5aa0303d8d3f64978f39d99bbc8364dc8eef9945"
+  },
+  {
+    "path": "EVIDENCE/files/runs/EXACT_RUNTIME_20261020_01/xai_equivalence_raw.csv",
+    "bytes": 9138,
+    "sha256": "1312625f9fe46e6bd3046140eaf76c4c8237a3e681703b7c29b357a7bfc1998c"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/artifacts_sha256.json",
+    "bytes": 6238,
+    "sha256": "95db44df22b6d6933a4bc494662171609f2ee34a0237b529d65645e261d25d31"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/configuration_freeze.json",
+    "bytes": 705,
+    "sha256": "88019b578116ece929ba02d0f7351f02ea53045bce0197f905f3273cb8d974f0"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/curves.json",
+    "bytes": 2943791,
+    "sha256": "bc9f0711aa454d45bcc80a48dafaa6ef67c66f07f33a855cf1edebb236e73ff3"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/groups/A32/coalitions.npz",
+    "bytes": 337407,
+    "sha256": "8316fe24b74a70633d59104d3c46a576163d6aae046e5cd024d561238a58b05c"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/groups/A32/metadata.json",
+    "bytes": 4177,
+    "sha256": "213a39a85aa0adee19e17cc1f22e1b15cd6e9d7462fbf9e2ef96e7a538450332"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/groups/B32/coalitions.npz",
+    "bytes": 144183,
+    "sha256": "8b5ec0e5c1fbae5820c4422126cce3188116301276399cbfd6e36420afe50355"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/groups/B32/metadata.json",
+    "bytes": 4176,
+    "sha256": "5e7ff47844f987c4d62ce55d534f703327a038d5188a466a7b12acc5ccdd725c"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/groups/query_delay_5ms/coalitions.npz",
+    "bytes": 336997,
+    "sha256": "92c6190c7991f441019052e0bcf692fbd4839c255f9357e6a435891775735f09"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/groups/query_delay_5ms/metadata.json",
+    "bytes": 4177,
+    "sha256": "6f17fb909579b8db39bf8dc4561f54ead54e8bd50e9a189b87ac3c6869462ac6"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/indices.npz",
+    "bytes": 65552,
+    "sha256": "7dddc22d8a22c50f30de1b89b3ca10637904a435c5fab5f13ab8e82d8aed6491"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/run_complete.json",
+    "bytes": 310,
+    "sha256": "d9e08f378cd213184ab21dc9e160c18ae23905efd238fef35a5b270fe424b1de"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/source/multiscale_context.py",
+    "bytes": 3151,
+    "sha256": "5259bc739c52472d83151b2232ef9cb9cbb1e1fe307bf025ef3c35e78a48ac83"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/source/run_multiscale_xai.py",
+    "bytes": 12106,
+    "sha256": "2ccf94c8ad7a16f6647f4eede70583e84f6db480c83474efdd6e6a79a598a821"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/source/run_xai_audit.py",
+    "bytes": 20545,
+    "sha256": "7e5ef16a8eeb7a237322d6b53b94b98cbfa8530ca0078617788daea67a4532d1"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/source/run_xai_background_extension.py",
+    "bytes": 9696,
+    "sha256": "aa3ecdeb426951b8d851063c709533817da9e7bdd84cdb21c55d55ee7c30cc1e"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/source/xai_audit.py",
+    "bytes": 6996,
+    "sha256": "ad4019fc0cb92e5df2485b385d544cd9e53d67c5ed7ba32b2f2ca01fb7b44d1a"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/tables/background_sensitivity.csv",
+    "bytes": 21861,
+    "sha256": "c78dbfbccae84aaa7cf28ca8f18e8a3b45e55c650a3e2f24ef3444b1676c120c"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/tables/faithfulness.csv",
+    "bytes": 581715,
+    "sha256": "b3ca771d8a32720e6d28f5200909e082fe301b1ab0cb28a4bde61837596f8512"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/tables/faithfulness_summary.csv",
+    "bytes": 350,
+    "sha256": "75043e9aed9bb2851ea28f64a25c4844b7dce360c7de028593009162f764b82e"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/tables/robustness.csv",
+    "bytes": 54487,
+    "sha256": "65abb8dc643bd27ee179927303e4b5f7fcd3d297d709006e526b4bc25e65a0c9"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/tables/robustness_summary.csv",
+    "bytes": 859,
+    "sha256": "544e242e922b83f9281e8442f0920ff513860cb9e3c66d65316a42accd2ae2a5"
+  },
+  {
+    "path": "EVIDENCE/files/runs/XAI_MULTISCALE_FULL_20261020_01/verification.json",
+    "bytes": 378,
+    "sha256": "8d6cdb788e231a1c40d066c4e19da2197b286bd6741fef87e665efb55634df46"
+  },
+  {
+    "path": "EVIDENCE/files/scripts/analyze_xai_background_extension.py",
+    "bytes": 13779,
+    "sha256": "70b795c75ce00f0abd29ebed72eb45e537ac1288e22dbf549772b44932165fa1"
+  },
+  {
+    "path": "EVIDENCE/files/scripts/build_xai_audit_report.py",
+    "bytes": 16954,
+    "sha256": "0ba96abea9226d1d480f78c9fc7a1b002f28f6d6e14ebee30c59a8d3e44fdbb6"
+  },
+  {
+    "path": "EVIDENCE/files/scripts/build_xai_review.py",
+    "bytes": 7207,
+    "sha256": "7f824f854256e3ba62e63cad61889c96bc456b0f3c21ca9ee063bb1fe92664e0"
+  },
+  {
+    "path": "EVIDENCE/files/scripts/finalize_xai_audit.py",
+    "bytes": 7148,
+    "sha256": "d4135852acfec8b0517b1f1d06bc7d497a6e3e516a4b8158a808d3f95ff586ce"
+  },
+  {
+    "path": "EVIDENCE/files/scripts/run_array_xai_20261103.py",
+    "bytes": 4520,
+    "sha256": "957fb3035b0a5b10034f8f43724c1a1d6616a82f541fe6f016d5472333c44a0f"
+  },
+  {
+    "path": "EVIDENCE/files/scripts/run_multiscale_xai.py",
+    "bytes": 12106,
+    "sha256": "2ccf94c8ad7a16f6647f4eede70583e84f6db480c83474efdd6e6a79a598a821"
+  },
+  {
+    "path": "EVIDENCE/files/scripts/run_xai_audit.py",
+    "bytes": 20545,
+    "sha256": "7e5ef16a8eeb7a237322d6b53b94b98cbfa8530ca0078617788daea67a4532d1"
+  },
+  {
+    "path": "EVIDENCE/files/scripts/run_xai_background_extension.py",
+    "bytes": 9696,
+    "sha256": "aa3ecdeb426951b8d851063c709533817da9e7bdd84cdb21c55d55ee7c30cc1e"
+  },
+  {
+    "path": "EVIDENCE/files/scripts/verify_exact_xai.py",
+    "bytes": 4092,
+    "sha256": "c4120e4f560f8f678978461d80d472469e490bdfd897acd9f121ffd9e3c1d02e"
+  },
+  {
+    "path": "EVIDENCE/files/scripts/verify_multiscale_xai.py",
+    "bytes": 4966,
+    "sha256": "d33df19c48d5443612fd0341b2a05e687a47c9cc2284ad02dac685b04ad1c068"
+  },
+  {
+    "path": "EVIDENCE/files/scripts/verify_xai_audit.py",
+    "bytes": 8343,
+    "sha256": "2e76e221e4260790d35b38b2b97b94ef4899cc3497ca50cf6540cb4587423238"
+  },
+  {
+    "path": "EVIDENCE/files/src/xai_audit.py",
+    "bytes": 6996,
+    "sha256": "ad4019fc0cb92e5df2485b385d544cd9e53d67c5ed7ba32b2f2ca01fb7b44d1a"
+  }
+]

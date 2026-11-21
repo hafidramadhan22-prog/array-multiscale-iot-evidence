@@ -1,0 +1,13 @@
+{
+  "protocol_status": "ARAHAN_DOSPEM_HOLDOUT_2026_10_13_DESAIN_EKSPLISIT",
+  "synthetic_cap": 0.5,
+  "synthetic_cap_denominator": "per_class_original_before_resampling",
+  "recommendation_policy": "holdout_all_six",
+  "profile_source": "holdout",
+  "profile_rows": 1000,
+  "memory_runs": 5,
+  "memory_interval_seconds": 0.002,
+  "latency_blocks": 3,
+  "latency_repeats": 15,
+  "final_tradeoff_performance_weight": 0.6
+}

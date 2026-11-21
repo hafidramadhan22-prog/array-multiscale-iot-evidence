@@ -1,0 +1,11 @@
+{
+  "status": "PASS_EXACT_RUNTIME",
+  "policies": 6,
+  "timings": 540,
+  "randomized_replays": 30,
+  "cold_memory_runs": 36,
+  "all_labels_and_replayed_features_match": true,
+  "new_classifier_fits": 0,
+  "source_sha256": "85501d588fb04116a3bf4b9a6d0b00482b328771147b3a5e0c4ef690986d824f",
+  "inputs_manifest_sha256": "b935207d33fb17b3fb74dbb977683f9c1e3444997c07b7fea955ff8aa7ce03f2"
+}

@@ -1,0 +1,114 @@
+{
+  "groups": {
+    "http": [
+      "http.response",
+      "http.request.method",
+      "http.request.version"
+    ],
+    "tcp": [
+      "tcp.connection.fin",
+      "tcp.connection.rst",
+      "tcp.connection.syn",
+      "tcp.connection.synack",
+      "tcp.flags.ack",
+      "tcp.len",
+      "tcp.flags"
+    ],
+    "udp": [
+      "udp.time_delta"
+    ],
+    "mqtt": [
+      "mqtt.len",
+      "mqtt.conflag.cleansess",
+      "mqtt.conflags",
+      "mqtt.hdrflags",
+      "mqtt.msgtype",
+      "mqtt.proto_len",
+      "mqtt.protoname",
+      "mqtt.topic_len",
+      "mqtt.ver"
+    ],
+    "dns": [
+      "dns.qry.name.len__numeric",
+      "dns.qry.qu",
+      "dns.retransmission"
+    ],
+    "arp": [
+      "arp.opcode",
+      "arp.hw.size"
+    ],
+    "history_100ms": [
+      "multiscale_higher_100ms_log_packets",
+      "multiscale_higher_100ms_log_bytes",
+      "multiscale_higher_100ms_log_peers",
+      "multiscale_higher_100ms_log_local_tcp_ports",
+      "multiscale_higher_100ms_log_peer_tcp_ports",
+      "multiscale_higher_100ms_mean_bytes",
+      "multiscale_higher_100ms_std_bytes",
+      "multiscale_higher_100ms_syn_fraction",
+      "multiscale_higher_100ms_ack_fraction",
+      "multiscale_higher_100ms_rst_fraction",
+      "multiscale_lower_100ms_log_packets",
+      "multiscale_lower_100ms_log_bytes",
+      "multiscale_lower_100ms_log_peers",
+      "multiscale_lower_100ms_log_local_tcp_ports",
+      "multiscale_lower_100ms_log_peer_tcp_ports",
+      "multiscale_lower_100ms_mean_bytes",
+      "multiscale_lower_100ms_std_bytes",
+      "multiscale_lower_100ms_syn_fraction",
+      "multiscale_lower_100ms_ack_fraction",
+      "multiscale_lower_100ms_rst_fraction"
+    ],
+    "history_1000ms": [
+      "multiscale_higher_1000ms_log_packets",
+      "multiscale_higher_1000ms_log_bytes",
+      "multiscale_higher_1000ms_log_peers",
+      "multiscale_higher_1000ms_log_local_tcp_ports",
+      "multiscale_higher_1000ms_log_peer_tcp_ports",
+      "multiscale_higher_1000ms_mean_bytes",
+      "multiscale_higher_1000ms_std_bytes",
+      "multiscale_higher_1000ms_syn_fraction",
+      "multiscale_higher_1000ms_ack_fraction",
+      "multiscale_higher_1000ms_rst_fraction",
+      "multiscale_lower_1000ms_log_packets",
+      "multiscale_lower_1000ms_log_bytes",
+      "multiscale_lower_1000ms_log_peers",
+      "multiscale_lower_1000ms_log_local_tcp_ports",
+      "multiscale_lower_1000ms_log_peer_tcp_ports",
+      "multiscale_lower_1000ms_mean_bytes",
+      "multiscale_lower_1000ms_std_bytes",
+      "multiscale_lower_1000ms_syn_fraction",
+      "multiscale_lower_1000ms_ack_fraction",
+      "multiscale_lower_1000ms_rst_fraction"
+    ],
+    "history_10000ms": [
+      "multiscale_higher_10000ms_log_packets",
+      "multiscale_higher_10000ms_log_bytes",
+      "multiscale_higher_10000ms_log_peers",
+      "multiscale_higher_10000ms_log_local_tcp_ports",
+      "multiscale_higher_10000ms_log_peer_tcp_ports",
+      "multiscale_higher_10000ms_mean_bytes",
+      "multiscale_higher_10000ms_std_bytes",
+      "multiscale_higher_10000ms_syn_fraction",
+      "multiscale_higher_10000ms_ack_fraction",
+      "multiscale_higher_10000ms_rst_fraction",
+      "multiscale_lower_10000ms_log_packets",
+      "multiscale_lower_10000ms_log_bytes",
+      "multiscale_lower_10000ms_log_peers",
+      "multiscale_lower_10000ms_log_local_tcp_ports",
+      "multiscale_lower_10000ms_log_peer_tcp_ports",
+      "multiscale_lower_10000ms_mean_bytes",
+      "multiscale_lower_10000ms_std_bytes",
+      "multiscale_lower_10000ms_syn_fraction",
+      "multiscale_lower_10000ms_ack_fraction",
+      "multiscale_lower_10000ms_rst_fraction"
+    ]
+  },
+  "model_sha256": "b51202085681b6f1b4f18f01b659cc8b7c7508a401970cd8eac848c347750545",
+  "model": "runs/MULTISCALE_REPAIR_FULL_20261020_01/stages/temporal_seed42/legacy25_multiscale60__balanced/model.joblib",
+  "indices_sha256": "7dddc22d8a22c50f30de1b89b3ca10637904a435c5fab5f13ab8e82d8aed6491",
+  "rows": 100,
+  "background_size": 32,
+  "smoke": false,
+  "new_classifier_fits": 0
+}

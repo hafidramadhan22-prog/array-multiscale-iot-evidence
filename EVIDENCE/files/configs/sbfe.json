@@ -1,0 +1,80 @@
+{
+  "experiment": "SBFE_PCAP_DEVELOPMENT_PILOT",
+  "zip_path": "C:/TA HAFID/Edge-IIoTset dataset.zip",
+  "zip_sha256": "a76b66806876691af2a5fafc2dd950743769bfde0f89186e40b45e3399e3538a",
+  "canonical_sha256": "53101fad091af20bee815860962a5016b802ee45d456a141042f6183094c3c1a",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "historical_holdout_used": false,
+  "resampling": "Original only; no RUS/SMOTE in this explicitly separate pilot",
+  "primary_split": "per-source-PCAP packet-index 60% A,10% G,10% C,20% V; first1s of each role excluded from labeled decisions; context reset at each boundary",
+  "role_fractions": [
+    0.6,
+    0.1,
+    0.1,
+    0.2
+  ],
+  "purge_seconds": 1,
+  "windows_seconds": [
+    0.1,
+    1
+  ],
+  "ring_capacity": 16384,
+  "clock": "Arrival-order causal watermark=max(previous clock,packet timestamp); no sorting or future packets",
+  "identity": "Selected development packets matched by minute/second/nanoseconds, IP endpoints, TCP checksum/ports/payload length; inferred hour offset and year verified; any multiple match/unmatched stops fit",
+  "secondary_protocol": "two nonport25 signature-disjoint diagnostic folds, seed42; expert/gate/calibration drawn only inside outer training; shared label-free causal context not capture-independent",
+  "lr": {
+    "C": 1,
+    "solver": "lbfgs",
+    "max_iter": 10000,
+    "tol": 1e-06
+  },
+  "rf": {
+    "n_estimators": 200,
+    "max_depth": 12,
+    "min_samples_leaf": 5,
+    "n_jobs": 1
+  },
+  "utility_tree": {
+    "max_depth": 3,
+    "min_samples_leaf": 50
+  },
+  "ddos_miss_weight": 3,
+  "calibration_quality_tolerance": 0.005,
+  "utility_thresholds": [
+    -3,
+    -1,
+    -0.5,
+    -0.1,
+    0,
+    0.1,
+    0.25,
+    0.5,
+    1,
+    2,
+    3,
+    4
+  ],
+  "confidence_thresholds": [
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    0.95,
+    0.99,
+    1.01
+  ],
+  "profile_rows_per_capture": 32,
+  "profile_repeats": 3,
+  "memory_runs": 3,
+  "memory_interval_seconds": 0.002,
+  "smoke_rows": 500,
+  "metadata_keys_are_not_predictors": true,
+  "novelty_status": "First feasibility and selective-computation prototype; not a claimed new active acquisition algorithm",
+  "number_status": "Research defaults, not numerical requirements endorsed by supervisor or papers",
+  "identity_alias_rule": "Repeated candidates allowed only for identical full packet bytes AND absolute timestamp AND header/behavior vector. Otherwise stop. Assign alias to latest role without labels; require every alias to pass purge."
+}

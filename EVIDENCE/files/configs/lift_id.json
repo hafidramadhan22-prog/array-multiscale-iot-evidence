@@ -1,0 +1,14 @@
+{
+  "extension": "LIFT_ID_E1_E2_E3",
+  "seed": 42,
+  "feature_mode": "dstport29",
+  "calibration_fraction": 0.2,
+  "calibration_seed_offset": 101,
+  "lambda_grid": [0.0, 0.1, 1.0, 10.0, 100.0],
+  "fixed_fusion_weight": 0.5,
+  "selection_rule": "0.5 Macro-F1 + 0.5 F2 DDoS on internal calibration validation; ties within 1e-12 choose larger lambda",
+  "leaf_identity_rule": "same frozen tree for calibration and deployment; never transfer node numbers between refitted trees",
+  "protocol_status": "USER_REQUESTED_EXECUTION_WITH_DOCUMENTED_RESEARCH_DEFAULTS",
+  "numbers_explicitly_set_by_supervisor": false,
+  "historical_holdout": true
+}

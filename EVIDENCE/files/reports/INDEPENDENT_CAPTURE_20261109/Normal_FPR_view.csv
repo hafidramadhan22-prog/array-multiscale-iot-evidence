@@ -1,0 +1,13 @@
+source,policy,normal_support,false_alarms,FPR_percent
+CIC_Normal0,RF,1000,329,32.9
+CIC_Normal0,Voting lama,1000,331,33.1
+CIC_Normal0,SQL guard + RF rescue,1000,347,34.7
+CIC_Normal3,RF,1000,283,28.3
+CIC_Normal3,Voting lama,1000,272,27.2
+CIC_Normal3,SQL guard + RF rescue,1000,291,29.1
+TON_Ransom1,RF,1000,151,15.1
+TON_Ransom1,Voting lama,1000,315,31.5
+TON_Ransom1,SQL guard + RF rescue,1000,154,15.4
+TON_Ransom2,RF,1000,218,21.8
+TON_Ransom2,Voting lama,1000,172,17.2
+TON_Ransom2,SQL guard + RF rescue,1000,223,22.3

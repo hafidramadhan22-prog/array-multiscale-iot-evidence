@@ -1,0 +1,8 @@
+{
+  "reason": "Notebook byte comparison found only an environment-specific DtypeWarning temp-kernel path in a stderr output",
+  "saved_probability_audit_passed": true,
+  "CLI_replay_passed": true,
+  "all_notebook_cells_executed": true,
+  "repair": "Use low_memory=False when reading mixed numeric/string row identifiers; no change to predictor or data",
+  "strict_byte_comparison_retained": true
+}

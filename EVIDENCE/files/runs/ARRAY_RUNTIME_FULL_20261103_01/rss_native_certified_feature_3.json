@@ -1,0 +1,9 @@
+{
+  "policy": "native_certified",
+  "workload": "feature",
+  "repeat": 3,
+  "baseline_mib": 294.375,
+  "peak_mib": 296.9921875,
+  "delta_mib": 2.6171875,
+  "samples": 5
+}

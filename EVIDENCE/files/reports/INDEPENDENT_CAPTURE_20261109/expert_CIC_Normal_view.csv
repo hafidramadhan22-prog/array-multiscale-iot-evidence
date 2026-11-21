@@ -1,0 +1,11 @@
+policy,normal_support,false_alarms,FPR_percent
+RF_XGB_50,2000,571,28.55
+RF_XGB_75,2000,586,29.3
+decision_tree,2000,357,17.85
+lightgbm,2000,742,37.1
+logistic_regression,2000,1184,59.2
+random_forest,2000,612,30.6
+sql_guard_rf_rescue,2000,638,31.9
+uniform_reference,2000,606,30.3
+weighted_reference,2000,603,30.15
+xgboost,2000,559,27.95

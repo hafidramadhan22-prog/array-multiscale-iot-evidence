@@ -1,0 +1,872 @@
+{
+  "files": [
+    {
+      "capture_id": 0,
+      "file": "profiling/workload/source_00_validation_slice.bin",
+      "source_entry": "Edge-IIoTset dataset/Attack traffic/DDoS TCP SYN Flood Attacks.pcap",
+      "first_source_record": 1616122,
+      "last_source_record": 1629053,
+      "packets": 12932,
+      "targets": {
+        "4994": {
+          "row_id": 52550,
+          "position": 23611,
+          "random_route": false
+        },
+        "4999": {
+          "row_id": 52551,
+          "position": 23612,
+          "random_route": true
+        },
+        "5057": {
+          "row_id": 52552,
+          "position": 23613,
+          "random_route": false
+        },
+        "5391": {
+          "row_id": 52553,
+          "position": 23614,
+          "random_route": true
+        },
+        "5752": {
+          "row_id": 52554,
+          "position": 23615,
+          "random_route": true
+        },
+        "6552": {
+          "row_id": 52555,
+          "position": 23616,
+          "random_route": true
+        },
+        "6609": {
+          "row_id": 52556,
+          "position": 23617,
+          "random_route": true
+        },
+        "6840": {
+          "row_id": 52557,
+          "position": 23618,
+          "random_route": true
+        },
+        "6976": {
+          "row_id": 52558,
+          "position": 23619,
+          "random_route": false
+        },
+        "7088": {
+          "row_id": 52559,
+          "position": 23620,
+          "random_route": false
+        },
+        "7125": {
+          "row_id": 52560,
+          "position": 23621,
+          "random_route": true
+        },
+        "7642": {
+          "row_id": 52561,
+          "position": 23622,
+          "random_route": true
+        },
+        "7799": {
+          "row_id": 52562,
+          "position": 23623,
+          "random_route": true
+        },
+        "8029": {
+          "row_id": 52563,
+          "position": 23624,
+          "random_route": false
+        },
+        "8322": {
+          "row_id": 52564,
+          "position": 23625,
+          "random_route": false
+        },
+        "8725": {
+          "row_id": 52565,
+          "position": 23626,
+          "random_route": true
+        },
+        "8994": {
+          "row_id": 52566,
+          "position": 23627,
+          "random_route": false
+        },
+        "9033": {
+          "row_id": 52567,
+          "position": 23628,
+          "random_route": true
+        },
+        "9218": {
+          "row_id": 52568,
+          "position": 23629,
+          "random_route": true
+        },
+        "9257": {
+          "row_id": 52569,
+          "position": 23630,
+          "random_route": true
+        },
+        "9424": {
+          "row_id": 52570,
+          "position": 23631,
+          "random_route": true
+        },
+        "10253": {
+          "row_id": 52571,
+          "position": 23632,
+          "random_route": true
+        },
+        "10579": {
+          "row_id": 52572,
+          "position": 23633,
+          "random_route": false
+        },
+        "10657": {
+          "row_id": 52573,
+          "position": 23634,
+          "random_route": false
+        },
+        "10758": {
+          "row_id": 52574,
+          "position": 23635,
+          "random_route": true
+        },
+        "11108": {
+          "row_id": 52576,
+          "position": 23636,
+          "random_route": false
+        },
+        "11346": {
+          "row_id": 52577,
+          "position": 23637,
+          "random_route": false
+        },
+        "11373": {
+          "row_id": 52579,
+          "position": 23638,
+          "random_route": false
+        },
+        "11439": {
+          "row_id": 52580,
+          "position": 23639,
+          "random_route": true
+        },
+        "12257": {
+          "row_id": 52583,
+          "position": 23640,
+          "random_route": false
+        },
+        "12868": {
+          "row_id": 52585,
+          "position": 23641,
+          "random_route": true
+        },
+        "12931": {
+          "row_id": 52586,
+          "position": 23642,
+          "random_route": false
+        }
+      },
+      "sha256": "13626d6c9e3da1ace5d6c7e0235ac17dddbe967d7913048057074d000154dbc2",
+      "bytes": 1866212
+    },
+    {
+      "capture_id": 1,
+      "file": "profiling/workload/source_01_validation_slice.bin",
+      "source_entry": "Edge-IIoTset dataset/Attack traffic/Port Scanning attack.pcap",
+      "first_source_record": 18664,
+      "last_source_record": 18789,
+      "packets": 126,
+      "targets": {
+        "7": {
+          "row_id": 72688,
+          "position": 31722,
+          "random_route": true
+        },
+        "13": {
+          "row_id": 72689,
+          "position": 31723,
+          "random_route": true
+        },
+        "18": {
+          "row_id": 72690,
+          "position": 31724,
+          "random_route": true
+        },
+        "22": {
+          "row_id": 72691,
+          "position": 31725,
+          "random_route": true
+        },
+        "24": {
+          "row_id": 72692,
+          "position": 31726,
+          "random_route": false
+        },
+        "26": {
+          "row_id": 72694,
+          "position": 31727,
+          "random_route": false
+        },
+        "35": {
+          "row_id": 72695,
+          "position": 31728,
+          "random_route": false
+        },
+        "39": {
+          "row_id": 72696,
+          "position": 31729,
+          "random_route": true
+        },
+        "41": {
+          "row_id": 72697,
+          "position": 31730,
+          "random_route": true
+        },
+        "45": {
+          "row_id": 72699,
+          "position": 31731,
+          "random_route": true
+        },
+        "53": {
+          "row_id": 72701,
+          "position": 31732,
+          "random_route": false
+        },
+        "54": {
+          "row_id": 72702,
+          "position": 31733,
+          "random_route": false
+        },
+        "61": {
+          "row_id": 72704,
+          "position": 31734,
+          "random_route": false
+        },
+        "64": {
+          "row_id": 72705,
+          "position": 31735,
+          "random_route": false
+        },
+        "67": {
+          "row_id": 72706,
+          "position": 31736,
+          "random_route": true
+        },
+        "69": {
+          "row_id": 72707,
+          "position": 31737,
+          "random_route": false
+        },
+        "80": {
+          "row_id": 72710,
+          "position": 31738,
+          "random_route": true
+        },
+        "84": {
+          "row_id": 72711,
+          "position": 31739,
+          "random_route": false
+        },
+        "86": {
+          "row_id": 72712,
+          "position": 31740,
+          "random_route": true
+        },
+        "87": {
+          "row_id": 72713,
+          "position": 31741,
+          "random_route": false
+        },
+        "89": {
+          "row_id": 72714,
+          "position": 31742,
+          "random_route": false
+        },
+        "91": {
+          "row_id": 72715,
+          "position": 31743,
+          "random_route": true
+        },
+        "96": {
+          "row_id": 72716,
+          "position": 31744,
+          "random_route": true
+        },
+        "97": {
+          "row_id": 72717,
+          "position": 31745,
+          "random_route": true
+        },
+        "99": {
+          "row_id": 72719,
+          "position": 31746,
+          "random_route": true
+        },
+        "103": {
+          "row_id": 72721,
+          "position": 31747,
+          "random_route": true
+        },
+        "104": {
+          "row_id": 72722,
+          "position": 31748,
+          "random_route": true
+        },
+        "108": {
+          "row_id": 72723,
+          "position": 31749,
+          "random_route": false
+        },
+        "111": {
+          "row_id": 72725,
+          "position": 31750,
+          "random_route": false
+        },
+        "119": {
+          "row_id": 72727,
+          "position": 31751,
+          "random_route": false
+        },
+        "120": {
+          "row_id": 72728,
+          "position": 31752,
+          "random_route": false
+        },
+        "125": {
+          "row_id": 72729,
+          "position": 31753,
+          "random_route": false
+        }
+      },
+      "sha256": "8443308a19807808b2db7ce3f192c7cc228fa5e3eab2131984c618d12091dd21",
+      "bytes": 9353
+    },
+    {
+      "capture_id": 2,
+      "file": "profiling/workload/source_02_validation_slice.bin",
+      "source_entry": "Edge-IIoTset dataset/Attack traffic/Ransomware attack.pcap",
+      "first_source_record": 8824,
+      "last_source_record": 8870,
+      "packets": 47,
+      "targets": {
+        "2": {
+          "row_id": 10946,
+          "position": 6990,
+          "random_route": false
+        },
+        "3": {
+          "row_id": 10947,
+          "position": 6991,
+          "random_route": false
+        },
+        "4": {
+          "row_id": 10948,
+          "position": 6992,
+          "random_route": true
+        },
+        "8": {
+          "row_id": 10952,
+          "position": 6993,
+          "random_route": false
+        },
+        "9": {
+          "row_id": 10953,
+          "position": 6994,
+          "random_route": true
+        },
+        "10": {
+          "row_id": 10954,
+          "position": 6995,
+          "random_route": false
+        },
+        "11": {
+          "row_id": 10955,
+          "position": 6996,
+          "random_route": true
+        },
+        "12": {
+          "row_id": 10956,
+          "position": 6997,
+          "random_route": true
+        },
+        "13": {
+          "row_id": 10957,
+          "position": 6998,
+          "random_route": false
+        },
+        "14": {
+          "row_id": 10958,
+          "position": 6999,
+          "random_route": false
+        },
+        "15": {
+          "row_id": 10959,
+          "position": 7000,
+          "random_route": true
+        },
+        "17": {
+          "row_id": 10961,
+          "position": 7001,
+          "random_route": true
+        },
+        "19": {
+          "row_id": 10963,
+          "position": 7002,
+          "random_route": true
+        },
+        "20": {
+          "row_id": 10964,
+          "position": 7003,
+          "random_route": false
+        },
+        "21": {
+          "row_id": 10965,
+          "position": 7004,
+          "random_route": false
+        },
+        "25": {
+          "row_id": 10969,
+          "position": 7005,
+          "random_route": false
+        },
+        "26": {
+          "row_id": 10970,
+          "position": 7006,
+          "random_route": false
+        },
+        "27": {
+          "row_id": 10971,
+          "position": 7007,
+          "random_route": true
+        },
+        "28": {
+          "row_id": 10972,
+          "position": 7008,
+          "random_route": false
+        },
+        "29": {
+          "row_id": 10973,
+          "position": 7009,
+          "random_route": true
+        },
+        "31": {
+          "row_id": 10975,
+          "position": 7010,
+          "random_route": false
+        },
+        "32": {
+          "row_id": 10976,
+          "position": 7011,
+          "random_route": false
+        },
+        "35": {
+          "row_id": 10979,
+          "position": 7012,
+          "random_route": true
+        },
+        "36": {
+          "row_id": 10980,
+          "position": 7013,
+          "random_route": true
+        },
+        "38": {
+          "row_id": 10982,
+          "position": 7014,
+          "random_route": false
+        },
+        "39": {
+          "row_id": 10983,
+          "position": 7015,
+          "random_route": false
+        },
+        "40": {
+          "row_id": 10984,
+          "position": 7016,
+          "random_route": false
+        },
+        "42": {
+          "row_id": 10986,
+          "position": 7017,
+          "random_route": true
+        },
+        "43": {
+          "row_id": 10987,
+          "position": 7018,
+          "random_route": true
+        },
+        "44": {
+          "row_id": 10988,
+          "position": 7019,
+          "random_route": true
+        },
+        "45": {
+          "row_id": 10989,
+          "position": 7020,
+          "random_route": true
+        },
+        "46": {
+          "row_id": 10990,
+          "position": 7021,
+          "random_route": false
+        }
+      },
+      "sha256": "90d637d1374bbb033cb2b6ad24a6962acf39d473f570ddd51569422b2fcf3bd0",
+      "bytes": 10154
+    },
+    {
+      "capture_id": 3,
+      "file": "profiling/workload/source_03_validation_slice.bin",
+      "source_entry": "Edge-IIoTset dataset/Attack traffic/SQL injection attack.pcap",
+      "first_source_record": 40983,
+      "last_source_record": 41185,
+      "packets": 203,
+      "targets": {
+        "14": {
+          "row_id": 31681,
+          "position": 15337,
+          "random_route": true
+        },
+        "15": {
+          "row_id": 31682,
+          "position": 15338,
+          "random_route": false
+        },
+        "25": {
+          "row_id": 31684,
+          "position": 15339,
+          "random_route": false
+        },
+        "26": {
+          "row_id": 31685,
+          "position": 15340,
+          "random_route": true
+        },
+        "35": {
+          "row_id": 31686,
+          "position": 15341,
+          "random_route": true
+        },
+        "43": {
+          "row_id": 31688,
+          "position": 15342,
+          "random_route": false
+        },
+        "50": {
+          "row_id": 31689,
+          "position": 15343,
+          "random_route": true
+        },
+        "57": {
+          "row_id": 31690,
+          "position": 15344,
+          "random_route": false
+        },
+        "60": {
+          "row_id": 31691,
+          "position": 15345,
+          "random_route": true
+        },
+        "63": {
+          "row_id": 31692,
+          "position": 15346,
+          "random_route": false
+        },
+        "69": {
+          "row_id": 31693,
+          "position": 15347,
+          "random_route": true
+        },
+        "70": {
+          "row_id": 31694,
+          "position": 15348,
+          "random_route": false
+        },
+        "83": {
+          "row_id": 31695,
+          "position": 15349,
+          "random_route": true
+        },
+        "84": {
+          "row_id": 31696,
+          "position": 15350,
+          "random_route": false
+        },
+        "103": {
+          "row_id": 31698,
+          "position": 15351,
+          "random_route": true
+        },
+        "105": {
+          "row_id": 31699,
+          "position": 15352,
+          "random_route": true
+        },
+        "116": {
+          "row_id": 31701,
+          "position": 15353,
+          "random_route": true
+        },
+        "132": {
+          "row_id": 31703,
+          "position": 15354,
+          "random_route": true
+        },
+        "142": {
+          "row_id": 31704,
+          "position": 15355,
+          "random_route": false
+        },
+        "151": {
+          "row_id": 31705,
+          "position": 15356,
+          "random_route": false
+        },
+        "152": {
+          "row_id": 31706,
+          "position": 15357,
+          "random_route": true
+        },
+        "159": {
+          "row_id": 31707,
+          "position": 15358,
+          "random_route": true
+        },
+        "162": {
+          "row_id": 31709,
+          "position": 15359,
+          "random_route": true
+        },
+        "166": {
+          "row_id": 31710,
+          "position": 15360,
+          "random_route": false
+        },
+        "168": {
+          "row_id": 31711,
+          "position": 15361,
+          "random_route": false
+        },
+        "169": {
+          "row_id": 31712,
+          "position": 15362,
+          "random_route": true
+        },
+        "183": {
+          "row_id": 31713,
+          "position": 15363,
+          "random_route": false
+        },
+        "189": {
+          "row_id": 31714,
+          "position": 15364,
+          "random_route": false
+        },
+        "191": {
+          "row_id": 31715,
+          "position": 15365,
+          "random_route": false
+        },
+        "192": {
+          "row_id": 31716,
+          "position": 15366,
+          "random_route": true
+        },
+        "198": {
+          "row_id": 31717,
+          "position": 15367,
+          "random_route": true
+        },
+        "202": {
+          "row_id": 31718,
+          "position": 15368,
+          "random_route": true
+        }
+      },
+      "sha256": "8bbfc5e8ddf47813068c45a683aa94d0b920c75fe96497975e5fe9fe3e22a1a2",
+      "bytes": 32512
+    },
+    {
+      "capture_id": 12,
+      "file": "profiling/workload/source_12_validation_slice.bin",
+      "source_entry": "Edge-IIoTset dataset/Normal traffic/Temperature_and_Humidity/Temperature_and_Humidity.pcap",
+      "first_source_record": 1303800,
+      "last_source_record": 1306156,
+      "packets": 2357,
+      "targets": {
+        "88": {
+          "row_id": 124296,
+          "position": 48823,
+          "random_route": true
+        },
+        "101": {
+          "row_id": 124297,
+          "position": 48824,
+          "random_route": false
+        },
+        "247": {
+          "row_id": 124298,
+          "position": 48825,
+          "random_route": false
+        },
+        "249": {
+          "row_id": 124299,
+          "position": 48826,
+          "random_route": true
+        },
+        "390": {
+          "row_id": 124301,
+          "position": 48827,
+          "random_route": true
+        },
+        "470": {
+          "row_id": 124302,
+          "position": 48828,
+          "random_route": true
+        },
+        "647": {
+          "row_id": 124305,
+          "position": 48829,
+          "random_route": true
+        },
+        "664": {
+          "row_id": 124306,
+          "position": 48830,
+          "random_route": false
+        },
+        "714": {
+          "row_id": 124307,
+          "position": 48831,
+          "random_route": true
+        },
+        "724": {
+          "row_id": 124308,
+          "position": 48832,
+          "random_route": true
+        },
+        "960": {
+          "row_id": 124309,
+          "position": 48833,
+          "random_route": true
+        },
+        "984": {
+          "row_id": 124310,
+          "position": 48834,
+          "random_route": false
+        },
+        "986": {
+          "row_id": 124311,
+          "position": 48835,
+          "random_route": false
+        },
+        "1036": {
+          "row_id": 124312,
+          "position": 48836,
+          "random_route": true
+        },
+        "1042": {
+          "row_id": 124313,
+          "position": 48837,
+          "random_route": false
+        },
+        "1054": {
+          "row_id": 124314,
+          "position": 48838,
+          "random_route": false
+        },
+        "1198": {
+          "row_id": 124316,
+          "position": 48839,
+          "random_route": false
+        },
+        "1218": {
+          "row_id": 124317,
+          "position": 48840,
+          "random_route": false
+        },
+        "1264": {
+          "row_id": 124318,
+          "position": 48841,
+          "random_route": true
+        },
+        "1272": {
+          "row_id": 124319,
+          "position": 48842,
+          "random_route": true
+        },
+        "1288": {
+          "row_id": 124320,
+          "position": 48843,
+          "random_route": true
+        },
+        "1323": {
+          "row_id": 124321,
+          "position": 48844,
+          "random_route": true
+        },
+        "1421": {
+          "row_id": 124322,
+          "position": 48845,
+          "random_route": false
+        },
+        "1551": {
+          "row_id": 124323,
+          "position": 48846,
+          "random_route": true
+        },
+        "1554": {
+          "row_id": 124324,
+          "position": 48847,
+          "random_route": true
+        },
+        "1639": {
+          "row_id": 124326,
+          "position": 48848,
+          "random_route": true
+        },
+        "1934": {
+          "row_id": 124327,
+          "position": 48849,
+          "random_route": true
+        },
+        "1969": {
+          "row_id": 124328,
+          "position": 48850,
+          "random_route": false
+        },
+        "2011": {
+          "row_id": 124329,
+          "position": 48851,
+          "random_route": true
+        },
+        "2016": {
+          "row_id": 124330,
+          "position": 48852,
+          "random_route": true
+        },
+        "2131": {
+          "row_id": 124332,
+          "position": 48853,
+          "random_route": true
+        },
+        "2356": {
+          "row_id": 124333,
+          "position": 48854,
+          "random_route": false
+        }
+      },
+      "sha256": "489fd513edced107baa777260ad2087c61cb46592b326aebe28f6b23cbe401c4",
+      "bytes": 177685
+    }
+  ],
+  "decision_rows": 160,
+  "packet_rows": 15665,
+  "scope": "Same byte-preserving PCAP slices as frozen SBFE workload; legacy domain features precomputed from CSV",
+  "workload": "Predict only annotated development decisions; buffer updates use every intervening packet.",
+  "source_zip_sha256": "a76b66806876691af2a5fafc2dd950743769bfde0f89186e40b45e3399e3538a",
+  "inherited_workload_run": "SBFE_FULL_20261019_01",
+  "inherited_workload_catalog_sha256": "75c0752b18b66491bc0dcbcee4017fbd71936f80ae06a3103467213867e12393",
+  "legacy_feature_extraction_included": false
+}

@@ -1,0 +1,10 @@
+{
+  "source_catalog_sha256": "89dae99bcbc8776023756e22ee6c8e96be50355b0fb7b2e231e194f1751daa0f",
+  "capacities": [
+    4096,
+    16384,
+    65536
+  ],
+  "refit": false,
+  "warmup": "1s reference; 10s removes early decisions without changing retained history; common-target predictions identical by definition"
+}

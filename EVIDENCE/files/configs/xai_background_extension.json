@@ -1,0 +1,13 @@
+{
+  "source_run": "runs/WB_RESEARCH_FULL_20261019_01",
+  "source_xai_run": "runs/XAI_FULL_20261020_01",
+  "views": ["legacy25_symmetric", "legacy29_symmetric"],
+  "case": "balanced",
+  "seed": 20261021,
+  "background_rows": 32,
+  "validation_rows": 100,
+  "jitter_condition": "query_delay_5ms",
+  "historical_holdout_used": false,
+  "new_classifier_fits": 0,
+  "scope": "Sensitivity to larger nested background and disjoint alternative; same previously observed V and unchanged semantic groups"
+}

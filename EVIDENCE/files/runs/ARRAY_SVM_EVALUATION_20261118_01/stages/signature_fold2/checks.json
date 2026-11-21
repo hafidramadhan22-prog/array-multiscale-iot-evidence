@@ -1,0 +1,22 @@
+{
+  "stage": "signature_fold2",
+  "models": [
+    {
+      "method": "SVM_default",
+      "candidate": "C1_G1",
+      "G_predictions_replayed_exactly": true
+    },
+    {
+      "method": "SVM_G_selected",
+      "candidate": "C1_G1",
+      "G_predictions_replayed_exactly": true
+    }
+  ],
+  "weight_source": "runs/MULTISCALE_REPAIR_FULL_20261020_01/stages/signature_fold2/legacy25_multiscale60__balanced/selection_before_V.json",
+  "selected_before_V": "C1_G1",
+  "no_refits": true,
+  "old_private_outputs_identical": false,
+  "split_matches": true,
+  "new_timestamp": 1795013294.7809126,
+  "original_freeze_unix": 1795013156.3927388
+}

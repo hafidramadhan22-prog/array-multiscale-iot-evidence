@@ -1,0 +1,64 @@
+{
+  "sources": [
+    {
+      "name": "normal_runsomware1",
+      "raw_sha256": "9b1618e5021803202da6751bde3557ab05dc0862468a39fa2818a7c3917201f4",
+      "pcap_path": "data\\external\\TON_IoT_20261109\\normal_runsomware1_ethernet_nsec.pcap",
+      "pcap_sha256": "b07957053ea527533d84195eae280c0aa84d4a0e565b161ad2eafa417799a8a8",
+      "packets": 357819,
+      "start_ns": 1556423390002125000,
+      "end_ns": 1556433159064158000,
+      "metadata_before": {
+        "File name": "C:\\Users\\PREDATOR NEO 16\\Downloads\\TA_HAFID_PAKET_CODEX_20261010\\TA_HAFID_CODEX_HANDOFF\\data\\external\\TON_IoT_20261109\\normal_runsomware1.pcap",
+        "File type": "pcapng",
+        "File encapsulation": "ether",
+        "Number of packets": "357819",
+        "Start time": "1556423390.002125",
+        "End time": "1556433159.064158",
+        "original_Start time_text": "1556423390.002125",
+        "original_End time_text": "1556433159.064158"
+      },
+      "metadata_after": {
+        "File name": "C:\\Users\\PREDATOR NEO 16\\Downloads\\TA_HAFID_PAKET_CODEX_20261010\\TA_HAFID_CODEX_HANDOFF\\data\\external\\TON_IoT_20261109\\normal_runsomware1_ethernet_nsec.pcap",
+        "File type": "nsecpcap",
+        "File encapsulation": "ether",
+        "Number of packets": "357819",
+        "Start time": "1556423390.002125",
+        "End time": "1556433159.064158",
+        "original_Start time_text": "1556423390.002125000",
+        "original_End time_text": "1556433159.064158000"
+      }
+    },
+    {
+      "name": "normal_runsomware2",
+      "raw_sha256": "aea6627c8d07a549193584ff284bfb153f55c660222470da84a67b95a5441461",
+      "pcap_path": "data\\external\\TON_IoT_20261109\\normal_runsomware2_ethernet_nsec.pcap",
+      "pcap_sha256": "f4732fd75ff2b0b46a24e398633562d2a42ad5ad343c7422be8c44e41f2cad20",
+      "packets": 1905124,
+      "start_ns": 1556424985283023000,
+      "end_ns": 1556430578841447000,
+      "metadata_before": {
+        "File name": "C:\\Users\\PREDATOR NEO 16\\Downloads\\TA_HAFID_PAKET_CODEX_20261010\\TA_HAFID_CODEX_HANDOFF\\data\\external\\TON_IoT_20261109\\normal_runsomware2.pcap",
+        "File type": "pcapng",
+        "File encapsulation": "ether",
+        "Number of packets": "1905124",
+        "Start time": "1556424985.283023",
+        "End time": "1556430578.841447",
+        "original_Start time_text": "1556424985.283023",
+        "original_End time_text": "1556430578.841447"
+      },
+      "metadata_after": {
+        "File name": "C:\\Users\\PREDATOR NEO 16\\Downloads\\TA_HAFID_PAKET_CODEX_20261010\\TA_HAFID_CODEX_HANDOFF\\data\\external\\TON_IoT_20261109\\normal_runsomware2_ethernet_nsec.pcap",
+        "File type": "nsecpcap",
+        "File encapsulation": "ether",
+        "Number of packets": "1905124",
+        "Start time": "1556424985.283023",
+        "End time": "1556430578.841447",
+        "original_Start time_text": "1556424985.283023000",
+        "original_End time_text": "1556430578.841447000"
+      }
+    }
+  ],
+  "unique_keys": 10651,
+  "new_model_scoring": false
+}

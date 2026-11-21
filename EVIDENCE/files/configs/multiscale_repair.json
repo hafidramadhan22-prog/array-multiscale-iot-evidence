@@ -1,0 +1,40 @@
+{
+  "experiment": "MULTISCALE_DIRECTIONAL_REPAIR_20261020",
+  "data_folder": "runs/MULTISCALE_DATA_20261020_01",
+  "source_run": "runs/WB_RESEARCH_FULL_20261019_01",
+  "views": [
+    "multiscale60",
+    "legacy25_multiscale60",
+    "legacy25_multiscale_directional96"
+  ],
+  "cases": [
+    "original",
+    "balanced"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "signature_seed": 42,
+  "runtime_workers": 3,
+  "weight_alphas": [
+    0.5,
+    0.6,
+    0.7
+  ],
+  "lr_max_iter": 10000,
+  "lr_tol": 1e-06,
+  "port_bijection_offset": 32768,
+  "bootstrap_repeats": 2000,
+  "bootstrap_block_seconds": [
+    1,
+    5,
+    10
+  ],
+  "bootstrap_seed": 20261020,
+  "historical_holdout_used": false,
+  "new_data_or_captures": false,
+  "selection": "G only; maximize 0.5 Macro-F1 + 0.5 F2 DDoS; exact tie prefers smaller serialized pipeline, then lexical name; baseline eligible",
+  "interpretation": "Post-observation exploratory feature repair. No guarantee of improvement, independent test, or algorithmic novelty. No second search after V."
+}

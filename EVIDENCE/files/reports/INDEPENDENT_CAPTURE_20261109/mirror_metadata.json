@@ -1,0 +1,226 @@
+[
+  {
+    "folder": "SqlInjection",
+    "error": "URLError(ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+  },
+  {
+    "folder": "Recon-PortScan",
+    "status": "OK",
+    "files": [
+      {
+        "type": "file",
+        "oid": "25457fc3ff68387eb6e4e795e6ae4a02b8957f0d",
+        "size": 93039768,
+        "lfs": {
+          "oid": "3454c84fadbd951ced6d64dc708d9f1911367f5b9428b372398f601f5c032a68",
+          "size": 93039768,
+          "pointerSize": 133
+        },
+        "xetHash": "386244054b098a97152ddb3f37c0f5a7572a5f97151bf00c7421bf933fc563a0",
+        "path": "PCAPS/Recon-PortScan/Recon-PortScan.pcap"
+      }
+    ]
+  },
+  {
+    "folder": "DDoS-SYN_Flood",
+    "status": "OK",
+    "files": [
+      {
+        "type": "file",
+        "oid": "1da13780da3df1de063c21cf4955f726dda41294",
+        "size": 2451954948,
+        "lfs": {
+          "oid": "b13ff83bd36d8227fd2473f700e47eee9badffdd4e92ed91b4cdc95ebbfc4ef5",
+          "size": 2451954948,
+          "pointerSize": 135
+        },
+        "xetHash": "1d35c2e160f56340893ef8fefeb09972a1bfa771fcf5a433d17dacbbe83d81f8",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "3752599a2f72ccf80adc28f189772d75d96eb845",
+        "size": 2461837664,
+        "lfs": {
+          "oid": "00c05c74eca0b1f87d0570ec89dea948118113269c737bcf18f157b45aa91fd8",
+          "size": 2461837664,
+          "pointerSize": 135
+        },
+        "xetHash": "9c0dfb136dc460eb5aef8add350fd4b4fffe818c0b0442bbed75328698c4577f",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood1.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "08987271e1e81bb616e8e923f4e654955a531b44",
+        "size": 2465555024,
+        "lfs": {
+          "oid": "76e11c14fd454562b484cfe2cda7b9967efd86e96ecabe3846e09751889cdead",
+          "size": 2465555024,
+          "pointerSize": 135
+        },
+        "xetHash": "4f11916e3abbdbc9e1cc1a8f91ff454a4156d87d62dc382b06831e7305ff71b9",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood10.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "27506a8d7d3247dcf5de0f32e3865691507c1877",
+        "size": 2454842132,
+        "lfs": {
+          "oid": "055011f41a401809975f94b8c06b94d1beb81fc71964f22d63e411111b3e9f92",
+          "size": 2454842132,
+          "pointerSize": 135
+        },
+        "xetHash": "7b98f29d544c772bdca92548a0f9000a26a0fe57259b90c27a5dc302cd4826d2",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood11.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "7ffb59e711501404b249669bd2367abb3103601a",
+        "size": 2470094648,
+        "lfs": {
+          "oid": "efeeebaec946e16ac89ad12d91cb1421031130f62dc4e904b7cb3129ff679e70",
+          "size": 2470094648,
+          "pointerSize": 135
+        },
+        "xetHash": "03e50b2399d3e9aa5f12644ad69aa3ba94fa9d84cd6a568ab381c7aef529a40d",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood12.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "db7f0c8b7b0fcd34394fadda81898554cfe05f2b",
+        "size": 2468390120,
+        "lfs": {
+          "oid": "899af130cc5c17fde32b52a8d4a472c5c29ca8e82ce514216839829297673227",
+          "size": 2468390120,
+          "pointerSize": 135
+        },
+        "xetHash": "e7116fb2bfffdfe4e0b14ecba5b52b7eb483cf24bc0548a7030f6c08ccb6d031",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood13.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "2b351c90b963900c08ee91098d4c8c265d6b6247",
+        "size": 2435911896,
+        "lfs": {
+          "oid": "cf222792fb890953aeaa0d55d867765a44a3a9e41c5eaaa4ea8b3b26f21264d9",
+          "size": 2435911896,
+          "pointerSize": 135
+        },
+        "xetHash": "5cbd0e646cda7837392dedb6f1d20c8ab2643353bbb47271b7b9208a21bbf77a",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood14.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "da19af69bd6846e8535b06fcb205df9ef7c10ba9",
+        "size": 1265097064,
+        "lfs": {
+          "oid": "5cc3ea090c016821fd42051fb12c34c2668d565c4c2481ec520c9358cc6b0a7c",
+          "size": 1265097064,
+          "pointerSize": 135
+        },
+        "xetHash": "5b04a157a9fab864c5f1865e3f194aca18d66c45615e5c45e886302a6cf3c960",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood15.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "8a1cc6adfb851aac0bf535ec85ff4d3bddc7f43e",
+        "size": 2471315276,
+        "lfs": {
+          "oid": "9f5dd3b7dea7909736bdb4b3acbef4b59985d3ffeabaab786f6b8df2025a4d06",
+          "size": 2471315276,
+          "pointerSize": 135
+        },
+        "xetHash": "635e765c47b95aacf839317021f31cd12da67504cafdda4d35b231bfd7483d72",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood2.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "11c823937bb281a803d17726976d6cfa1c9157ea",
+        "size": 2470848088,
+        "lfs": {
+          "oid": "72521212220e70121f4434c0e471616fd20b3b6e06c9444b1a596e8de5ff6134",
+          "size": 2470848088,
+          "pointerSize": 135
+        },
+        "xetHash": "cb352051d542c33ef74f2ae3eef5d226cbf88512e6e93460e65ba18d97bcb32b",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood3.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "3090a4042090bcad59dba2d7011ad5362c0cfa0b",
+        "size": 2105678732,
+        "lfs": {
+          "oid": "ecdb8f1b849cf3ba21a1e781c8c73470c53247cb4628da693104d8603bbe5221",
+          "size": 2105678732,
+          "pointerSize": 135
+        },
+        "xetHash": "cf4aa077ad81adcbd0b2073f0ab2c0dafc6874cda0804d7c2832782f30bdb32a",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood4.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "8bb78ce2cafff8331f946ad2e88d46bf47021834",
+        "size": 2461039652,
+        "lfs": {
+          "oid": "3a1f31f5eb5498db308b14ae8677c541c97d288a1e61e868c0bb3c77d719d1c5",
+          "size": 2461039652,
+          "pointerSize": 135
+        },
+        "xetHash": "0409b63a3bd86e25157e261c46151d8b6ad8359e005f529de312d57b7fbc511a",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood5.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "c7d57dbfa1ab95083ebc49f489d93f3fb4b87517",
+        "size": 2466681436,
+        "lfs": {
+          "oid": "a43979fb5957d72a1bc722a45a97f59367cc817f1b57812bb2e156ed241d4637",
+          "size": 2466681436,
+          "pointerSize": 135
+        },
+        "xetHash": "1d9dd940507a37f826d8c2df7a73cedd11ba8186f79904f1b62ec0ae637d5294",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood6.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "c88887d494b0b1881ac41d962f5e4f1873ffb34f",
+        "size": 2441875168,
+        "lfs": {
+          "oid": "f0132df5917b9e23ed3919c5f8dc411e9b1748eba7dc6cd7dd653bdf1e7588dc",
+          "size": 2441875168,
+          "pointerSize": 135
+        },
+        "xetHash": "b968dabdaa0399b801a8850415c5e4bcadccc210451a03211794b78686aba027",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood7.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "10e887688a779fe3ee571e0eea105d2f33461fbf",
+        "size": 2401811056,
+        "lfs": {
+          "oid": "6e9dd323ea8a7252d2dc13c763d7b98687c8c254be0483e5ad50bf95d72fa582",
+          "size": 2401811056,
+          "pointerSize": 135
+        },
+        "xetHash": "659967b90940f5b9b215aff856cf52f96c3db08949e02675c66056f63733031a",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood8.pcap"
+      },
+      {
+        "type": "file",
+        "oid": "a6eb1321560986da7d53184c4df4a0b031812b1a",
+        "size": 2447479848,
+        "lfs": {
+          "oid": "67d33ce920a994ae97d887103ed8c3bb381a300af259dc8fc18121f807d8df8c",
+          "size": 2447479848,
+          "pointerSize": 135
+        },
+        "xetHash": "07700133fc533a67b735885aab4ee6bef7d849c1f7ffe5ca4a1aa87933c88c9a",
+        "path": "PCAPS/DDoS-SYN_Flood/DDoS-SYN_Flood9.pcap"
+      }
+    ]
+  },
+  {
+    "folder": "Benign_Final",
+    "error": "URLError(ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+  }
+]

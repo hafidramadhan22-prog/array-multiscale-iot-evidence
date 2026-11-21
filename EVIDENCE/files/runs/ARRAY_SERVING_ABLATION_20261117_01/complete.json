@@ -1,0 +1,10 @@
+{
+  "status": "PASS_SERVING_ABLATION",
+  "new_classifier_fits": 0,
+  "policies": 8,
+  "feature_timings": 480,
+  "replays": 240,
+  "cold_memory_runs": 80,
+  "all_labels_match": true,
+  "catalog_sha256": "c923eda926caa5a0f27d8552cc28aa780c90e36ce808193a792e18b5560eb593"
+}

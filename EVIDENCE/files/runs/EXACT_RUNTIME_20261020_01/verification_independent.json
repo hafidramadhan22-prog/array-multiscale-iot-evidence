@@ -1,0 +1,15 @@
+{
+  "status": "PASS_RUNTIME_EVIDENCE_RECONSTRUCTION",
+  "policies": 6,
+  "raw_timings": 540,
+  "raw_replays": 30,
+  "cold_rss": 36,
+  "full_input_equivalence_rows": 52684,
+  "coalition_games": 300,
+  "all_sources_and_artifact_hashes_match": true,
+  "same_role_boundary_workload": true,
+  "new_model_loads": 0,
+  "new_classifier_fits": 0,
+  "zero_delta_rss_observations": 0,
+  "independent_capture_evaluation": false
+}

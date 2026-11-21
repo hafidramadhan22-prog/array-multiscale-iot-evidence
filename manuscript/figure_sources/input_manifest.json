@@ -1,0 +1,32 @@
+[
+  {
+    "file": "data/factorial_summary.csv",
+    "original_artifact": "reports/ARRAY_MAJOR_REVISION_20261103/factorial_summary.csv",
+    "sha256": "b327d4853e8ec4267a054cff6850d8895847719c6c76a409ce43ebcc448c23e6"
+  },
+  {
+    "file": "data/xai_shares.csv",
+    "original_artifact": "reports/ARRAY_MAJOR_REVISION_20261103/xai_shares.csv",
+    "sha256": "6a2870da85c2eecfb2bb1a1b3b360127cd28ff805f057e6439e8632a11ebfc58"
+  },
+  {
+    "file": "data/replay_raw.csv",
+    "original_artifact": "runs/ARRAY_RUNTIME_FULL_20261103_01/replay_raw.csv",
+    "sha256": "5847bbebb57acb4d5491e5990af3873b13b1229f153cd9c6ea3c0282a768ea07"
+  },
+  {
+    "file": "data/metrics_all_cached.csv",
+    "original_artifact": "reports/FPR_SOLUTION_20261109/metrics_all_cached.csv",
+    "sha256": "7871fe89c4c94d43b4309210c1f7e264837c1d4e418ca50c115f8387c5108b64"
+  },
+  {
+    "file": "data/metrics_later_blocks.csv",
+    "original_artifact": "reports/FPR_SOLUTION_20261109/metrics_later_blocks.csv",
+    "sha256": "e79dec404b800dd9d065a5686eae685f66ab7968dcff05608abf1ea1b798efca"
+  },
+  {
+    "file": "data/primary_policy_metrics_verified.csv",
+    "original_artifact": "reports/INDEPENDENT_CAPTURE_20261109/primary_policy_metrics_verified.csv",
+    "sha256": "f5d51b0dac985682ff9535e4ae5b347d4c8b524070a02ef4d9d7ecae5ef92f4c"
+  }
+]

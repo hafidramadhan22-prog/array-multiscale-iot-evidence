@@ -1,0 +1,22 @@
+{
+  "stage": "private_fold2",
+  "models": [
+    {
+      "method": "SVM_default",
+      "candidate": "C1_G1",
+      "G_predictions_replayed_exactly": true
+    },
+    {
+      "method": "SVM_G_selected",
+      "candidate": "C10_G10",
+      "G_predictions_replayed_exactly": true
+    }
+  ],
+  "weight_source": "evaluation.npz",
+  "selected_before_V": "C10_G10",
+  "no_refits": true,
+  "old_private_outputs_identical": true,
+  "split_matches": true,
+  "new_timestamp": 1795013262.5083983,
+  "original_freeze_unix": 1795012812.8486073
+}

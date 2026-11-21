@@ -1,0 +1,8 @@
+cohort,passed,macro_F1_delta_pp,attack_to_Normal_delta
+C,True,0.0,0
+G,True,0.0,0
+signature_fold1,True,0.0,0
+signature_fold2,True,0.0017245459976749,-10
+temporal_seed43,True,-0.0116530467745405,-6
+temporal_seed44,True,-0.0549252595574074,-9
+V_seed42,True,-0.0297690691808583,-2

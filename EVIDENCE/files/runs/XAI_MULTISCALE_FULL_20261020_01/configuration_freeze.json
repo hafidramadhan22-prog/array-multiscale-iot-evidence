@@ -1,0 +1,19 @@
+{
+  "quality_run": "runs\\MULTISCALE_REPAIR_FULL_20261020_01",
+  "view": "legacy25_multiscale60",
+  "selection_role": "G",
+  "owned_model": {
+    "stage": "temporal_seed42",
+    "view": "legacy25_multiscale60",
+    "case": "balanced",
+    "path": "stages/temporal_seed42/legacy25_multiscale60__balanced/model.joblib",
+    "sha256": "b51202085681b6f1b4f18f01b659cc8b7c7508a401970cd8eac848c347750545",
+    "bytes": 644528
+  },
+  "background_A": 32,
+  "background_B": 32,
+  "rows": 100,
+  "new_classifier_fits": 0,
+  "indices_sha256": "7dddc22d8a22c50f30de1b89b3ca10637904a435c5fab5f13ab8e82d8aed6491",
+  "jitter_sha256": "39b1e4123ff80e700dac603c86f002679679a82ef7a007485a9f488e7365c234"
+}

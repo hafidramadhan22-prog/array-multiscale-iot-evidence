@@ -1,0 +1,11 @@
+{
+  "status": "PASS_COMPACT_XAI_GAMES",
+  "games": 300,
+  "coalitions": 38400,
+  "donor_rows": 1228800,
+  "max_probability_difference": 0.0,
+  "max_shap_difference": 0.0,
+  "source_xai_catalog_sha256": "95db44df22b6d6933a4bc494662171609f2ee34a0237b529d65645e261d25d31",
+  "new_classifier_fits": 0,
+  "limitation": "Same classifier and donor intervention definition; this does not establish causal validity or new faithfulness scores."
+}

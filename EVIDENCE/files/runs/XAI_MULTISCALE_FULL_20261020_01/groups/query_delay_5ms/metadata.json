@@ -1,0 +1,125 @@
+{
+  "groups": {
+    "http": [
+      "http.response",
+      "http.request.method",
+      "http.request.version"
+    ],
+    "tcp": [
+      "tcp.connection.fin",
+      "tcp.connection.rst",
+      "tcp.connection.syn",
+      "tcp.connection.synack",
+      "tcp.flags.ack",
+      "tcp.len",
+      "tcp.flags"
+    ],
+    "udp": [
+      "udp.time_delta"
+    ],
+    "mqtt": [
+      "mqtt.len",
+      "mqtt.conflag.cleansess",
+      "mqtt.conflags",
+      "mqtt.hdrflags",
+      "mqtt.msgtype",
+      "mqtt.proto_len",
+      "mqtt.protoname",
+      "mqtt.topic_len",
+      "mqtt.ver"
+    ],
+    "dns": [
+      "dns.qry.name.len__numeric",
+      "dns.qry.qu",
+      "dns.retransmission"
+    ],
+    "arp": [
+      "arp.opcode",
+      "arp.hw.size"
+    ],
+    "endpoint_history": [
+      "multiscale_higher_100ms_log_packets",
+      "multiscale_higher_100ms_log_bytes",
+      "multiscale_higher_100ms_log_peers",
+      "multiscale_higher_100ms_log_local_tcp_ports",
+      "multiscale_higher_100ms_log_peer_tcp_ports",
+      "multiscale_higher_100ms_mean_bytes",
+      "multiscale_higher_100ms_std_bytes",
+      "multiscale_higher_100ms_syn_fraction",
+      "multiscale_higher_100ms_ack_fraction",
+      "multiscale_higher_100ms_rst_fraction",
+      "multiscale_higher_1000ms_log_packets",
+      "multiscale_higher_1000ms_log_bytes",
+      "multiscale_higher_1000ms_log_peers",
+      "multiscale_higher_1000ms_log_local_tcp_ports",
+      "multiscale_higher_1000ms_log_peer_tcp_ports",
+      "multiscale_higher_1000ms_mean_bytes",
+      "multiscale_higher_1000ms_std_bytes",
+      "multiscale_higher_1000ms_syn_fraction",
+      "multiscale_higher_1000ms_ack_fraction",
+      "multiscale_higher_1000ms_rst_fraction",
+      "multiscale_higher_10000ms_log_packets",
+      "multiscale_higher_10000ms_log_bytes",
+      "multiscale_higher_10000ms_log_peers",
+      "multiscale_higher_10000ms_log_local_tcp_ports",
+      "multiscale_higher_10000ms_log_peer_tcp_ports",
+      "multiscale_higher_10000ms_mean_bytes",
+      "multiscale_higher_10000ms_std_bytes",
+      "multiscale_higher_10000ms_syn_fraction",
+      "multiscale_higher_10000ms_ack_fraction",
+      "multiscale_higher_10000ms_rst_fraction",
+      "multiscale_lower_100ms_log_packets",
+      "multiscale_lower_100ms_log_bytes",
+      "multiscale_lower_100ms_log_peers",
+      "multiscale_lower_100ms_log_local_tcp_ports",
+      "multiscale_lower_100ms_log_peer_tcp_ports",
+      "multiscale_lower_100ms_mean_bytes",
+      "multiscale_lower_100ms_std_bytes",
+      "multiscale_lower_100ms_syn_fraction",
+      "multiscale_lower_100ms_ack_fraction",
+      "multiscale_lower_100ms_rst_fraction",
+      "multiscale_lower_1000ms_log_packets",
+      "multiscale_lower_1000ms_log_bytes",
+      "multiscale_lower_1000ms_log_peers",
+      "multiscale_lower_1000ms_log_local_tcp_ports",
+      "multiscale_lower_1000ms_log_peer_tcp_ports",
+      "multiscale_lower_1000ms_mean_bytes",
+      "multiscale_lower_1000ms_std_bytes",
+      "multiscale_lower_1000ms_syn_fraction",
+      "multiscale_lower_1000ms_ack_fraction",
+      "multiscale_lower_1000ms_rst_fraction",
+      "multiscale_lower_10000ms_log_packets",
+      "multiscale_lower_10000ms_log_bytes",
+      "multiscale_lower_10000ms_log_peers",
+      "multiscale_lower_10000ms_log_local_tcp_ports",
+      "multiscale_lower_10000ms_log_peer_tcp_ports",
+      "multiscale_lower_10000ms_mean_bytes",
+      "multiscale_lower_10000ms_std_bytes",
+      "multiscale_lower_10000ms_syn_fraction",
+      "multiscale_lower_10000ms_ack_fraction",
+      "multiscale_lower_10000ms_rst_fraction"
+    ]
+  },
+  "official_checks": [
+    {
+      "row_id": 126105,
+      "max_difference": 3.3306690738754696e-16
+    },
+    {
+      "row_id": 53658,
+      "max_difference": 8.881784197001252e-16
+    }
+  ],
+  "hybrid_rows_evaluated": 135168,
+  "coalitions_per_sample": 128,
+  "output_order": [
+    "weighted_voting",
+    "decision_tree",
+    "random_forest",
+    "xgboost",
+    "lightgbm",
+    "logistic_regression"
+  ],
+  "link": "identity_probability",
+  "exact_for_empirical_game": true
+}

@@ -1,0 +1,12 @@
+{
+  "mean_seconds": 0.6592536599957384,
+  "median_seconds": 0.6140652499889256,
+  "sd_seconds": 0.1920686804313972,
+  "ci95_mean_seconds": [
+    0.5965147500808234,
+    0.7312877529940185
+  ],
+  "compact_slower": 0,
+  "repeats": 30,
+  "mean_relative_reduction": 0.41748800259626384
+}

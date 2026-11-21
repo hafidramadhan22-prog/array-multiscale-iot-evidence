@@ -1,0 +1,11 @@
+{
+  "policy": "RF_native",
+  "workload": "feature",
+  "repeat": 2,
+  "baseline_mib": 293.45703125,
+  "peak_mib": 294.46484375,
+  "delta_mib": 1.0078125,
+  "samples": 5,
+  "interval_seconds": 0.002,
+  "labels_match": true
+}

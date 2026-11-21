@@ -1,0 +1,23 @@
+{
+  "specs": [
+    -12,
+    -11,
+    -10,
+    -9,
+    -8,
+    -7,
+    -6,
+    -5,
+    -4,
+    -3,
+    -2,
+    -1,
+    0
+  ],
+  "smoke": false,
+  "time": 1795078880.2373126,
+  "python": "3.11.15",
+  "sklearn": "1.7.2",
+  "selection": "G only .5F1+.5DDoSF2",
+  "previously_observed_evaluation": true
+}

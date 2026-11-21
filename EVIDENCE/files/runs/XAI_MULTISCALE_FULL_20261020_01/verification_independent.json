@@ -1,0 +1,10 @@
+{
+  "status": "PASS_INDEPENDENT_XAI_RECONSTRUCTION",
+  "faithfulness_rows": 2700,
+  "robustness_rows": 600,
+  "background_rows": 300,
+  "all_coalition_attributions_reconstructed": true,
+  "official_shap_checks": true,
+  "new_model_loads": 0,
+  "new_classifier_fits": 0
+}

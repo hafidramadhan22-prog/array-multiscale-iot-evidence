@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "client_date": "2026-11-09",
+  "sealed_runs": [
+    {
+      "run": "FPR_TARGET8_20261109_01",
+      "status": "PASS",
+      "sealed_files": 66
+    },
+    {
+      "run": "FPR_NORMAL_VOTING_20261109_01",
+      "status": "PASS",
+      "sealed_files": 76
+    },
+    {
+      "run": "FPR_SQL_GUARD_20261109_01",
+      "status": "PASS",
+      "sealed_files": 72
+    }
+  ],
+  "independently_recomputed_cached_cohorts": 8,
+  "all_seven_attack_gates_passed": true,
+  "third_block_FPR_below_8": true,
+  "strict_target": "observed Normal FPR; attack recall no decline on seven reused cohorts",
+  "new_fits": 0,
+  "new_captures": 0,
+  "limitation": "No independent attack/capture evaluation; final rule chosen after two benign blocks and historical attack results; third block Normal only",
+  "source_inputs_verified_by_original_runs": true,
+  "first_profiler_failure_preserved_and_v2_resolved": true
+}

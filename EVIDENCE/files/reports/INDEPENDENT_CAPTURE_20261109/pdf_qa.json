@@ -1,0 +1,17 @@
+{
+  "status": "PASS_ALL_SIX_PAGES_VISUALLY_REVIEWED",
+  "pdf": "output\\pdf\\UJI_INDEPENDEN_CIC_TON_HASIL_DAN_EVIDENCE_20261109.pdf",
+  "sha256": "182043181f25becd4cffff22210da745e1b1e2da6a53f6753fb04664a0ce3b92",
+  "pages": 6,
+  "render_scale": 1.5,
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "tables_legible": true,
+  "no_clipping_or_overflow": true
+}

@@ -1,0 +1,8 @@
+source,planned,n,false_alarms,FPR_percent
+Distance,100,100,0,0.0
+Flame_Sensor,100,100,1,1.0
+IR_Receiver,100,100,0,0.0
+phValue,100,98,0,0.0
+Soil_Moisture,100,100,0,0.0
+Sound_Sensor,100,100,0,0.0
+Water_Level,100,99,0,0.0

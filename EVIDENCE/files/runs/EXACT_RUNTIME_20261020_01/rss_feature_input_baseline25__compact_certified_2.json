@@ -1,0 +1,13 @@
+{
+  "policy": "baseline25__compact_certified",
+  "workload": "feature_input",
+  "run": 2,
+  "baseline_rss_mib": 293.40234375,
+  "peak_rss_mib": 296.8984375,
+  "delta_peak_inference_mib": 3.49609375,
+  "samples": 5,
+  "interval_seconds": 0.002,
+  "labels_match": true,
+  "cold_first_prediction": true,
+  "ring_included": false
+}
