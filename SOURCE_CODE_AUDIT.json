@@ -1,0 +1,191 @@
+{
+  "date": "2026-11-22",
+  "python_files": 244,
+  "entrypoints": [
+    {
+      "entrypoint": "run_array_gnb_20261119",
+      "paths": [
+        "EVIDENCE/files/runs/ARRAY_GNB_FULL_20261119_01/run_array_gnb_20261119.py",
+        "EVIDENCE/files/scripts/run_array_gnb_20261119.py"
+      ]
+    },
+    {
+      "entrypoint": "run_array_factorial_20261103",
+      "paths": [
+        "EVIDENCE/files/runs/ARRAY_FACTORIAL_FULL_20261103_01/source/run_array_factorial_20261103.py",
+        "EVIDENCE/files/scripts/run_array_factorial_20261103.py"
+      ]
+    },
+    {
+      "entrypoint": "run_array_history_models_20261103",
+      "paths": [
+        "EVIDENCE/files/runs/ARRAY_HISTORY_FULL_20261103_01/source/run_array_history_models_20261103.py",
+        "EVIDENCE/files/scripts/run_array_history_models_20261103.py"
+      ]
+    },
+    {
+      "entrypoint": "profile_array_serving_20261117",
+      "paths": [
+        "EVIDENCE/files/runs/ARRAY_SERVING_ABLATION_20261117_01/source/profile_array_serving_20261117.py",
+        "EVIDENCE/files/scripts/profile_array_serving_20261117.py"
+      ]
+    },
+    {
+      "entrypoint": "run_array_xai_20261103",
+      "paths": [
+        "EVIDENCE/files/runs/ARRAY_XAI_FULL_20261103_01/source/run_array_xai_20261103.py",
+        "EVIDENCE/files/scripts/run_array_xai_20261103.py"
+      ]
+    },
+    {
+      "entrypoint": "run_independent_capture_v2_20261109",
+      "paths": [
+        "EVIDENCE/files/scripts/run_independent_capture_v2_20261109.py"
+      ]
+    },
+    {
+      "entrypoint": "run_ton_independent_20261109",
+      "paths": [
+        "EVIDENCE/files/scripts/run_ton_independent_20261109.py"
+      ]
+    },
+    {
+      "entrypoint": "run_fpr_normal_voting_20261109",
+      "paths": [
+        "EVIDENCE/files/scripts/run_fpr_normal_voting_20261109.py"
+      ]
+    },
+    {
+      "entrypoint": "predict_fpr_sql_guard_rf_rescue_20261109",
+      "paths": [
+        "EVIDENCE/files/scripts/predict_fpr_sql_guard_rf_rescue_20261109.py"
+      ]
+    }
+  ],
+  "local_import_module_closure": [
+    "analyze_context_repair",
+    "analyze_time_repair",
+    "array_gnb_20261119",
+    "array_revision",
+    "array_svm_20261118",
+    "audit_array_flag_format_20261104",
+    "context_repair",
+    "e4",
+    "exact_runtime",
+    "fpr_target8_20261109",
+    "independent_capture_20261109",
+    "multiscale_context",
+    "predict_fpr_sql_guard_rf_rescue_20261109",
+    "prepare_array_history_20261103",
+    "prepare_sbfe",
+    "prepare_wb_behavior",
+    "profile_array_serving_20261117",
+    "profile_exact_runtime",
+    "profile_multiscale_repair",
+    "recommendation",
+    "replay_multiscale_repair",
+    "rf_normal_voting_type_20261109",
+    "rf_normal_voting_type_v2_20261109",
+    "run_array_factorial_20261103",
+    "run_array_gnb_20261119",
+    "run_array_history_models_20261103",
+    "run_array_svm_20261118",
+    "run_array_xai_20261103",
+    "run_context_repair",
+    "run_fpr_normal_voting_20261109",
+    "run_fpr_target8_20261109",
+    "run_independent_capture_20261109",
+    "run_independent_capture_v2_20261109",
+    "run_time_repair",
+    "run_ton_independent_20261109",
+    "run_wb_research",
+    "run_xai_audit",
+    "sbfe",
+    "sql_guard_rf_rescue_20261109",
+    "ta_hafid_engine",
+    "time_context",
+    "wb_behavior",
+    "wb_context_ablation",
+    "wb_profile",
+    "wb_research",
+    "wb_scheduler",
+    "xai_audit"
+  ],
+  "missing_local_modules": [],
+  "exact_source_dependencies_added": [
+    {
+      "path": "EVIDENCE/files/scripts/run_array_svm_20261118.py",
+      "sha256": "cce8b1b7547d08fbcdb69bff1b30c9e3da7f28118df9fc5824e7b04b7f8d34d1",
+      "source_archive": "ARRAY_HAFID_REPRODUCIBILITY_GNB_REVISION_20261119.zip",
+      "source_relative_path": "scripts/run_array_svm_20261118.py",
+      "role": "Exact local dependency of archived experimental drivers; no new comparator results or model fitting."
+    },
+    {
+      "path": "EVIDENCE/files/src/array_svm_20261118.py",
+      "sha256": "150615666d163d2fb2b1e3f508086cfe33e399e3b66162a4411b8f2c08edb996",
+      "source_archive": "ARRAY_HAFID_REPRODUCIBILITY_GNB_REVISION_20261119.zip",
+      "source_relative_path": "src/array_svm_20261118.py",
+      "role": "Exact local dependency of archived experimental drivers; no new comparator results or model fitting."
+    },
+    {
+      "path": "EVIDENCE/files/scripts/analyze_context_repair.py",
+      "sha256": "ed8b17c0cae49a454d1dab9ec8714d12cdee679e2e9c43ff6d9b320de223b991",
+      "source_archive": "ARRAY_HAFID_REPRODUCIBILITY_GNB_REVISION_20261119.zip",
+      "source_relative_path": "scripts/analyze_context_repair.py",
+      "role": "Exact local dependency of archived experimental drivers; no new comparator results or model fitting."
+    },
+    {
+      "path": "EVIDENCE/files/scripts/run_context_repair.py",
+      "sha256": "0748adc66752a1b8e84a441deeb20c8fffd5defa6414c29b6e10c631300ff11b",
+      "source_archive": "ARRAY_HAFID_REPRODUCIBILITY_GNB_REVISION_20261119.zip",
+      "source_relative_path": "scripts/run_context_repair.py",
+      "role": "Exact local dependency of archived experimental drivers; no new comparator results or model fitting."
+    },
+    {
+      "path": "EVIDENCE/files/scripts/run_time_repair.py",
+      "sha256": "5a58bf145e20bbcaf16f4481b9f0ae48803b92b253bfbaa80c5a5db51ccaa304",
+      "source_archive": "ARRAY_HAFID_REPRODUCIBILITY_GNB_REVISION_20261119.zip",
+      "source_relative_path": "scripts/run_time_repair.py",
+      "role": "Exact local dependency of archived experimental drivers; no new comparator results or model fitting."
+    }
+  ],
+  "verification": "AST/source presence only. No imports of research drivers, dataset loading, estimator deserialization or new fits.",
+  "reproduction_scope": "Entry points and local imported modules are present. Raw provider datasets, large historical features and fitted models are still external prerequisites; full retraining was not rerun or certified.",
+  "protocol_documents_restored": [
+    {
+      "path": "EVIDENCE/files/docs/ARRAY_GNB_PROTOCOL_20261119.md",
+      "source_archive_member": "docs/ARRAY_GNB_PROTOCOL_20261119.md",
+      "sha256": "08872041c5fa035f58fc8080bc2fe6cf272609812c95d0d063f98f7eef4b3f35"
+    },
+    {
+      "path": "EVIDENCE/files/docs/ARRAY_MAJOR_REVISION_PROTOCOL_20261103.md",
+      "source_archive_member": "docs/ARRAY_MAJOR_REVISION_PROTOCOL_20261103.md",
+      "sha256": "36c88d7717cbd1c98809be4968420de7474bab8f159ea0f1923d4d77ce192eba"
+    },
+    {
+      "path": "EVIDENCE/files/docs/ARRAY_SERVING_ENHANCEMENT_PROTOCOL_20261117.md",
+      "source_archive_member": "docs/ARRAY_SERVING_ENHANCEMENT_PROTOCOL_20261117.md",
+      "sha256": "43a450b9d8f7443ac948e7f9b904f6fcd1cbdb69b4f0b27c3562e21095fa9199"
+    },
+    {
+      "path": "EVIDENCE/files/docs/INDEPENDENT_CAPTURE_PROTOCOL_20261109.md",
+      "source_archive_member": "docs/INDEPENDENT_CAPTURE_PROTOCOL_20261109.md",
+      "sha256": "f2acbdd592833941941e4f8116367de29443ca8077df632d0d3b8d7b25edb9c5"
+    },
+    {
+      "path": "EVIDENCE/files/docs/INDEPENDENT_TON_FLOW_LABEL_ADDENDUM_20261109.md",
+      "source_archive_member": "docs/INDEPENDENT_TON_FLOW_LABEL_ADDENDUM_20261109.md",
+      "sha256": "43c3432ad1fe6407ce5cb077d8cb7f3bdbb099acc51164c75bc049120842eecb"
+    },
+    {
+      "path": "EVIDENCE/files/docs/FPR_TARGET8_PROTOCOL_20261109.md",
+      "source_archive_member": "docs/FPR_TARGET8_PROTOCOL_20261109.md",
+      "sha256": "6c8d6a07748ce200bbd171889b2be60d8d531f34ed6d2be44bb273155531a10c"
+    },
+    {
+      "path": "EVIDENCE/files/docs/FPR_TARGET8_SQL_GUARD_PROTOCOL_20261109.md",
+      "source_archive_member": "docs/FPR_TARGET8_SQL_GUARD_PROTOCOL_20261109.md",
+      "sha256": "3e3cab19e5fff4ce63bf42cc0404edb04c3930a1468f1613b1f08b8f0c21fa6b"
+    }
+  ]
+}

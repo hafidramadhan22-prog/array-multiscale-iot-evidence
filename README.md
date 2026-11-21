@@ -35,6 +35,10 @@ Historical development/holdout reuse and adaptive selection constrain predictive
 
 Raw third-party datasets, payloads, full packet arrays, fitted estimator binaries and private correspondence are excluded. Selected derived mappings retain packet indices and provider flow-record indices. Provider data and permissions are needed for full raw extraction. Source snapshots may need local path adaptation and omitted artifacts for full retraining. Historical manifests describe their original run; root SHA256_MANIFEST.json is the inventory for this published release. No new license over provider datasets or third-party code is asserted.
 
+## Source code availability audit
+
+SOURCE_CODE_INDEX.md maps experimental entry points, and SOURCE_CODE_AUDIT.json records their static local import closure. The exact historical shared input/hash-gating and label-metric helpers imported by the GNB runner are now included, along with their transitive context dependencies. Some helper filenames contain SVM because of their actual source history; they are source dependencies, not new SVM comparison results. Entry-point and source availability does not certify an end-to-end rerun without provider datasets, historical caches and fitted artifacts.
+
 ## Manuscript files
 
 `manuscript/main.tex` is the main document; `manuscript/SUPPLEMENTARY/supplement.tex` is the companion. Both have editable tables/equations, bibliography and Python-generated figures. Compile separately using Tectonic, or select the corresponding file in Overleaf. The main PDF has 19 pages and the supplement has three pages. The supervisor's 21 November QC revisions are the source; redundant supplementary prose was condensed while retaining all five tables and numerical findings. The main availability paragraph points to this release.

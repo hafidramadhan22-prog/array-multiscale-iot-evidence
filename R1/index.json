@@ -65,6 +65,16 @@
     "sha256": "291c7364c728acfe3cf680891aeda5958bb5fdca3dd826b2e504579060a7690c"
   },
   {
+    "path": "EVIDENCE/files/docs/ARRAY_GNB_PROTOCOL_20261119.md",
+    "bytes": 1689,
+    "sha256": "08872041c5fa035f58fc8080bc2fe6cf272609812c95d0d063f98f7eef4b3f35"
+  },
+  {
+    "path": "EVIDENCE/files/docs/ARRAY_MAJOR_REVISION_PROTOCOL_20261103.md",
+    "bytes": 7545,
+    "sha256": "36c88d7717cbd1c98809be4968420de7474bab8f159ea0f1923d4d77ce192eba"
+  },
+  {
     "path": "EVIDENCE/files/requirements.lock.txt",
     "bytes": 1016,
     "sha256": "54fbfe646aaf32a7d2575f7c5fe2cbe1f40a32adc1d82d36b4ea6ba58647a959"
@@ -1065,6 +1075,11 @@
     "sha256": "1a7e7a0c4d3165ceeed9a98c12cc34bfd36ef36caa7e2caa9ab489efe7a2988e"
   },
   {
+    "path": "EVIDENCE/files/scripts/analyze_context_repair.py",
+    "bytes": 11508,
+    "sha256": "ed8b17c0cae49a454d1dab9ec8714d12cdee679e2e9c43ff6d9b320de223b991"
+  },
+  {
     "path": "EVIDENCE/files/scripts/analyze_multiscale_repair.py",
     "bytes": 11835,
     "sha256": "38dabb3a9e4d4c77a088b31bae4053c00ec77ae9b2c5188cd56f294bc6281a21"
@@ -1405,14 +1420,29 @@
     "sha256": "a55bddf72539147511d9af8eb9c46e3ce5d0435954c76cc84ea4d886f3de8647"
   },
   {
+    "path": "EVIDENCE/files/scripts/run_array_svm_20261118.py",
+    "bytes": 11867,
+    "sha256": "cce8b1b7547d08fbcdb69bff1b30c9e3da7f28118df9fc5824e7b04b7f8d34d1"
+  },
+  {
     "path": "EVIDENCE/files/scripts/run_array_weight_retune_20261118.py",
     "bytes": 11584,
     "sha256": "4a725ca6e8633f61114b16e9bad3b49e6f1a802ae4b6d06011b22707b951e851"
   },
   {
+    "path": "EVIDENCE/files/scripts/run_context_repair.py",
+    "bytes": 15122,
+    "sha256": "0748adc66752a1b8e84a441deeb20c8fffd5defa6414c29b6e10c631300ff11b"
+  },
+  {
     "path": "EVIDENCE/files/scripts/run_multiscale_repair.py",
     "bytes": 15455,
     "sha256": "3ef62fdbbd73daabfb1f16746f3b59d828eab8eae288e64af62120708b7b4b4c"
+  },
+  {
+    "path": "EVIDENCE/files/scripts/run_time_repair.py",
+    "bytes": 15635,
+    "sha256": "5a58bf145e20bbcaf16f4481b9f0ae48803b92b253bfbaa80c5a5db51ccaa304"
   },
   {
     "path": "EVIDENCE/files/scripts/summarize_array_revision_20261103.py",
@@ -1533,6 +1563,11 @@
     "path": "EVIDENCE/files/src/array_revision.py",
     "bytes": 2046,
     "sha256": "b482b0936851f41285f75435155f80e5fbb6679cc92ec98e722e926a8d3693b1"
+  },
+  {
+    "path": "EVIDENCE/files/src/array_svm_20261118.py",
+    "bytes": 2423,
+    "sha256": "150615666d163d2fb2b1e3f508086cfe33e399e3b66162a4411b8f2c08edb996"
   },
   {
     "path": "EVIDENCE/files/src/array_weight_retune_20261118.py",
@@ -1776,13 +1811,23 @@
   },
   {
     "path": "README.md",
-    "bytes": 4671,
-    "sha256": "409cbe0bb79e7074bb3d1cd41d3e83c553cbf241b2e8e02027e09a7b18acd8f7"
+    "bytes": 5276,
+    "sha256": "98c9503d173ef181e189654d4405010bdc8a220a318240601560d7db3a4a8155"
   },
   {
     "path": "requirements-verification.txt",
     "bytes": 50,
     "sha256": "c7bf08c11a0850a1a1623fbb5c8f8f5e422b5104bdd6f84e52cea27799ec801c"
+  },
+  {
+    "path": "SOURCE_CODE_AUDIT.json",
+    "bytes": 7908,
+    "sha256": "d9b64efc8287d2a47da277dabaf988422f4e84577788d19ecd88d5b72548200d"
+  },
+  {
+    "path": "SOURCE_CODE_INDEX.md",
+    "bytes": 1858,
+    "sha256": "c39de956dc5e8db2711ce53f59e2b593478d173fd84f513f1b7124ff9220cc46"
   },
   {
     "path": "VERIFICATION_RESULTS.json",

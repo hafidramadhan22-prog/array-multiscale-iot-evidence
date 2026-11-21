@@ -1,5 +1,10 @@
 [
   {
+    "path": "EVIDENCE/files/docs/ARRAY_SERVING_ENHANCEMENT_PROTOCOL_20261117.md",
+    "bytes": 3809,
+    "sha256": "43a450b9d8f7443ac948e7f9b904f6fcd1cbdb69b4f0b27c3562e21095fa9199"
+  },
+  {
     "path": "EVIDENCE/files/runs/ARRAY_RUNTIME_FULL_20261103_01/buffer_latency_raw.csv",
     "bytes": 2233,
     "sha256": "fc9228d45bbd484b96e65ef4ff5f7e56a35b05a4d3fbe1338f4e0482ba90bbd1"

@@ -5,6 +5,26 @@
     "sha256": "8d17054cbe64a71070cf1c71a35ca1ff42239e325f1fa2d8fe3bc811dd946b9d"
   },
   {
+    "path": "EVIDENCE/files/docs/FPR_TARGET8_PROTOCOL_20261109.md",
+    "bytes": 5384,
+    "sha256": "6c8d6a07748ce200bbd171889b2be60d8d531f34ed6d2be44bb273155531a10c"
+  },
+  {
+    "path": "EVIDENCE/files/docs/FPR_TARGET8_SQL_GUARD_PROTOCOL_20261109.md",
+    "bytes": 2543,
+    "sha256": "3e3cab19e5fff4ce63bf42cc0404edb04c3930a1468f1613b1f08b8f0c21fa6b"
+  },
+  {
+    "path": "EVIDENCE/files/docs/INDEPENDENT_CAPTURE_PROTOCOL_20261109.md",
+    "bytes": 4638,
+    "sha256": "f2acbdd592833941941e4f8116367de29443ca8077df632d0d3b8d7b25edb9c5"
+  },
+  {
+    "path": "EVIDENCE/files/docs/INDEPENDENT_TON_FLOW_LABEL_ADDENDUM_20261109.md",
+    "bytes": 2490,
+    "sha256": "43c3432ad1fe6407ce5cb077d8cb7f3bdbb099acc51164c75bc049120842eecb"
+  },
+  {
     "path": "EVIDENCE/files/reports/FPR_SOLUTION_20261109/attack_validation_view.csv",
     "bytes": 338,
     "sha256": "d3ae16fd6751554ab3a3ae903193d85e70502f4725dfafa0751d042a3a9805c3"
